@@ -16,6 +16,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Rest JAX-RS 2.0 Jersey 2.25.X
   * JUnit 4.12
 
+* [AlgoritimosEstruturaDados](https://github.com/crhobus/java-projects/tree/master/AlgoritimosEstruturaDados/)
+
+  * Estruturas de dados criadas
+
 
 ## Contributors
 
