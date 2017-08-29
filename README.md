@@ -11,10 +11,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
 * [BackEndChallenge](https://github.com/crhobus/java-projects/tree/master/BackEndChallenge/)
 
-### Maven Project
-### Server WildFly
-### Rest JAX-RS 2.0 Jersey 2.25.X
-### JUnit 4.12
+  * Maven Project
+  * Server WildFly
+  * Rest JAX-RS 2.0 Jersey 2.25.X
+  * JUnit 4.12
 
 
 ## Contributors
