@@ -1,6 +1,7 @@
 # JavaProjects
 
-Projetos de modo geral Desenvolvidos em Java
+Projetos de modo geral Desenvolvidos em Java.
+Repositório criado para consultas de estruturas/configurações/bibliotecas de modo geral que auxiliam no desenvolvimento de aplicações.
 
 * Desktop
 * Web
