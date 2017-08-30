@@ -23,8 +23,8 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   
 * [AlgoritmosGeometricos](https://github.com/crhobus/java-projects/tree/master/AlgoritmosGeometricos/)
 
- * Projeto matéria de faculdade: manipulação de imagens
-  * Libraries: [JAI](https://github.com/crhobus/java-libraries/tree/master/JAI)
+  * Projeto matéria de faculdade: manipulação de imagens
+    * Libraries: [JAI](https://github.com/crhobus/java-libraries/tree/master/JAI)
 
 
 ## Contributors
