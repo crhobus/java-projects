@@ -10,13 +10,6 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
 ## NetBeans
 
-* [BackEndChallenge](https://github.com/crhobus/java-projects/tree/master/BackEndChallenge/)
-
-  * Maven Project
-  * Server WildFly
-  * Rest JAX-RS 2.0 Jersey 2.25.X
-  * JUnit 4.12
-
 * [AlgoritimosEstruturaDados](https://github.com/crhobus/java-projects/tree/master/AlgoritimosEstruturaDados/)
 
   * Estruturas de dados criadas
@@ -25,6 +18,17 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: manipulação de imagens
     * Libraries: [JAI](https://github.com/crhobus/java-libraries/tree/master/JAI)
+
+* [BackEndChallenge](https://github.com/crhobus/java-projects/tree/master/BackEndChallenge/)
+
+  * Maven Project
+  * Server WildFly
+  * Rest JAX-RS 2.0 Jersey 2.25.X
+  * JUnit 4.12
+
+* [ConceitosJava8](https://github.com/crhobus/java-projects/tree/master/ConceitosJava8/)
+
+  * Exemplos do Java 8, novos recursos da linguagem
 
 
 ## Contributors
