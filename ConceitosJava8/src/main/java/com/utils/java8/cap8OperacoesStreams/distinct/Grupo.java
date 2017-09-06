@@ -1,4 +1,4 @@
-package com.utils.java8.cap8OperacoesStreams;
+package com.utils.java8.cap8OperacoesStreams.distinct;
 
 import com.utils.java8.cap2Lambda.Usuario;
 import java.util.Collections;

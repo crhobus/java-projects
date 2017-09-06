@@ -1,4 +1,4 @@
-package com.utils.java8.cap8OperacoesStreams;
+package com.utils.java8.cap8OperacoesStreams.fileStream;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -61,7 +61,6 @@ public class Sistema2 {
 
     private static Stream<String> lines(Path p) {
         try {
-            System.out.println(p.toFile().getName());
             return Files.lines(p);
         } catch (IOException ex) {
             throw new UncheckedIOException(ex);

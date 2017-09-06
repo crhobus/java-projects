@@ -1,4 +1,4 @@
-package com.utils.java8.cap8OperacoesStreams;
+package com.utils.java8.cap8OperacoesStreams.operacoes;
 
 import java.util.function.IntSupplier;
 
