@@ -212,45 +212,45 @@ public class Sistema {
         for (Usuario u : usuarios) {
             soma += u.getPontos();
         }
-        double pontuacaoMedia2 = soma / usuarios.size();
-        System.out.println(pontuacaoMedia2);
+        pontuacaoMedia = soma / usuarios.size();
+        System.out.println(pontuacaoMedia);
 
         System.out.println("\n-----------------------------------------\n");
 
         OptionalDouble media = usuarios.stream()
                 .mapToInt(Usuario::getPontos)
                 .average();
-        double pontuacaoMedia3 = media.orElse(0.0);
-        System.out.println(pontuacaoMedia3);
+        pontuacaoMedia = media.orElse(0.0);
+        System.out.println(pontuacaoMedia);
 
         //ou
-        double pontuacaoMedia4 = usuarios.stream()
+        pontuacaoMedia = usuarios.stream()
                 .mapToInt(Usuario::getPontos)
                 .average()
                 .orElse(0.0);
-        System.out.println(pontuacaoMedia4);
+        System.out.println(pontuacaoMedia);
 
         //versão antiga
-        double soma2 = 0;
+        soma = 0;
         for (Usuario u : usuarios) {
-            soma2 += u.getPontos();
+            soma += u.getPontos();
         }
-        double pontuacaoMedia5;
+
         if (usuarios.isEmpty()) {
-            pontuacaoMedia5 = 0;
+            pontuacaoMedia = 0;
         } else {
-            pontuacaoMedia5 = soma2 / usuarios.size();
+            pontuacaoMedia = soma / usuarios.size();
         }
-        System.out.println(pontuacaoMedia5);
+        System.out.println(pontuacaoMedia);
 
         System.out.println("\n-----------------------------------------\n");
 
-        double pontuacaoMedia6 = usuarios.stream()
+        pontuacaoMedia = usuarios.stream()
                 .mapToInt(Usuario::getPontos)
                 .average()
                 .orElseThrow(IllegalStateException::new);
 
-        System.out.println(pontuacaoMedia6);
+        System.out.println(pontuacaoMedia);
 
         System.out.println("\n-----------------------------------------\n");
 

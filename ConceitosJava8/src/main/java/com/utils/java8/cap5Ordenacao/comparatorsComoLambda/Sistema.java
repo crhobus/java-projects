@@ -44,8 +44,8 @@ public class Sistema {
 
         System.out.println("\n-----------------------------------------\n");
 
-        Comparator<Usuario> comparator2 = (u1, u2) -> u1.getNome().compareTo(u2.getNome());
-        Collections.sort(usuarios, comparator2);
+        comparator = (u1, u2) -> u1.getNome().compareTo(u2.getNome());
+        Collections.sort(usuarios, comparator);
         usuarios.forEach(u -> System.out.println(u.getNome()));
 
         System.out.println("\n-----------------------------------------\n");
@@ -61,8 +61,8 @@ public class Sistema {
 
         System.out.println("\n-----------------------------------------\n");
 
-        Comparator<Usuario> comparator3 = Comparator.comparing(u -> u.getNome());
-        usuarios.sort(comparator3);
+        comparator = Comparator.comparing(u -> u.getNome());
+        usuarios.sort(comparator);
         usuarios.forEach(u -> System.out.println(u.getNome()));
 
         System.out.println("\n-----------------------------------------\n");
@@ -94,8 +94,8 @@ public class Sistema {
         System.out.println("\n-----------------------------------------\n");
 
         Function<Usuario, String> extraiNome = u -> u.getNome();
-        Comparator<Usuario> comparator4 = Comparator.comparing(extraiNome);
-        usuarios.sort(comparator4);
+        comparator = Comparator.comparing(extraiNome);
+        usuarios.sort(comparator);
         usuarios.forEach(u -> System.out.println(u.getNome()));
 
         System.out.println("\n-----------------------------------------\n");
@@ -106,15 +106,15 @@ public class Sistema {
         System.out.println("\n-----------------------------------------\n");
 
         Function<Usuario, Integer> extraiPontos = u -> u.getPontos();
-        Comparator<Usuario> comparator5 = Comparator.comparing(extraiPontos);
-        usuarios.sort(comparator5);
+        comparator = Comparator.comparing(extraiPontos);
+        usuarios.sort(comparator);
         usuarios.forEach(u -> System.out.println(u.getNome()));
 
         System.out.println("\n-----------------------------------------\n");
 
         ToIntFunction<Usuario> extraiPontos2 = u -> u.getPontos();
-        Comparator<Usuario> comparator6 = Comparator.comparingInt(extraiPontos2);
-        usuarios.sort(comparator6);
+        comparator = Comparator.comparingInt(extraiPontos2);
+        usuarios.sort(comparator);
         usuarios.forEach(u -> System.out.println(u.getNome()));
 
         System.out.println("\n-----------------------------------------\n");

@@ -71,7 +71,7 @@ public class Sistema {
             Map<Path, List<String>> content = Files.list(Paths.get("C:\\Users\\crhobus\\MyDataFiles\\Documents\\Arquivos\\"))
                     .filter(p -> p.toString().endsWith(".txt"))
                     .collect(Collectors.toMap(
-                            Function.identity(),
+                            Function.identity(),//Vai retornar a instância do objeto Path, sempre a mesma instância
                             p -> lines(p).collect(Collectors.toList())));
 
             System.out.println("\n-----------------------------------------\n");

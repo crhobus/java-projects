@@ -15,8 +15,8 @@ public class Sistema {
         bloco.run();
 
         //bloco1 e bloco2 são iguais:
-        Runnable bloco1 = user::tornaModerador;//method reference
-        Runnable bloco2 = () -> user.tornaModerador();//lambda
+        bloco = user::tornaModerador;//method reference
+        bloco = () -> user.tornaModerador();//lambda
         //-----//
 
         //-----------------------------------------
@@ -26,8 +26,8 @@ public class Sistema {
         System.out.println(user2.isModerador());
 
         //consumer1 e consumer2 são iguais:
-        Consumer<Usuario> consumer1 = Usuario::tornaModerador;//method reference
-        Consumer<Usuario> consumer2 = u -> u.tornaModerador();//lambda
+        consumer = Usuario::tornaModerador;//method reference
+        consumer = u -> u.tornaModerador();//lambda
         //-----//
     }
 }

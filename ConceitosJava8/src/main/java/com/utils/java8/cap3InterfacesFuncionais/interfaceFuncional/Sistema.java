@@ -18,14 +18,14 @@ public class Sistema {
 
         System.out.println("\n-----------------------------------------\n");
 
-        Validador<String> validadorCEP2 = valor -> {
+        validadorCEP = valor -> {
             return valor.matches("[0-9]{5}-[0-9]{3}");
         };
-        System.out.println(validadorCEP2.valida("89130-000"));
+        System.out.println(validadorCEP.valida("89130-000"));
 
         System.out.println("\n-----------------------------------------\n");
 
-        Validador<String> validadorCEP3 = valor -> valor.matches("[0-9]{5}-[0-9]{3}");
-        System.out.println(validadorCEP3.valida("89130-000"));
+        validadorCEP = valor -> valor.matches("[0-9]{5}-[0-9]{3}");
+        System.out.println(validadorCEP.valida("89130-000"));
     }
 }

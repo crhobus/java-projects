@@ -136,31 +136,31 @@ public class Sistema {
 
         int valorInicial = 0;
         IntBinaryOperator operacao = (a, b) -> a + b;
-        int total2 = usuarios.stream()
+        total = usuarios.stream()
                 .mapToInt(Usuario::getPontos)
                 .reduce(valorInicial, operacao);
-        System.out.println(total2);
+        System.out.println(total);
 
         System.out.println("\n-----------------------------------------\n");
 
-        int total3 = usuarios.stream()
+        total = usuarios.stream()
                 .mapToInt(Usuario::getPontos)
                 .reduce(0, (a, b) -> a + b);
-        System.out.println(total3);
+        System.out.println(total);
 
-        int total4 = usuarios.stream()
+        total = usuarios.stream()
                 .mapToInt(Usuario::getPontos)
                 .reduce(0, Integer::sum);
-        System.out.println(total4);
+        System.out.println(total);
 
         int multiplicacao = usuarios.stream()
                 .mapToInt(Usuario::getPontos)
                 .reduce(1, (a, b) -> a * b);
         System.out.println(multiplicacao);
 
-        int total5 = usuarios.stream()
+        total = usuarios.stream()
                 .reduce(0, (atual, u) -> atual + u.getPontos(), Integer::sum);
-        System.out.println(total5);
+        System.out.println(total);
 
         System.out.println("\n-----------------------------------------\n");
 

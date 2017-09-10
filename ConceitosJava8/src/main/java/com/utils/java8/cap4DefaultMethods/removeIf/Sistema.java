@@ -37,12 +37,12 @@ public class Sistema {
         Usuario user5 = new Usuario("Nome5", 160);
         Usuario user6 = new Usuario("Nome6", 220);
 
-        List<Usuario> usuarios2 = new ArrayList<>();
-        usuarios2.add(user4);
-        usuarios2.add(user5);
-        usuarios2.add(user6);
+        usuarios = new ArrayList<>();
+        usuarios.add(user4);
+        usuarios.add(user5);
+        usuarios.add(user6);
 
-        usuarios2.removeIf(u -> u.getPontos() > 160);
-        usuarios2.forEach(u -> System.out.println(u.getNome()));
+        usuarios.removeIf(u -> u.getPontos() > 160);
+        usuarios.forEach(u -> System.out.println(u.getNome()));
     }
 }

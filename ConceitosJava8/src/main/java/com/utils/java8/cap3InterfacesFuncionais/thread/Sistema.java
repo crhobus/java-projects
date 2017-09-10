@@ -19,12 +19,12 @@ public class Sistema {
         new Thread(runnable).start();
 
         //-----------------------------------------
-        Runnable runnable2 = () -> {
+        runnable = () -> {
             for (int i = 0; i <= 1000; i++) {
                 System.out.println("Saída 2: " + i);
             }
         };
-        new Thread(runnable2).start();
+        new Thread(runnable).start();
 
         //-----------------------------------------
         new Thread(() -> {

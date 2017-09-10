@@ -89,10 +89,9 @@ public class Sistema {
 
         System.out.println("\n-----------------------------------------\n");
 
-        Stream<Usuario> stream2 = usuarios.stream();
-        stream2.filter(u -> u.getPontos() > 100);
+        stream = usuarios.stream();
+        stream.filter(u -> u.getPontos() > 100);
 
         usuarios.stream().filter(u -> u.getPontos() > 100);
-
     }
 }
