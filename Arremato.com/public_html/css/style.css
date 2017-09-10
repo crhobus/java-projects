@@ -1,0 +1,672 @@
+/*
+Documento   : style.css
+Disciplina  : Fundamentos do Desenvolvimento Web
+Equipe      : Caio Renan Hobus
+              Daniel Zimmermann
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    background-color: #f4d59e;
+    font-family: arial, verdana;
+    font-size: 14px;
+}
+
+#pagina {
+
+}
+
+#pagina header {
+    margin-top: 50px;
+}
+
+#logo {
+    background-image: url('../img/logo.png');
+    width: 246px;
+    height: 102px;
+    float: left;
+    margin-right: 20px; 
+}
+
+#cabecalho {
+    height: 102px;
+    float: left;
+    width: 900px;
+}
+
+/*  Menu Horizontal Topo */
+
+#menu_horizontal {
+    float: left;
+    height: 50px;
+}
+
+#menu_horizontal nav,
+#menu_horizontal nav ul,
+#menu_horizontal nav li 
+#menu_horizontal nav a {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+    font-family: Helvetica;
+    line-height: 1;
+}
+
+#menu_horizontal nav {
+    width: 690px;
+}
+
+#menu_horizontal nav ul {
+    background: url(../img/pattern.png) top left repeat;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #D6D6D6;
+    -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+#menu_horizontal nav a,
+#menu_horizontal nav a:link,
+#menu_horizontal nav a:visited {
+    padding: 15px 20px;
+    display: block;
+    text-decoration: none;
+    color: #c29669;
+    font: 12px Verdana;
+    border-right: 1px solid #ffffff;
+    font-weight: bold;
+}
+
+#menu_horizontal nav a:hover {
+    color: #586835;
+}
+
+.menu_horizontal {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    list-style:none;
+    border: 0px solid black;
+}
+
+.menu_horizontal > li {
+    float:left;
+    position:relative;
+    box-shadow: rgba(0,0,0,0.2) 0px 1px 2px;
+    overflow: hidden;
+}
+
+.menu_horizontal > li > a:before {
+    display: block;
+    content: '';
+    height: 100%;
+    left: -2px;
+    top: -1px;
+    position: absolute;
+    width: 31px;
+    z-index: 1;
+}
+
+.menu_horizontal > li:hover > a:before {
+    background: url('../img/seta.png') 50% 50% no-repeat;
+}
+
+.menu_horizontal > li > a {
+    font-size: 11px;
+    display:block;
+    line-height: 36px;
+    text-decoration:none;
+    color:#7f7f7f;
+    text-shadow: rgba(0,0,0,0.2) 1px 1px 1px;
+}
+
+.menu_horizontal li a.login:before {
+    background: url('../img/cadeado.png') 50% 50% no-repeat;
+}
+
+.menu_horizontal li:hover a.login:before {
+    background: url('../img/cadeado.png') 50% 50% no-repeat;
+}
+
+.menu_horizontal li a.login > span {
+    padding-left: 5px;
+}
+
+#cadastro_usuario {
+    float: left;
+    text-align: center;
+    margin-left: 35px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.novo_cadastrado {
+
+}
+
+.link_cadastre_se {
+    color: #0000FF;
+}
+
+.link_cadastre_se:hover {
+    color: #FF0000;
+}
+
+#localizar {
+
+}
+
+.campo {
+    background-color: #e4ba70;
+    font-weight: bold;
+    border: 0px;
+    height: 25px;
+}
+
+.campo_pos {
+    margin-top: 15px;
+}
+
+.busca {
+    width: 560px;
+    padding-left: 20px;
+}
+
+.departamento {
+    width: 150px;
+    padding-left: 10px;
+}
+
+.botao {
+    background-color: #e4ba70;
+    font-weight: bold;
+    border: 0px;
+    height: 25px;
+    width: 90px;
+}
+
+.botao_buscar {
+    margin-left: 18px;
+}
+
+#pagina #mid {
+
+}
+
+#pagina #mid #menu {
+    width: 246px;
+    height: 317px;
+    float: left;
+    margin-top: 10px;
+    border:2px #e4ba70 solid; 
+}
+
+/* Tratamento Menu Vertical */ 
+
+#menu_vertical {
+    margin-top: 4px;
+    margin-left: 3px;
+}
+
+#menu_vertical li {
+    list-style: none;
+    margin: 0;
+    border: 0;
+    font-size: 13px;
+    font-family: Helvetica;
+    line-height: 1;
+    background: url(../img/pattern.png) top left repeat;
+
+    width: 200px;
+    height: 35px;
+    margin-left: 20px;
+    margin-top: 8px;
+
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    border-radius:20px;
+}
+
+#menu_vertical a,
+#menu_vertical a:link,
+#menu_vertical a:visited {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    color: #c29669;
+    font: 12px Verdana;
+    border-right: 1px solid #ffffff;
+    font-weight: bold;
+}
+
+#menu_vertical a:hover {
+    color: #586835;
+}
+
+.menu_vertical {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    list-style:none;
+    border: 0px solid black;
+}
+
+.menu_vertical:after {
+    clear: both;
+}
+
+.menu_vertical > li {
+    float:left;
+    position:relative;
+    box-shadow: rgba(0,0,0,0.2) 0px 1px 2px;
+    overflow: hidden;
+}
+
+.menu_vertical > li > a:before {
+    display: block;
+    content: '';
+    height: 100%;
+    left: -2px;
+    top: -1px;
+    position: absolute;
+    width: 31px;
+    z-index: 1;
+}
+
+.menu_vertical > li:hover > a:before {
+    background: url('../img/seta.png') 50% 50% no-repeat;
+}
+
+.menu_vertical > li > a {
+    font-size: 11px;
+    display:block;
+    line-height: 36px;
+    text-decoration: none;
+    color: #7f7f7f;
+    text-shadow: rgba(0,0,0,0.2) 1px 1px 1px;
+}
+
+#pagina #mid #slider {
+    height: 317px;
+    width: 738px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 14px;
+}
+
+#pagina #ofertas {
+
+}
+
+#pagina #ofertas #oferta_esq {
+    width: 950px;
+    height: 400px;
+    float: left;
+}
+
+#pagina #ofertas #oferta_esq #linha_div {
+    background-color: #e4ba70; 
+    width: 950px;
+    height: 20px;
+    float: left;
+    margin-top: 25px;
+}
+
+#pagina #ofertas #oferta_esq #produtos {
+
+}
+
+#pagina #ofertas #oferta_esq #produtos #produto_1 {
+    float: left;
+    margin-right: 20px;
+}
+
+#pagina #ofertas #oferta_esq #produtos #produto_2 {
+    float: left ;
+}
+
+#pagina #ofertas #oferta_esq #produtos #produto_3 {
+    float: right;
+}
+
+.produto {
+    height: 300px;
+    width: 300px;
+    margin-top: 25px;
+    float: left;
+    border:2px #e4ba70 solid;
+}
+
+.titulo_produto {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.foto_produto {
+    padding-top: 20px;
+    padding-left: 10px;
+    float: left;
+    height: 240px;
+    position: relative;
+}
+
+.descricao_produto {
+    padding-top: 20px;
+    padding-right: 10px;
+
+}
+
+.mais_detalhes_produto {
+    padding-top: 10px;
+}
+
+#pagina #ofertas #parceiros {
+    height: 380px;
+    width: 170px;
+    float: left;
+    margin-left: 20px;
+}
+
+#pagina #ofertas #parceiros img {
+    padding-top: 25px;
+}
+
+.arredondado_sombreado {
+    border-radius: 20px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.central {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Tratamento para placeholder */
+
+::-webkit-input-placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+:-moz-placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+:-ms-input-placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+footer #autores {
+    padding: 20px 0px 20px 0px;
+    color: #777777;
+}
+
+.autores_links {
+    font-weight: bold;
+    font-size: 13px;
+    color: #0000FF;
+    text-decoration: none;
+}
+
+.autores_links:hover {
+    color: #FF0000;
+}
+
+/* Tratamento telas de Produto e Cadastro de Usuário */
+
+#borda_central {
+    height: 680px;
+    width: 900px;
+    border: 2px #e4ba70 solid; 
+    float: right;
+    margin-top: 10px;
+}
+
+#detalhe #parceiros {
+    height: 380px;
+    width: 170px;
+    float: left;
+    margin-left: 20px;
+}
+
+#detalhe #parceiros img {
+    padding-top: 25px;
+    margin-left: 20px;
+}
+
+.titulo_sub_pagina {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-left: 70px;
+    text-transform: uppercase;
+    text-align: left;
+    width: 200px;
+}
+
+/* Tratamento Produtos */
+
+.left {
+    float: left;
+}
+
+
+.right {
+    float: right;
+}
+
+.produto_imagem {
+    height: 300px;
+    width: 300px;
+    margin-top: 25px;
+    float: left;
+}
+
+.produto_detalhe {
+    height: 300px;
+    width: 230px;
+    margin-top: 25px;
+    float: left;
+    text-transform: uppercase;
+    text-align: justify;
+}
+
+.produto_lance {
+    height: 300px;
+    width: 250px;
+    margin-top: 25px;
+    float: right;
+}
+
+
+.produto_encerra {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-right: 30px;
+    text-align: right;
+    width: 300px;
+}
+
+.area_texto {
+    width:800px;
+    height:100px;
+    margin-left: 40px;
+    resize:none;
+    background-color: #e4ba70;
+    margin-bottom: 20px;
+}
+
+#botao_lance {
+    background-color: #e4ba70;
+    font-weight: bold;
+    margin-right: 40px;
+    border: 0px;
+    height: 60px;
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: right;
+}
+
+.contador {
+    font-size: 16px;
+    font-weight: bold;
+    padding-right: 30px;
+    margin-top: 5px;
+    height: 40px;
+    width: 250px;
+}
+
+#relogio_contador {
+    width: 160px;
+}
+
+#relogio {
+    margin-left: 30px;
+}
+
+.encerra_em {
+    margin-left: 35px;
+}
+
+.obs_lance {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-left: 55px;
+    text-align: left;
+    width: 200px;
+    margin-top: 20px;
+}
+
+/* Tratamento Cadastro Usuários */
+
+.cadas_usuario_dados {
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.campo_negrito {
+    font-weight: bold;
+}
+
+.tipo_pj_usuario {
+    margin-bottom: 20px;
+}
+
+.espacamento_entre_campos {
+    margin-top: 4px;
+    padding-left: 10px;
+}
+
+.campo_usuario {
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.campo_espacamento {
+    margin-left: 20px;
+}
+
+.label_espacamento_conf_senha {
+    margin-left: 157px;
+}
+
+.label_espacamento_rg {
+    margin-left: 172px;
+}
+
+.label_espacamento_est_civil {
+    margin-left: 166px;
+}
+
+.label_espacamento_celular {
+    margin-left: 64px;
+}
+
+.campo_usuario_maior {
+    width: 385px;
+    margin-bottom: 10px;
+}
+
+.botao_avancar {
+    margin-top: 15px;
+}
+
+.campo_obrigatorio {
+    border: 1px solid #FF0000;
+}
+
+.msg_erro_cadastro {
+    margin-top: 10px;
+}
+
+.msg_erro {
+    color: #FF0000;
+    font-weight: bold;
+}

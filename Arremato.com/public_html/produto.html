@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+Documento   : produto.html
+Disciplina  : Fundamentos do Desenvolvimento Web
+Equipe      : Caio Renan Hobus
+              Daniel Zimmermann
+-->
+<html>
+    <head>
+        <title>Arremato.com - Leilões</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css"> 
+        <script src="js/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="js/script.js"></script>
+        <script src="js/jquery.cycle.all.js"></script>
+        <script type="text/javascript" src="js/jquery.plugin.js"></script> 
+        <script type="text/javascript" src="js/jquery.countdown.js"></script>
+    </head>
+    <body>
+        <div id="pagina">
+
+            <header class="central">
+
+                <a href='index.html' >
+                    <div id="logo"></div>
+                </a>
+
+                <div id="cabecalho">
+                    <div id="menu_horizontal">
+                        <nav>
+                            <ul class="menu_horizontal">
+                                <li><a href='#' >Próximos Leilões</a></li>
+                                <li><a href='#' >Quem Somos</a></li>
+                                <li><a href='#' >Quero Vender</a></li>
+                                <li><a href='#' >Contato</a></li>
+                                <li><a href='#' >Ajuda</a></li>
+                                <li><a href='#' class="login"><span>Login</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div id="cadastro_usuario">
+                        <span class="novo_cadastrado">Não é Cadastrado?</span><br/>
+                        <a href="cadastroUsuario.html" class="link_cadastre_se">Cadastre-se</a>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div id="localizar">
+                        <form action="#" method="post" id="form_busca_no_site" >
+                            <fieldset>
+
+                                <input type="text" name="busca" id="busca" class="busca campo campo_pos arredondado_sombreado" placeholder="O que você procura?">
+
+                                <label>em</label>
+
+                                <select name="departamento" id="departamento" class="departamento campo campo_pos arredondado_sombreado">
+                                    <option value="" selected="selected">Departamento</option>
+                                    <option value="1">Informática</option>
+                                    <option value="2">Eletrônicos</option>
+                                    <option value="3">Telefonia</option>
+                                    <option value="4">Lazer e Esporte</option>
+                                </select>
+
+                                <input type="submit" id="botao_buscar" class="botao botao_buscar arredondado_sombreado" value="Buscar"><br/>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+            </header>
+
+            <div class="clear"></div>
+
+            <div id="mid" class="central">
+                <div id="menu" class="arredondado_sombreado"> 
+                    <nav id='menu_vertical'>
+                        <ul class="menu_vertical">
+                            <li><a href='#'><span>Eletrônicos</span></a></li>
+                            <li><a href='#'><span>Eletrodomésticos</span></a></li>
+                            <li><a href='#'><span>Informática</span></a></li>
+                            <li><a href='#'><span>Telefonia</span></a></li>
+                            <li><a href='#'><span>Lazer e Esporte</span></a></li>
+                            <li><a href='#'><span>Automotivo</span></a></li>
+                            <li><a href='#'><span>Todos Departamentos</span></a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="clear"></div>
+
+                    <section id="detalhe" class="central">
+                        <aside id="parceiros">
+                            <a href="#"><img src="img/parceiro_2.jpg" alt="" title=""></a> 
+                            <a href="#"><img src="img/parceiro_1.png" alt="" title=""></a> 
+                        </aside>
+                    </section>
+                </div>
+
+                <div id="borda_central" class="arredondado_sombreado central">
+
+                    <h2 class="titulo_sub_pagina left"><samp>Placa Mãe ASUS</samp></h2>
+                    <span class="produto_encerra right">Encerra: Qui, 23/Fev/2015 - 09h00</span><br>
+
+                    <div class="clear"></div>
+
+                    <div class="produto_imagem foto_produto"><a href="produto.html"><img src="img/produto_1_grande.png" alt="" title=""></a></div>
+
+                    <div class="produto_detalhe descricao_produto">MB ASUS P/INTEL RAMPAGE III EXTREME 1366 I7 BOX PROTUDO COM AVARIAS, SEM A VERIFICAÇÃO DE DEFEITOS, AUSÊNCIA DE PEÇAS VISIVEIS OU OCULTAS, SEM GARANTIA.
+                        Esta motherboard suporta os mais recentes processadores Intel ® Core ™ i7 no pacote LGA1366 com controlador de memória integrado para suportar 3 canais (6 DIMMs) de memória DDR3. Suporta processadores Intel ® QuickPath Interconnect (QPI) com um bus de sistema de até 6.4 GT / s, e uma largura de banda máxima de até 25,6 GB / s.</div>
+
+                    <form action="#" method="post" id="form_lance" >
+                        <fieldset>
+                            <div class="produto_lance descricao_produto">
+
+                                <span class="produto_encerra right">Lance Inicial: R$ 150,00</span><br/>
+                                <span class="produto_encerra right">Lance Atual R$ 450,00</span><br/>
+
+                                <input type="submit" id="botao_lance" class="arredondado_sombreado" value="DÊ SEU LANCE"><br/>
+
+                                <div class="contador right">
+                                    <div>
+                                        <a href="#" class="left" id="relogio"  ><img src="img/time.png" alt="Termino" title=""></a> 
+                                    </div>
+                                    <div>
+                                        <span class="encerra_em">Encerra em:</span><br/>
+                                        <div id="relogio_contador" class="right" > </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </form>
+
+                    <div class="clear"></div>
+
+                    <span class="obs_lance">Observações</span><br>
+                    <textarea id="obeservacoes" class="area_texto arredondado_sombreado" readonly></textarea><br>
+
+                    <span class="obs_lance">Últimos Lances</span><br>
+                    <textarea id="ultimos_lances" class="area_texto arredondado_sombreado" readonly></textarea>
+
+                </div>
+
+            </div>
+
+            <div class="clear"></div>
+
+            <footer class="central">
+                <div id="autores">
+                    <p>Copyright ©2015. Todos os direitos reservados</p>
+                    <small>Criado por <a href="mailto:danielbnu@gmail.com" class="autores_links">Daniel Zimmermann</a> e <a href="mailto:caiohobus@gmail.com" class="autores_links">Caio Hobus</a>. Para <a href="http://www.furb.br" class="autores_links">Pós Desenvolvimento de Aplicações WEB - Turma 11</a>.</small>
+                </div>
+            </footer>
+
+        </div>    
+    </body>
+</html>

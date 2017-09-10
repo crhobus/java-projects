@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--
+Documento   : index.html
+Disciplina  : Fundamentos do Desenvolvimento Web
+Equipe      : Caio Renan Hobus
+              Daniel Zimmermann
+-->
+<html>
+    <head>
+        <title>Arremato.com - Leilões</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script src="js/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="js/script.js"></script>
+        <script src="js/jquery.cycle.all.js"></script>
+    </head>
+    <body>
+        <div id="pagina">
+
+            <header class="central">
+
+                <a href='index.html' >
+                    <div id="logo"></div>
+                </a>
+
+                <div id="cabecalho">
+                    <div id="menu_horizontal">
+                        <nav>
+                            <ul class="menu_horizontal">
+                                <li><a href='#' >Próximos Leilões</a></li>
+                                <li><a href='#' >Quem Somos</a></li>
+                                <li><a href='#' >Quero Vender</a></li>
+                                <li><a href='#' >Contato</a></li>
+                                <li><a href='#' >Ajuda</a></li>
+                                <li><a href='#' class="login"><span>Login</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div id="cadastro_usuario">
+                        <span class="novo_cadastrado">Não é Cadastrado?</span><br/>
+                        <a href="cadastroUsuario.html" class="link_cadastre_se">Cadastre-se</a>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div id="localizar">
+                        <form action="#" method="post" id="form_busca_no_site" >
+                            <fieldset>
+
+                                <input type="text" name="busca" id="busca" class="busca campo campo_pos arredondado_sombreado" placeholder="O que você procura?">
+
+                                <label>em</label>
+
+                                <select name="departamento" id="departamento" class="departamento campo campo_pos arredondado_sombreado">
+                                    <option value="" selected="selected">Departamento</option>
+                                    <option value="1">Informática</option>
+                                    <option value="2">Eletrônicos</option>
+                                    <option value="3">Telefonia</option>
+                                    <option value="4">Lazer e Esporte</option>
+                                </select>
+
+                                <input type="submit" id="botao_buscar" class="botao botao_buscar arredondado_sombreado" value="Buscar"><br/>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+            </header>
+
+            <div class="clear"></div>
+
+            <div id="mid" class="central">
+                <div id="menu" class="arredondado_sombreado"> 
+                    <nav id='menu_vertical'>
+                        <ul class="menu_vertical">
+                            <li><a href='#'><span>Eletrônicos</span></a></li>
+                            <li><a href='#'><span>Eletrodomésticos</span></a></li>
+                            <li><a href='#'><span>Informática</span></a></li>
+                            <li><a href='#'><span>Telefonia</span></a></li>
+                            <li><a href='#'><span>Lazer e Esporte</span></a></li>
+                            <li><a href='#'><span>Automotivo</span></a></li>
+                            <li><a href='#'><span>Todos Departamentos</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div id="slider"> 
+                    <a href="#"><img src="img/banner_1.jpg" alt="" title=""></a> 
+                    <a href="#"><img src="img/banner_2.jpg" alt="" title=""></a> 
+                    <a href="#"><img src="img/banner_3.jpg" alt="" title=""></a> 
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <section id="ofertas" class="central">
+
+                <div id="oferta_esq">
+
+                    <div id="linha_div" class="arredondado_sombreado"></div>
+
+                    <div id="produtos">
+
+                        <div id="produto_1" class="produto arredondado_sombreado">
+                            <h2 class="titulo_produto"><samp>Placa Mãe ASUS</samp></h2>
+                            <div class="foto_produto"><a href="produto.html"><img src="img/produto_1.png" alt="" title=""></a></div>
+                            <div class="descricao_produto">MB ASUS P/INTEL RAMPAGE III EXTREME 1366 I7 BOX PROTUDO COM AVARIAS, SEM A VERIFICAÇÃO DE DEFEITOS, AUSÊNCIA DE PEÇAS VISIVEIS OU OCULTAS, SEM GARANTIA.</div>
+                            <div class="mais_detalhes_produto"><a href="produto.html">Mais Detalhes...</a></div>
+                        </div> 
+
+                        <div id="produto_2" class="produto arredondado_sombreado">
+                            <h2 class="titulo_produto"><span>SIII Mini Samsung</span></h2>
+                            <div class="foto_produto"><a href="produto.html"><img src="img/produto_2.png" alt="" title=""></a></div>
+                            <div class="descricao_produto">SAMSUNG GALAXY SIII MINI C/ ANDROID 4.1, TELA SUPER AMOLED, DUAL CORE 1GHZ, CÂM 5MP, 8GB - I8190 BRANCO. PRODUTO SEM VERIFICAÇÃO DE DEFEITOS, AUSÊNCIA DE PEÇAS VISÍVEIS OU OCULTAS, SEM GARANTIA</div>
+                            <div class="mais_detalhes_produto"><a href="produto.html">Mais Detalhes...</a></div>
+                        </div>
+
+                        <div id="produto_3" class="produto arredondado_sombreado">
+                            <h2 class="titulo_produto"><samp>Projetor Vivitek</samp></h2>
+                            <div class="foto_produto"><a href="produto.html"><img src="img/produto_3.png" alt="" title=""></a></div>
+                            <div class="descricao_produto">PROJETOR VIVITEK HT-8602 QU CA - H1081 - 9228 COM CONTROLE / CABO. PRODUTO COM AVARIA(S), SEM A VERIFICAÇÃO DE DEFEITOS, AUSÊNCIA DE PEÇAS VISÍVEIS OU OCULTAS, SEM GARANTIA</div>
+                            <div class="mais_detalhes_produto"><a href="produto.html">Mais Detalhes...</a></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <aside id="parceiros">
+                    <a href="#"><img src="img/parceiro_2.jpg" alt="" title=""></a> 
+                    <a href="#"><img src="img/parceiro_1.png" alt="" title=""></a> 
+                </aside>
+
+            </section>
+
+            <div class="clear"></div>
+
+            <footer class="central">
+                <div id="autores">
+                    <p>Copyright ©2015. Todos os direitos reservados</p>
+                    <small>Criado por <a href="mailto:danielbnu@gmail.com" class="autores_links">Daniel Zimmermann</a> e <a href="mailto:caiohobus@gmail.com" class="autores_links">Caio Hobus</a>. Para <a href="http://www.furb.br" class="autores_links">Pós Desenvolvimento de Aplicações WEB - Turma 11</a>.</small>
+                </div>
+            </footer>
+
+        </div>    
+    </body>
+</html>
