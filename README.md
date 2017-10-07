@@ -41,6 +41,18 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Rest JAX-RS 2.0 Jersey 2.25.X
   * JUnit 4.12
 
+* [BuyCarVRaptor](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/BuyCarVRaptor)
+
+  * Maven Project
+  * HTML5
+  * CSS3
+  * JavaScript
+  * JQuery
+  * JSP
+  * JSTL
+  * Framework VRaptor (MVC, CDI)
+  * Oracle DataBase
+
 * [ConceitosJava8](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ConceitosJava8/)
 
   * Exemplos do Java 8, novos recursos da linguagem
