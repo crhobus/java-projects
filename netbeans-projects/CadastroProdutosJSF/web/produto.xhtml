@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="template.xhtml">
+        <ui:define name="body">
+            <h:outputScript target="body">
+                document.getElementById("cadastro:id").readOnly = true;
+            </h:outputScript>
+            <h:form id="cadastro">
+                <h:inputHidden value="#{produtoBean.update}"/>
+
+                <h:panelGrid columns="3">
+                    <h:outputLabel for="id" value="Id:"/>
+                    <h:inputText id="id" label="id" required="true" value="#{produtoBean.produto.id}" class="field"/>
+                    <h:message for="id"/>
+
+                    <h:outputLabel for="codigo" value="Codigo:"/>
+                    <h:inputText id="codigo" label="codigo" required="true" value="#{produtoBean.produto.codigo}" class="field"/>
+                    <h:message for="codigo"/>
+
+                    <h:outputLabel for="nome" value="Nome:"/>
+                    <h:inputText id="nome" label="nome" required="true" value="#{produtoBean.produto.nome}" class="field"/>
+                    <h:message for="nome"/>
+
+                    <h:outputLabel for="categoria" value="Categoria:"/>
+                    <h:selectOneMenu id="categoria" label="categoria" required="true" value="#{produtoBean.produto.categoria}" converter="#{categoriaConverter}" class="lookup">
+                        <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+                        <f:selectItems var="categoria" value="#{categoriaBean.categorias}" itemLabel="#{categoria.nome}" itemValue="#{categoria}"/>
+                    </h:selectOneMenu>
+                    <h:message for="categoria"/>
+
+                    <h:outputLabel for="preco" value="Preço:"/>
+                    <h:inputText id="preco" label="preço" required="true" value="#{produtoBean.produto.preco}" class="field">
+                        <f:convertNumber locale="pt"/>
+                    </h:inputText>
+                    <h:message for="preco"/>
+
+                    <h:outputLabel for="qtEstoque" value="Estoque:"/>
+                    <h:inputText id="qtEstoque" label="estoque" required="true" value="#{produtoBean.produto.qtEstoque}" class="field"/>
+                    <h:message for="qtEstoque"/>
+                </h:panelGrid>
+                <h:commandButton action="#{produtoBean.salvar()}" value="Salvar" class="button"/>
+                <h:commandButton action="#{produtoBean.limpar()}" immediate="true" value="Cancelar" class="button"/>
+            </h:form>
+            <br/>
+            <h:form id="consulta">
+                <h:commandButton value="Gerar Relatório" onclick="this.form.target='_blank'" action="#{produtoBean.gerarRelatorio()}" class="button"/>
+                <h:dataTable var="produto" binding="#{produtoBean.selecionado}" value="#{produtoBean.produtos}" class="tabela" columnClasses="columnIdProduto, columnCodigoProduto, columnNomeProduto, columnCategoriaProduto, columnPrecoProduto, columnEstoqueProduto, columnEditarProduto columnExcluirProduto">
+                    <h:column>
+                        <f:facet name="header">Id</f:facet>
+                        <h:outputText value="#{produto.id}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Código</f:facet>
+                        <h:outputText value="#{produto.codigo}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Nome</f:facet>
+                        <h:outputText value="#{produto.nome}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Categoria</f:facet>
+                        <h:outputText value="#{produto.categoria.nome}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Preço</f:facet>
+                        <h:outputText value="#{produto.preco}">
+                            <f:convertNumber locale="pt"/>
+                        </h:outputText>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Estoque</f:facet>
+                        <h:outputText value="#{produto.qtEstoque}"/>
+                    </h:column>
+                    <h:column>
+                        <h:commandLink action="#{produtoBean.editar()}">
+                            <h:graphicImage library="img" name="edit.png"/>
+                        </h:commandLink>
+                    </h:column>
+                    <h:column>
+                        <h:commandLink action="#{produtoBean.excluir()}">
+                            <h:graphicImage library="img" name="delete.png"/>
+                        </h:commandLink>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
