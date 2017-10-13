@@ -17,7 +17,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 * [AlgoritmosGeometricos](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/AlgoritmosGeometricos/)
 
   * Projeto matéria de faculdade: manipulação de imagens
-    * Libraries: [JAI](https://github.com/crhobus/java-libraries/tree/master/JAI)
+    * Libraries: [JAI](https://github.com/crhobus/java-libraries/tree/master/JAI/)
 
 * [Arquivos](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Arquivos/)
 
@@ -41,7 +41,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Rest JAX-RS 2.0 Jersey 2.25.X
   * JUnit 4.12
 
-* [BuyCarVRaptor](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/BuyCarVRaptor)
+* [BuyCarVRaptor](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/BuyCarVRaptor/)
 
   * Maven Project
   * HTML5
@@ -56,6 +56,20 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 * [ConceitosJava8](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ConceitosJava8/)
 
   * Exemplos do Java 8, novos recursos da linguagem
+
+* [CadastroProdutosJSF](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/CadastroProdutosJSF/)
+
+  * JSF 2.3
+  * EclipseLink 2.7.0 (JPA 2.2)
+  * Weld 2.2.14 (CDI 1.2)
+  * MySQL DataBase
+  * JasperReports 6.4.1
+  * CSS3
+    * Libraries: [JSF 2.3.0](https://github.com/crhobus/java-libraries/tree/master/JSF%202.3.0/)
+	             [EclipseLink 2.7.0 (JPA 2.2)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.7.0%20(JPA%202.2)/)
+	             [Weld 2.2.14 (CDI 1.2)](https://github.com/crhobus/java-libraries/tree/master/Weld%202.2.14%20(CDI%201.2)/)
+				 [MySQL 5.7.17.0 JDBC 5.1.40](https://github.com/crhobus/java-libraries/tree/master/MySQL%205.7.17.0%20JDBC%205.1.40/)
+				 [JasperReports 6.4.1](https://github.com/crhobus/java-libraries/tree/master/JasperReports%206.4.1/)
 
 
 ## Contributors
