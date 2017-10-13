@@ -65,11 +65,11 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * MySQL DataBase
   * JasperReports 6.4.1
   * CSS3
-    * Libraries: [JSF 2.3.0](https://github.com/crhobus/java-libraries/tree/master/JSF%202.3.0/)
-	             [EclipseLink 2.7.0 (JPA 2.2)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.7.0%20(JPA%202.2)/)
-	             [Weld 2.2.14 (CDI 1.2)](https://github.com/crhobus/java-libraries/tree/master/Weld%202.2.14%20(CDI%201.2)/)
-				 [MySQL 5.7.17.0 JDBC 5.1.40](https://github.com/crhobus/java-libraries/tree/master/MySQL%205.7.17.0%20JDBC%205.1.40/)
-				 [JasperReports 6.4.1](https://github.com/crhobus/java-libraries/tree/master/JasperReports%206.4.1/)
+    * Libraries: [JSF 2.3.0](https://github.com/crhobus/java-libraries/tree/master/JSF%202.3.0/)<br>
+	             [EclipseLink 2.7.0 (JPA 2.2)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.7.0%20(JPA%202.2)/)<br>
+	             [Weld 2.2.14 (CDI 1.2)](https://github.com/crhobus/java-libraries/tree/master/Weld%202.2.14%20(CDI%201.2)/)<br>
+				 [MySQL 5.7.17.0 JDBC 5.1.40](https://github.com/crhobus/java-libraries/tree/master/MySQL%205.7.17.0%20JDBC%205.1.40/)<br>
+				 [JasperReports 6.4.1](https://github.com/crhobus/java-libraries/tree/master/JasperReports%206.4.1/)<br>
 
 
 ## Contributors
