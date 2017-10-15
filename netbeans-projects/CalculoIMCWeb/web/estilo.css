@@ -1,0 +1,41 @@
+#centralizado {
+    width: 650px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    background-image: url(Fundo.jpg);
+}
+
+h1  {
+    width: 590px;
+    color: Green;
+    font-size: 1.8em;
+    font-family: Tahoma, Times New Roman, Arial;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+label {
+    font-family: Tahoma, Times New Roman, Arial;
+    font-size: 15px;
+    display: block;
+}
+
+input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 15px 0px;
+    padding: 4px;
+    width: 250px;
+    font-family: Tahoma, Times New Roman, Arial;
+    font-size: 15px;
+}
+
+#btCalcularIMC {
+    width: 120px;
+    height: 35px;
+    font-family: Tahoma, Times New Roman, Arial;
+    font-size: 15px;
+}

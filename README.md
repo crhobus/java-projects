@@ -79,6 +79,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries:
 	  * [GWT 2.6.1](https://github.com/crhobus/java-libraries/tree/master/GWT%202.6.1/)
 
+* [CalculoIMCWeb](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/CalculoIMCWeb/)
+
+  * Java web iniciante, calculo índice de massa corporal 
+
 * [ConceitosJava8](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ConceitosJava8/)
 
   * Exemplos do Java 8, novos recursos da linguagem
