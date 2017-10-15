@@ -54,10 +54,6 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Framework VRaptor (MVC, CDI)
   * Oracle DataBase
 
-* [ConceitosJava8](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ConceitosJava8/)
-
-  * Exemplos do Java 8, novos recursos da linguagem
-
 * [CadastroProdutosJSF](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/CadastroProdutosJSF/)
 
   * JSF 2.3
@@ -72,6 +68,14 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 	  * [Weld 2.2.14 (CDI 1.2)](https://github.com/crhobus/java-libraries/tree/master/Weld%202.2.14%20(CDI%201.2)/)
 	  * [MySQL 5.7.17.0 JDBC 5.1.40](https://github.com/crhobus/java-libraries/tree/master/MySQL%205.7.17.0%20JDBC%205.1.40/)
       * [JasperReports 6.4.1](https://github.com/crhobus/java-libraries/tree/master/JasperReports%206.4.1/)
+
+* [Calculadora](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Calculadora/)
+
+  * Java iniciante, calculadora
+
+* [ConceitosJava8](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ConceitosJava8/)
+
+  * Exemplos do Java 8, novos recursos da linguagem
 
 
 ## Contributors
