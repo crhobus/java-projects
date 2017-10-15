@@ -73,6 +73,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante, calculadora
 
+* [CalculadoraGWT](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/CalculadoraGWT/)
+
+  * Desenvolvido utilizando o framework GWT
+    * Libraries:
+	  * [GWT 2.6.1](https://github.com/crhobus/java-libraries/tree/master/GWT%202.6.1/)
+
 * [ConceitosJava8](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ConceitosJava8/)
 
   * Exemplos do Java 8, novos recursos da linguagem
