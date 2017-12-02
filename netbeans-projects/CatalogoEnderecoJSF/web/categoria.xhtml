@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="template.xhtml">
+        <ui:define name="body">
+            <h:outputScript target="body">
+                document.getElementById("cadastro:codigo").readOnly = true;
+            </h:outputScript>
+            <h:form id="cadastro">
+                <h:inputHidden value="#{categoriaBean.update}"/>
+
+                <h:panelGrid columns="3">
+                    <h:outputLabel for="codigo" value="Código:"/>
+                    <h:inputText id="codigo" label="código" required="true" value="#{categoriaBean.categoria.codigo}"/>
+                    <h:message for="codigo"/>
+
+                    <h:outputLabel for="nome" value="Nome:"/>
+                    <h:inputText id="nome" label="nome" required="true" value="#{categoriaBean.categoria.nome}"/>
+                    <h:message for="nome"/>
+                </h:panelGrid>
+                <h:commandButton action="#{categoriaBean.salvar()}" value="Salvar"/> | 
+                <h:commandButton action="#{categoriaBean.limpar()}" immediate="true" value="Cancelar"/>
+            </h:form>
+            <br/>
+            <h:form id="consulta">
+                <h:dataTable var="categoria" value="#{categoriaBean.categorias}" binding="#{categoriaBean.selecionado}" rowClasses="row-par,row-impar">
+                    <h:column>
+                        <f:facet name="header">Código</f:facet>
+                        <h:outputText value="#{categoria.codigo}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Nome</f:facet>
+                        <h:outputText value="#{categoria.nome}"/>
+                    </h:column>
+                    <h:column>
+                        <h:commandLink action="#{categoriaBean.editar()}">
+                            <h:graphicImage library="img" name="edit.png"/> 
+                        </h:commandLink>
+                        <h:commandLink action="#{categoriaBean.excluir()}">
+                            <h:graphicImage library="img" name="delete.png"/>
+                        </h:commandLink>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
