@@ -95,6 +95,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 	  * [Weld 2.2.14 (CDI 1.2)](https://github.com/crhobus/java-libraries/tree/master/Weld%202.2.14%20(CDI%201.2)/)
 	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
 
+* [ClientHTTP](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ClientHTTP/)
+
+  * Maven Project
+  * Java Swing
+  * HTTP Client
+
 * [ConceitosJava8](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ConceitosJava8/)
 
   * Exemplos do Java 8, novos recursos da linguagem
