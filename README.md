@@ -81,7 +81,19 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
 * [CalculoIMCWeb](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/CalculoIMCWeb/)
 
-  * Java web iniciante, calculo índice de massa corporal 
+  * Java web iniciante, calculo índice de massa corporal
+
+* [CatalogoEnderecoJSF](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/CatalogoEnderecoJSF/)
+
+  * JSF 2.3
+  * EclipseLink 2.7.0 (JPA 2.2)
+  * Weld 2.2.14 (CDI 1.2)
+  * Oracle DataBase
+    * Libraries: 
+	  * [JSF 2.3.0](https://github.com/crhobus/java-libraries/tree/master/JSF%202.3.0/)
+	  * [EclipseLink 2.7.0 (JPA 2.2)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.7.0%20(JPA%202.2)/)
+	  * [Weld 2.2.14 (CDI 1.2)](https://github.com/crhobus/java-libraries/tree/master/Weld%202.2.14%20(CDI%201.2)/)
+	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
 
 * [ConceitosJava8](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ConceitosJava8/)
 
