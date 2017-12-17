@@ -105,6 +105,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante, manipulação de arquivos de texto e binário, utilizando padrões de projeto como DAO e Abstract Factory
 
+* [Colecoes](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Colecoes/)
+
+  * Java iniciante, coleções
+
 * [ConceitosJava8](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ConceitosJava8/)
 
   * Exemplos do Java 8, novos recursos da linguagem
