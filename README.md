@@ -123,6 +123,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante, conta bancária
 
+* [CriacaoPDF](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/CriacaoPDF/)
+
+  * Criação de arquivo PDF
+    * Libraries:
+	  * [Itext 1.02b](https://github.com/crhobus/java-libraries/tree/master/Itext%201.02b/)
+
 
 ## Contributors
 
