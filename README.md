@@ -109,6 +109,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante, coleções
 
+* [ComputacaoGrafica](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ComputacaoGrafica/)
+
+  * Projeto matéria de faculdade: Computação gráfica
+    * Libraries:
+	  * [OpenGL](https://github.com/crhobus/java-libraries/tree/master/OpenGL/)
+
 * [ConceitosJava8](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ConceitosJava8/)
 
   * Exemplos do Java 8, novos recursos da linguagem
