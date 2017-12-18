@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="/mainPages/template/template.xhtml">
+        <ui:define name="titulo">
+            Consulta Bancos::Easy Boleto
+        </ui:define>
+        <ui:define name="arquivocss">
+            <h:outputStylesheet library="css" name="consulta.css"/>
+            <h:outputStylesheet library="css" name="consultaBanco.css"/>
+        </ui:define>
+        <ui:define name="main">
+
+            <h3>Consulta de Bancos</h3>
+
+            <h:form id="consBanco">
+
+                <p:growl id="msg" showDetail="true"/>
+
+                <p:dataTable value="#{bancoBean.bancos}" var="banco" id="consulta" selectionMode="single" rowKey="#{banco.cdBanco}" binding="#{bancoBean.selecionado}" emptyMessage="dados não encontrados" scrollable="true" scrollHeight="620">
+                    <p:column headerText="Código" styleClass="columnCodigo">
+                        <h:outputText value="#{banco.id}"/>
+                    </p:column>
+                    <p:column headerText="DV" styleClass="columnDV">
+                        <h:outputText value="#{banco.dv}"/>
+                    </p:column>
+                    <p:column headerText="Nome" styleClass="columnNome">
+                        <h:outputText value="#{banco.nome}"/>
+                    </p:column>
+                    <p:column styleClass="columAlterar">
+                        <p:commandLink action="#{bancoBean.alterar()}">
+                            <p:graphicImage library="img" name="Editar.png" styleClass="imgAlterar"/>
+                        </p:commandLink>
+                    </p:column>
+                    <p:column styleClass="columExcluir">
+                        <p:commandLink actionListener="#{bancoBean.excluir()}"
+                                       update="consBanco:msg, consulta"
+                                       onclick="if (!confirm('Confirma a exclusão do banco #{banco.nome}?'))
+                                                   return false;">
+                            <p:graphicImage library="img" name="Excluir.png" styleClass="imgExcluir"/>
+                        </p:commandLink>
+                    </p:column>
+                </p:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

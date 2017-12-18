@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="/mainPages/template/template.xhtml">
+        <ui:define name="titulo">
+            Gerar Boleto::Easy Boleto
+        </ui:define>
+        <ui:define name="arquivocss">
+            <h:outputStylesheet library="css" name="cadastro.css"/>
+        </ui:define>
+        <ui:define name="main">
+
+            <h3>Gerar Boleto</h3>
+
+            <h:form id="formBoleto">
+
+                <p:panel id="cadastro" styleClass="pnTransparente">
+
+                    <p:growl showDetail="true" rendered="#{not facesContext.validationFailed}"/>
+
+                    <p:panelGrid columns="3" styleClass="pnForm">
+
+                        <p:outputLabel for="nrBoleto" value="Nro. Boleto:"/>
+                        <p:inputText id="nrBoleto" required="true" value="#{boletoBean.boleto.nrBoleto}" readonly="#{facesContext.renderResponse}"/>
+                        <p:message for="nrBoleto"/>
+
+                        <p:outputLabel for="banco" value="Banco:"/>
+                        <p:autoComplete id="banco" value="#{boletoBean.boleto.banco}" completeMethod="#{bancoBean.getFiltroBancos}" var="banco" itemLabel="#{banco.nome}" itemValue="#{banco}" converter="#{bancoConverter}" forceSelection="true" required="true" emptyMessage="dados não encontrados" placeholder="Pesquisar..."/>
+                        <p:message for="banco"/>
+
+                        <p:outputLabel for="beneficiario" value="Beneficiário:"/>
+                        <p:autoComplete id="beneficiario" value="#{boletoBean.boleto.beneficiario}" completeMethod="#{beneficiarioBean.getFiltroBeneficiarios}" var="beneficiario" itemLabel="#{beneficiario.pessoa.nome.concat(' - ').concat(beneficiario.nrConta)}" itemValue="#{beneficiario}" converter="#{beneficiarioConverter}" forceSelection="true" required="true" emptyMessage="dados não encontrados" placeholder="Pesquisar..."/>
+                        <p:message for="beneficiario"/>
+
+                        <p:outputLabel for="convenioBeneficiario" value="Convênio benef.:"/>
+                        <p:autoComplete id="convenioBeneficiario" value="#{boletoBean.boleto.convenioBeneficiario}" completeMethod="#{convenioBeneficiarioBean.getFiltroConvenioBeneficiarios}" var="convenioBeneficiario" itemLabel="#{convenioBeneficiario.convenio.descricao.concat(' - ').concat(convenioBeneficiario.beneficiario.pessoa.nome)}" itemValue="#{convenioBeneficiario}" converter="#{convenioBeneficiarioConverter}" forceSelection="true" required="true" emptyMessage="dados não encontrados" placeholder="Pesquisar..."/>
+                        <p:message for="convenioBeneficiario"/>
+
+                        <p:outputLabel for="pagador" value="Pagador:"/>
+                        <p:autoComplete id="pagador" value="#{boletoBean.boleto.pagador}" completeMethod="#{pagadorBean.getFiltroPagadores}" var="pagador" itemLabel="#{pagador.pessoa.nome}" itemValue="#{pagador}" converter="#{pagadorConverter}" forceSelection="true" required="true" emptyMessage="dados não encontrados" placeholder="Pesquisar..."/>
+                        <p:message for="pagador"/>
+
+                        <p:outputLabel for="nossoNumero" value="Nosso número:"/>
+                        <p:inputText id="nossoNumero" required="true" value="#{boletoBean.boleto.nossoNumero}" maxlength="20"/>
+                        <p:message for="nossoNumero"/>
+
+                        <p:outputLabel for="especieDocumento" value="Espécie doc.:"/>
+                        <p:autoComplete id="especieDocumento" value="#{boletoBean.boleto.especieDocumento}" completeMethod="#{especieDocumentoBean.getFiltroEspecieDocumentos}" var="especieDocumento" itemLabel="#{especieDocumento.descricao}" itemValue="#{especieDocumento}" converter="#{especieDocumentoConverter}" forceSelection="true" required="true" emptyMessage="dados não encontrados" placeholder="Pesquisar..."/>
+                        <p:message for="especieDocumento"/>
+
+                        <p:outputLabel for="dtEmissao" value="Data emissão:"/>
+                        <p:calendar id="dtEmissao" required="true" value="#{boletoBean.boleto.dtEmissao}" navigator="true" pattern="dd/MM/yyyy"/>
+                        <p:message for="dtEmissao"/>
+
+                        <p:outputLabel for="dtDocumento" value="Data documento:"/>
+                        <p:calendar id="dtDocumento" required="true" value="#{boletoBean.boleto.dtDocumento}" navigator="true" pattern="dd/MM/yyyy"/>
+                        <p:message for="dtDocumento"/>
+
+                        <p:outputLabel for="dtVencimento" value="Data vencimento:"/>
+                        <p:calendar id="dtVencimento" required="true" value="#{boletoBean.boleto.dtVencimento}" navigator="true" pattern="dd/MM/yyyy"/>
+                        <p:message for="dtVencimento"/>
+
+                        <p:outputLabel for="vlBoleto" value="Valor boleto:"/>
+                        <p:inputText id="vlBoleto" required="true" value="#{boletoBean.boleto.vlBoleto}">
+                            <f:convertNumber pattern="###,###,##0.00"/>
+                        </p:inputText>
+                        <p:message for="vlBoleto"/>
+
+                        <p:outputLabel for="vlAbatimento" value="Desconto/Abatimento:"/>
+                        <p:inputText id="vlAbatimento" required="true" value="#{boletoBean.boleto.vlAbatimento}">
+                            <f:convertNumber pattern="###,###,##0.00"/>
+                        </p:inputText>
+                        <p:message for="vlAbatimento"/>
+
+                        <p:outputLabel for="vlMulta" value="Acréscimo/Multa:"/>
+                        <p:inputText id="vlMulta" required="true" value="#{boletoBean.boleto.vlMulta}">
+                            <f:convertNumber pattern="###,###,##0.00"/>
+                        </p:inputText>
+                        <p:message for="vlMulta"/>
+
+                        <p:outputLabel for="mensagem1" value="Mensagem 1:"/>
+                        <p:inputText id="mensagem1" value="#{boletoBean.boleto.mensagem1}" maxlength="60"/>
+                        <p:message for="mensagem1"/>
+
+                        <p:outputLabel for="mensagem2" value="Mensagem 2:"/>
+                        <p:inputText id="mensagem2" value="#{boletoBean.boleto.mensagem2}" maxlength="60"/>
+                        <p:message for="mensagem2"/>
+
+                        <p:outputLabel for="mensagem3" value="Mensagem 3:"/>
+                        <p:inputText id="mensagem3" value="#{boletoBean.boleto.mensagem3}" maxlength="60"/>
+                        <p:message for="mensagem3"/>
+
+                        <p:outputLabel for="mensagem4" value="Mensagem 4:"/>
+                        <p:inputText id="mensagem4" value="#{boletoBean.boleto.mensagem4}" maxlength="60"/>
+                        <p:message for="mensagem4"/>
+
+                    </p:panelGrid>
+
+                </p:panel>
+
+                <br/>
+
+                <p:commandButton actionListener="#{boletoBean.salvar()}" update="cadastro" value="Salvar" styleClass="btSalvar"/>
+                <p:commandButton action="#{boletoBean.gerarBoleto()}" onclick="this.form.target='_blank'" ajax="false" value="Gerar Boleto" styleClass="btGerarBoleto"/>
+                <p:button outcome="/mainPages/boleto/formBoleto" value="Novo" styleClass="btNovo"/>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

@@ -1,0 +1,23 @@
+.columnBanco {
+    width: 21%;
+}
+
+.columnNrConta {
+    width: 10%;
+}
+
+.columnAgencia {
+    width: 7%;
+}
+
+.columnBeneficiario {
+    width: 26%;
+}
+
+.columnCPF {
+    width: 15%;
+}
+
+.columnCNPJ {
+    width: 15%;
+}

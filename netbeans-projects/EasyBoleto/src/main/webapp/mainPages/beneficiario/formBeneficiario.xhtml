@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="/mainPages/template/template.xhtml">
+        <ui:define name="titulo">
+            Cadastro Beneficiário::Easy Boleto
+        </ui:define>
+        <ui:define name="arquivocss">
+            <h:outputStylesheet library="css" name="cadastro.css"/>
+        </ui:define>
+        <ui:define name="main">
+
+            <h3>Cadastro de Beneficiário</h3>
+
+            <h:form id="formBeneficiario">
+
+                <p:panel id="cadastro" styleClass="pnTransparente">
+
+                    <p:growl showDetail="true" rendered="#{not facesContext.validationFailed}"/>
+
+                    <h:inputHidden id="nrSeqPessoa" value="#{beneficiarioBean.beneficiario.pessoa.nrSequencia}"/>
+
+                    <p:panelGrid columns="3" styleClass="pnForm">
+
+                        <p:outputLabel for="nrConta" value="Nr Conta:"/>
+                        <p:inputText id="nrConta" required="true" value="#{beneficiarioBean.beneficiario.nrConta}" readonly="#{facesContext.renderResponse}"/>
+                        <p:message for="nrConta"/>
+
+                        <p:outputLabel for="agencia" value="Agencia:"/>
+                        <p:inputText id="agencia" required="true" value="#{beneficiarioBean.beneficiario.agencia}"/>
+                        <p:message for="agencia"/>
+
+                        <p:outputLabel for="dv" value="DV:"/>
+                        <p:inputText id="dv" required="true" value="#{beneficiarioBean.beneficiario.dv}" maxlength="1"/>
+                        <p:message for="dv"/>
+
+                        <p:outputLabel for="banco" value="Banco:"/>
+                        <p:autoComplete id="banco" value="#{beneficiarioBean.beneficiario.banco}" completeMethod="#{bancoBean.getFiltroBancos}" var="banco" itemLabel="#{banco.nome}" itemValue="#{banco}" converter="#{bancoConverter}" forceSelection="true" required="true" emptyMessage="dados não encontrados"  placeholder="Pesquisar..."/>
+                        <p:message for="banco"/>
+
+                        <p:outputLabel for="nome" value="Nome:"/>
+                        <p:inputText id="nome" required="true" value="#{beneficiarioBean.beneficiario.pessoa.nome}" maxlength="60"/>
+                        <p:message for="nome"/>
+
+                        <p:outputLabel for="tipoPessoa" value="Tipo de Pessoa:"/>
+                        <p:selectOneMenu id="tipoPessoa" required="true" value="#{beneficiarioBean.beneficiario.pessoa.tipoPessoa}" style="width: 200px">
+                            <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+                            <f:selectItem itemLabel="Pessoa Física" itemValue="PF"/>
+                            <f:selectItem itemLabel="Pessoa Jurídica" itemValue="PJ"/>
+                        </p:selectOneMenu>
+                        <p:message for="tipoPessoa"/>
+
+                        <p:outputLabel for="cpf" value="CPF:"/>
+                        <p:inputMask id="cpf" value="#{beneficiarioBean.beneficiario.pessoa.cpf}" mask="999.999.999-99"/>
+                        <p:message for="cpf"/>
+
+                        <p:outputLabel for="cnpj" value="CNPJ:"/>
+                        <p:inputMask id="cnpj" value="#{beneficiarioBean.beneficiario.pessoa.cnpj}" mask="99.999.999/9999-99"/>
+                        <p:message for="cnpj"/>
+
+                        <p:outputLabel for="fone" value="Fone:"/>
+                        <p:inputMask id="fone" value="#{beneficiarioBean.beneficiario.pessoa.fone}" mask="(99) 9999-9999"/>
+                        <p:message for="fone"/>
+
+                        <p:outputLabel for="email" value="E-mail:"/>
+                        <p:inputText id="email" value="#{beneficiarioBean.beneficiario.pessoa.email}" maxlength="50"/>
+                        <p:message for="email"/>
+
+                        <p:outputLabel for="endereco" value="Endereço:"/>
+                        <p:inputText id="endereco" required="true" value="#{beneficiarioBean.beneficiario.pessoa.endereco}" maxlength="60"/>
+                        <p:message for="endereco"/>
+
+                        <p:outputLabel for="bairro" value="Bairro:"/>
+                        <p:inputText id="bairro" required="true" value="#{beneficiarioBean.beneficiario.pessoa.bairro}" maxlength="40"/>
+                        <p:message for="bairro"/>
+
+                        <p:outputLabel for="numero" value="Número:"/>
+                        <p:inputText id="numero" required="true" value="#{beneficiarioBean.beneficiario.pessoa.numero}"/>
+                        <p:message for="numero"/>
+
+                        <p:outputLabel for="complemento" value="Complemento:"/>
+                        <p:inputText id="complemento" required="true" value="#{beneficiarioBean.beneficiario.pessoa.complemento}" maxlength="15"/>
+                        <p:message for="complemento"/>
+
+                        <p:outputLabel for="cep" value="CEP:"/>
+                        <p:inputMask id="cep" required="true" value="#{beneficiarioBean.beneficiario.pessoa.cep}" mask="99999-999"/>
+                        <p:message for="cep"/>
+
+                        <p:outputLabel for="cidade" value="Cidade:"/>
+                        <p:inputText id="cidade" required="true" value="#{beneficiarioBean.beneficiario.pessoa.cidade}" maxlength="40"/>
+                        <p:message for="cidade"/>
+
+                        <p:outputLabel for="uf" value="UF:"/>
+                        <p:inputText id="uf" required="true" value="#{beneficiarioBean.beneficiario.pessoa.uf}" maxlength="2"/>
+                        <p:message for="uf"/>
+
+                    </p:panelGrid>
+
+                </p:panel>
+
+                <br/>
+
+                <p:commandButton actionListener="#{beneficiarioBean.salvar()}" update="cadastro" value="Salvar" styleClass="btSalvar"/>
+                <p:button outcome="/mainPages/beneficiario/formBeneficiario" value="Novo" styleClass="btNovo"/>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

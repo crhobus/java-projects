@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="/mainPages/template/template.xhtml">
+        <ui:define name="titulo">
+            Cadastro Convênio Beneficiário::Easy Boleto
+        </ui:define>
+        <ui:define name="arquivocss">
+            <h:outputStylesheet library="css" name="cadastro.css"/>
+        </ui:define>
+        <ui:define name="main">
+
+            <h3>Cadastro de Convênio Beneficiário</h3>
+
+            <h:form id="formConvenioBeneficiario">
+
+                <p:panel id="cadastro" styleClass="pnTransparente">
+
+                    <p:growl showDetail="true" rendered="#{not facesContext.validationFailed}"/>
+
+                    <h:inputHidden id="nrSequencia" value="#{convenioBeneficiarioBean.convenioBeneficiario.nrSequencia}"/>
+
+                    <p:panelGrid columns="3" styleClass="pnForm">
+
+                        <p:outputLabel for="banco" value="Banco:"/>
+                        <p:autoComplete id="banco" value="#{convenioBeneficiarioBean.convenioBeneficiario.banco}" completeMethod="#{bancoBean.getFiltroBancos}" var="banco" itemLabel="#{banco.nome}" itemValue="#{banco}" converter="#{bancoConverter}" forceSelection="true" required="true" emptyMessage="dados não encontrados" placeholder="Pesquisar..."/>
+                        <p:message for="banco"/>
+
+                        <p:outputLabel for="convenio" value="Convênio:"/>
+                        <p:autoComplete id="convenio" value="#{convenioBeneficiarioBean.convenioBeneficiario.convenio}" completeMethod="#{convenioBean.getFiltroConvenios}" var="convenio" itemLabel="#{convenio.descricao}" itemValue="#{convenio}" converter="#{convenioConverter}" forceSelection="true" required="true" emptyMessage="dados não encontrados" placeholder="Pesquisar..."/>
+                        <p:message for="convenio"/>
+
+                        <p:outputLabel for="beneficiario" value="Beneficiário:"/>
+                        <p:autoComplete id="beneficiario" value="#{convenioBeneficiarioBean.convenioBeneficiario.beneficiario}" completeMethod="#{beneficiarioBean.getFiltroBeneficiarios}" var="beneficiario" itemLabel="#{beneficiario.pessoa.nome}" itemValue="#{beneficiario}" converter="#{beneficiarioConverter}" forceSelection="true" required="true" emptyMessage="dados não encontrados" placeholder="Pesquisar..."/>
+                        <p:message for="beneficiario"/>
+
+                    </p:panelGrid>
+
+                </p:panel>
+
+                <br/>
+
+                <p:commandButton actionListener="#{convenioBeneficiarioBean.salvar()}" update="cadastro" value="Salvar" styleClass="btSalvar"/>
+                <p:button outcome="/mainPages/convenioBeneficiario/formConvenioBeneficiario" value="Novo" styleClass="btNovo"/>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

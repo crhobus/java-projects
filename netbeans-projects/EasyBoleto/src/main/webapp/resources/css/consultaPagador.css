@@ -1,0 +1,19 @@
+.columnBanco {
+    width: 20%;
+}
+
+.columnBeneficiario {
+    width: 22%;
+}
+
+.columnPagador {
+    width: 22%;
+}
+
+.columnCPF {
+    width: 15%;
+}
+
+.columnCNPJ {
+    width: 15%;
+}

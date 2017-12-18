@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title><ui:insert name="titulo">Easy Boleto</ui:insert></title>
+        <h:outputStylesheet library="css" name="main.css"/>
+        <ui:insert name="arquivocss"/>
+    </h:head>
+    <h:body>
+        <p:panel styleClass="pnTransparente">
+
+            <f:facet name="header">
+                <h:outputText value="Bem Vindo"/>
+            </f:facet>
+
+            <p:panel styleClass="pnTransparente">
+
+                <p:panel styleClass="pnMenu pnTransparente">
+                    <h:form id="formMenu">
+                        <p:menu>
+                            <p:submenu label="Principal">
+                                <p:menuitem value="Home" outcome="/index" icon="ui-icon-arrowrefresh-1-w"/>
+                            </p:submenu>
+                            <p:submenu label="Banco">
+                                <p:menuitem value="Consulta" outcome="/mainPages/banco/consBanco" icon="ui-icon-document"/>
+                                <p:menuitem value="Cadastro" outcome="/mainPages/banco/formBanco" icon="ui-icon-disk"/>
+                            </p:submenu>
+                            <p:submenu label="Convênio">
+                                <p:menuitem value="Consulta" outcome="/mainPages/convenio/consConvenio" icon="ui-icon-document"/>
+                                <p:menuitem value="Cadastro" outcome="/mainPages/convenio/formConvenio" icon="ui-icon-disk"/>
+                            </p:submenu>
+                            <p:submenu label="Espécie Documento">
+                                <p:menuitem value="Consulta" outcome="/mainPages/especieDocumento/consEspecieDocumento" icon="ui-icon-document"/>
+                                <p:menuitem value="Cadastro" outcome="/mainPages/especieDocumento/formEspecieDocumento" icon="ui-icon-disk"/>
+                            </p:submenu>
+                            <p:submenu label="Beneficiário">
+                                <p:menuitem value="Consulta" outcome="/mainPages/beneficiario/consBeneficiario" icon="ui-icon-document"/>
+                                <p:menuitem value="Cadastro" outcome="/mainPages/beneficiario/formBeneficiario" icon="ui-icon-disk"/>
+                            </p:submenu>
+                            <p:submenu label="Convênio Beneficiário">
+                                <p:menuitem value="Consulta" outcome="/mainPages/convenioBeneficiario/consConvenioBeneficiario" icon="ui-icon-document"/>
+                                <p:menuitem value="Cadastro" outcome="/mainPages/convenioBeneficiario/formConvenioBeneficiario" icon="ui-icon-disk"/>
+                            </p:submenu>
+                            <p:submenu label="Pagador">
+                                <p:menuitem value="Consulta" outcome="/mainPages/pagador/consPagador" icon="ui-icon-document"/>
+                                <p:menuitem value="Cadastro" outcome="/mainPages/pagador/formPagador" icon="ui-icon-disk"/>
+                            </p:submenu>
+                            <p:submenu label="Boleto">
+                                <p:menuitem value="Consulta" outcome="/mainPages/boleto/consBoleto" icon="ui-icon-document"/>
+                                <p:menuitem value="Gerar" outcome="/mainPages/boleto/formBoleto" icon="ui-icon-disk"/>
+                            </p:submenu>
+                        </p:menu>
+                    </h:form>
+                </p:panel>
+
+                <p:panel styleClass="pnMain pnTransparente">
+                    <ui:insert name="main"/>
+                </p:panel>
+
+                <p:panel styleClass="clear pnTransparente"></p:panel>
+
+            </p:panel>
+
+            <f:facet name="footer">
+                <h:outputText value="Easy Boleto 1.0" styleClass="texto-rodape"/>
+            </f:facet>
+
+        </p:panel>
+
+    </h:body>
+</html>
+

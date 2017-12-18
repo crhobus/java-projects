@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="/mainPages/template/template.xhtml">
+        <ui:define name="titulo">
+            Consulta Convênios::Easy Boleto
+        </ui:define>
+        <ui:define name="arquivocss">
+            <h:outputStylesheet library="css" name="consulta.css"/>
+            <h:outputStylesheet library="css" name="consultaConvenio.css"/>
+        </ui:define>
+        <ui:define name="main">
+
+            <h3>Consulta de Convênios</h3>
+
+            <h:form id="consConvenio">
+
+                <p:growl id="msg" showDetail="true"/>
+
+                <p:dataTable value="#{convenioBean.convenios}" var="convenio" id="consulta" selectionMode="single" rowKey="#{convenio.cdConvenio}" binding="#{convenioBean.selecionado}" emptyMessage="dados não encontrados" scrollable="true" scrollHeight="620">
+                    <p:column headerText="Código" styleClass="columnCodigo">
+                        <h:outputText value="#{convenio.cdConvenio}"/>
+                    </p:column>
+                    <p:column headerText="Descrição" styleClass="columnDescricao">
+                        <h:outputText value="#{convenio.descricao}"/>
+                    </p:column>
+                    <p:column headerText="Carteira" styleClass="columnCarteira">
+                        <h:outputText value="#{convenio.carteira}"/>
+                    </p:column>
+<!--                    <p:column headerText="Banco" styleClass="columnBanco">
+                        <h:outputText value="#{convenio.banco.nome}"/>
+                    </p:column>-->
+                    <p:column styleClass="columAlterar">
+                        <p:commandLink action="#{convenioBean.alterar()}">
+                            <p:graphicImage library="img" name="Editar.png" styleClass="imgAlterar"/>
+                        </p:commandLink>
+                    </p:column>
+                    <p:column styleClass="columExcluir">
+                        <p:commandLink actionListener="#{convenioBean.excluir()}"
+                                       update="consConvenio:msg, consulta"
+                                       onclick="if (!confirm('Confirma a exclusão do convênio #{convenio.descricao}?'))
+                                                   return false;">
+                            <p:graphicImage library="img" name="Excluir.png" styleClass="imgExcluir"/>
+                        </p:commandLink>
+                    </p:column>
+                </p:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

@@ -1,0 +1,20 @@
+.pnForm tr, .pnForm td {
+    border: none !important;
+    background: transparent !important;
+}
+
+.btSalvar {
+    width: 75px;
+}
+
+.btNovo {
+    margin-left: 5px;
+    width: 75px;
+}
+
+/*boleto*/
+
+.btGerarBoleto {
+    margin-left: 5px;
+    width: 115px;
+}

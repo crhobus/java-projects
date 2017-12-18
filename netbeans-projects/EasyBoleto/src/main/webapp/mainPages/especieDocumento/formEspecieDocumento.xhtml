@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="/mainPages/template/template.xhtml">
+        <ui:define name="titulo">
+            Cadastro Espécie Documento::Easy Boleto
+        </ui:define>
+        <ui:define name="arquivocss">
+            <h:outputStylesheet library="css" name="cadastro.css"/>
+        </ui:define>
+        <ui:define name="main">
+
+            <h3>Cadastro de Espécie Documento</h3>
+
+            <h:form id="formEspecieDocumento">
+
+                <p:panel id="cadastro" styleClass="pnTransparente">
+
+                    <p:growl showDetail="true" rendered="#{not facesContext.validationFailed}"/>
+
+                    <h:inputHidden id="nrSequencia" value="#{especieDocumentoBean.especieDocumento.nrSequencia}"/>
+
+                    <p:panelGrid columns="3" styleClass="pnForm">
+
+                        <p:outputLabel for="codigo" value="Código:"/>
+                        <p:inputText id="codigo" required="true" value="#{especieDocumentoBean.especieDocumento.codigo}" maxlength="2"/>
+                        <p:message for="codigo"/>
+
+                        <p:outputLabel for="descricao" value="Descrição:"/>
+                        <p:inputText id="descricao" required="true" value="#{especieDocumentoBean.especieDocumento.descricao}" maxlength="60"/>
+                        <p:message for="descricao"/>
+
+                    </p:panelGrid>
+
+                </p:panel>
+
+                <br/>
+
+                <p:commandButton actionListener="#{especieDocumentoBean.salvar()}" update="cadastro" value="Salvar" styleClass="btSalvar"/>
+                <p:button outcome="/mainPages/especieDocumento/formEspecieDocumento" value="Novo" styleClass="btNovo"/>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

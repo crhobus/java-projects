@@ -1,0 +1,9 @@
+.imagem {
+    background-image: url(../resources/img/boleto.png);
+    background-repeat: no-repeat;
+    width: 880px;
+    height: 571px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

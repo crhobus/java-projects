@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="/mainPages/template/template.xhtml">
+        <ui:define name="titulo">
+            Cadastro Convênio::Easy Boleto
+        </ui:define>
+        <ui:define name="arquivocss">
+            <h:outputStylesheet library="css" name="cadastro.css"/>
+        </ui:define>
+        <ui:define name="main">
+
+            <h3>Cadastro de Convênio</h3>
+
+            <h:form id="formConvenio">
+
+                <p:panel id="cadastro" styleClass="pnTransparente">
+
+                    <p:growl showDetail="true" rendered="#{not facesContext.validationFailed}"/>
+
+                    <p:panelGrid columns="3" styleClass="pnForm">
+
+                        <p:outputLabel for="cdConvenio" value="Código:"/>
+                        <p:inputText id="cdConvenio" required="true" value="#{convenioBean.convenio.cdConvenio}" readonly="#{facesContext.renderResponse}"/>
+                        <p:message for="cdConvenio"/>
+
+                        <p:outputLabel for="descricao" value="Descrição:"/>
+                        <p:inputText id="descricao" required="true" value="#{convenioBean.convenio.descricao}" maxlength="50"/>
+                        <p:message for="descricao"/>
+
+                        <p:outputLabel for="carteira" value="Carteira:"/>
+                        <p:inputText id="carteira" required="true" value="#{convenioBean.convenio.carteira}"/>
+                        <p:message for="carteira"/>
+
+                        <p:outputLabel for="banco" value="Banco:"/>
+                        <p:autoComplete id="banco" value="#{convenioBean.convenio.banco}" completeMethod="#{bancoBean.getFiltroBancos}" var="banco" itemLabel="#{banco.nome}" itemValue="#{banco}" converter="#{bancoConverter}" forceSelection="true" required="true" emptyMessage="dados não encontrados" placeholder="Pesquisar..."/>
+                        <p:message for="banco"/>
+
+                    </p:panelGrid>
+
+                </p:panel>
+
+                <br/>
+
+                <p:commandButton actionListener="#{convenioBean.salvar()}" update="cadastro" value="Salvar" styleClass="btSalvar"/>
+                <p:button outcome="/mainPages/convenio/formConvenio" value="Novo" styleClass="btNovo"/>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

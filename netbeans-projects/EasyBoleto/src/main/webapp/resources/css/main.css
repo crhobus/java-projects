@@ -1,0 +1,43 @@
+body {
+    background-image: linear-gradient(to bottom, #FFFFFF, #363636);
+}
+
+.ui-widget {
+    font-size: 15px;
+}
+
+.ui-panel .ui-panel-titlebar {
+    text-align: right;
+}
+
+.ui-panel .ui-panel-footer {
+    text-align: center !important;
+    background: transparent;
+}
+
+.ui-panel-content {
+    padding: 0px 0px 0px 0px !important;
+}
+
+.pnTransparente {
+    background: transparent;
+    border: none;
+}
+
+.pnMenu {
+    float: left;
+}
+
+.pnMain {
+    margin-left: 219px;
+}
+
+.clear {
+    clear: both;
+}
+
+.texto-rodape {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}

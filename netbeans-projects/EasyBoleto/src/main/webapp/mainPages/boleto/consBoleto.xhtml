@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="/mainPages/template/template.xhtml">
+        <ui:define name="titulo">
+            Consulta Boletos::Easy Boleto
+        </ui:define>
+        <ui:define name="arquivocss">
+            <h:outputStylesheet library="css" name="consulta.css"/>
+            <h:outputStylesheet library="css" name="consultaBoleto.css"/>
+        </ui:define>
+        <ui:define name="main">
+
+            <h3>Consulta de Boletos</h3>
+
+            <h:form id="consBoleto">
+
+                <p:growl id="msg" showDetail="true"/>
+
+                <p:dataTable value="#{boletoBean.boletos}" var="boleto" id="consulta" selectionMode="single" rowKey="#{boleto.nrBoleto}" binding="#{boletoBean.selecionado}" emptyMessage="dados não encontrados" scrollable="true" scrollHeight="620">
+                    <p:column headerText="Nro. Boleto" styleClass="columnNrBoleto">
+                        <h:outputText value="#{boleto.nrBoleto}"/>
+                    </p:column>
+                    <p:column headerText="Banco" styleClass="columnBanco">
+                        <h:outputText value="#{boleto.banco.nome}"/>
+                    </p:column>
+                    <p:column headerText="Beneficiário" styleClass="columnBeneficiario">
+                        <h:outputText value="#{boleto.beneficiario.pessoa.nome}"/>
+                    </p:column>
+                    <p:column headerText="Pagador" styleClass="columnPagador">
+                        <h:outputText value="#{boleto.pagador.pessoa.nome}"/>
+                    </p:column>
+                    <p:column headerText="Data Emissão" styleClass="columnDtEmissao">
+                        <h:outputText value="#{boleto.dtEmissao}">
+                            <f:convertDateTime pattern="dd/MM/yyyy"/>
+                        </h:outputText>
+                    </p:column>
+                    <p:column headerText="Valor boleto" styleClass="columnVlBoleto">
+                        <h:outputText value="#{boleto.vlBoleto}">
+                            <f:convertNumber pattern="###,###,##0.00"/>
+                        </h:outputText>
+                    </p:column>
+                    <p:column headerText="Data vencimento" styleClass="columnDtVencimento">
+                        <h:outputText value="#{boleto.dtVencimento}">
+                            <f:convertDateTime pattern="dd/MM/yyyy"/>
+                        </h:outputText>
+                    </p:column>
+                    <p:column styleClass="columAlterar">
+                        <p:commandLink action="#{boletoBean.alterar()}">
+                            <p:graphicImage library="img" name="Editar.png" styleClass="imgAlterar"/>
+                        </p:commandLink>
+                    </p:column>
+                    <p:column styleClass="columExcluir">
+                        <p:commandLink actionListener="#{boletoBean.excluir()}"
+                                       update="consBoleto:msg, consulta"
+                                       onclick="if (!confirm('Confirma a exclusão do botelo #{boleto.nrBoleto}?'))
+                                                   return false;">
+                            <p:graphicImage library="img" name="Excluir.png" styleClass="imgExcluir"/>
+                        </p:commandLink>
+                    </p:column>
+                </p:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

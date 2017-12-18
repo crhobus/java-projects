@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="/mainPages/template/template.xhtml">
+        <ui:define name="titulo">
+            Consulta Beneficiários::Easy Boleto
+        </ui:define>
+        <ui:define name="arquivocss">
+            <h:outputStylesheet library="css" name="consulta.css"/>
+            <h:outputStylesheet library="css" name="consultaBeneficiario.css"/>
+        </ui:define>
+        <ui:define name="main">
+
+            <h3>Consulta de Beneficiários</h3>
+
+            <h:form id="consBeneficiario">
+
+                <p:growl id="msg" showDetail="true"/>
+
+                <p:dataTable value="#{beneficiarioBean.beneficiarios}" var="beneficiario" id="consulta" selectionMode="single" rowKey="#{beneficiario.nrConta}" binding="#{beneficiarioBean.selecionado}" emptyMessage="dados não encontrados" scrollable="true" scrollHeight="620">
+                    <p:column headerText="Banco" styleClass="columnBanco">
+                        <h:outputText value="#{beneficiario.banco.nome}"/>
+                    </p:column>
+                    <p:column headerText="Nro. conta" styleClass="columnNrConta">
+                        <h:outputText value="#{beneficiario.nrConta}"/>
+                    </p:column>
+                    <p:column headerText="Agência" styleClass="columnAgencia">
+                        <h:outputText value="#{beneficiario.agencia}"/>
+                    </p:column>
+                    <p:column headerText="Beneficiário" styleClass="columnBeneficiario">
+                        <h:outputText value="#{beneficiario.pessoa.nome}"/>
+                    </p:column>
+                    <p:column headerText="CPF" styleClass="columnCPF">
+                        <h:outputText value="#{beneficiario.pessoa.cpf}"/>
+                    </p:column>
+                    <p:column headerText="CNPJ" styleClass="columnCNPJ">
+                        <h:outputText value="#{beneficiario.pessoa.cnpj}"/>
+                    </p:column>
+                    <p:column styleClass="columAlterar">
+                        <p:commandLink action="#{beneficiarioBean.alterar()}">
+                            <p:graphicImage library="img" name="Editar.png" styleClass="imgAlterar"/>
+                        </p:commandLink>
+                    </p:column>
+                    <p:column styleClass="columExcluir">
+                        <p:commandLink actionListener="#{beneficiarioBean.excluir()}"
+                                       update="consBeneficiario:msg, consulta"
+                                       onclick="if (!confirm('Confirma a exclusão do beneficiário #{beneficiario.pessoa.nome}?'))
+                                                   return false;">
+                            <p:graphicImage library="img" name="Excluir.png" styleClass="imgExcluir"/>
+                        </p:commandLink>
+                    </p:column>
+                </p:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

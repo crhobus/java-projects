@@ -1,0 +1,27 @@
+.columnNrBoleto {
+    width: 10%;
+}
+
+.columnBanco {
+    width: 15%;
+}
+
+.columnBeneficiario {
+    width: 17%;
+}
+
+.columnPagador {
+    width: 17%;
+}
+
+.columnDtEmissao {
+    width: 12%;
+}
+
+.columnVlBoleto {
+    width: 10%;
+}
+
+.columnDtVencimento {
+    width: 13%;
+}
