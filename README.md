@@ -57,14 +57,14 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 * [CadastroProdutosJSF](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/CadastroProdutosJSF/)
 
   * JSF 2.3
-  * EclipseLink 2.7.0 (JPA 2.2)
+  * EclipseLink 2.5 (JPA 2.1)
   * Weld 2.2.14 (CDI 1.2)
   * MySQL DataBase
   * JasperReports 6.4.1
   * CSS3
     * Libraries: 
 	  * [JSF 2.3.0](https://github.com/crhobus/java-libraries/tree/master/JSF%202.3.0/)
-	  * [EclipseLink 2.7.0 (JPA 2.2)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.7.0%20(JPA%202.2)/)
+	  * [EclipseLink 2.5 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.5%20(JPA%202.1)/)
 	  * [Weld 2.2.14 (CDI 1.2)](https://github.com/crhobus/java-libraries/tree/master/Weld%202.2.14%20(CDI%201.2)/)
 	  * [MySQL 5.7.17.0 JDBC 5.1.40](https://github.com/crhobus/java-libraries/tree/master/MySQL%205.7.17.0%20JDBC%205.1.40/)
       * [JasperReports 6.4.1](https://github.com/crhobus/java-libraries/tree/master/JasperReports%206.4.1/)
@@ -86,12 +86,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 * [CatalogoEnderecoJSF](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/CatalogoEnderecoJSF/)
 
   * JSF 2.3
-  * EclipseLink 2.7.0 (JPA 2.2)
+  * EclipseLink 2.5 (JPA 2.1)
   * Weld 2.2.14 (CDI 1.2)
   * Oracle DataBase
     * Libraries: 
 	  * [JSF 2.3.0](https://github.com/crhobus/java-libraries/tree/master/JSF%202.3.0/)
-	  * [EclipseLink 2.7.0 (JPA 2.2)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.7.0%20(JPA%202.2)/)
+	  * [EclipseLink 2.5 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.5%20(JPA%202.1)/)
 	  * [Weld 2.2.14 (CDI 1.2)](https://github.com/crhobus/java-libraries/tree/master/Weld%202.2.14%20(CDI%201.2)/)
 	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
 
@@ -157,6 +157,14 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 * [Exe1BancoDadosII](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Exe1BancoDadosII/)
 
   * Projeto matéria de faculdade: TableSpace em arquivo, manipulação de dados
+
+* [ExemploHibernateProdutos](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExemploHibernateProdutos/)
+
+  * Hibernate 4.3 (JPA 2.1)
+  * Oracle DataBase
+    * Libraries: 
+	  * [Hibernate 4.3 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/Hibernate%204.3%20(JPA%202.1)/)
+	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
 
 
 ## Contributors
