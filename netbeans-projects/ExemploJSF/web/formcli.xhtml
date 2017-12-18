@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Formulário de cliente</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputLabel value="Nome:" for="nome" />
+                <h:inputText id="nome" value="#{clicad.cliente.nome}" required="true" />
+                <h:message for="nome" />
+
+                <h:outputLabel value="Telefone:" for="telefone" />
+                <h:inputText id="telefone" value="#{clicad.cliente.telefone}" required="true" >
+                    <f:validateLength minimum="8"/>
+                </h:inputText>
+                <h:message for="telefone" />
+
+                <h:outputLabel value="Celular" for="celular" />
+                <h:inputText id="celular" value="#{clicad.cliente.celular}"/>
+                <h:message for="telefone" />
+
+            </h:panelGrid>
+
+            <h:commandButton value="Salvar" action="#{clicad.salvar()}"/>
+
+        </h:form>
+    </h:body>
+</html>
