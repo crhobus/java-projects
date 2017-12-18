@@ -133,6 +133,23 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Gerenciador de download
 
+* [EasyBoleto](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/EasyBoleto/)
+
+  * Maven Project
+  * HTML5
+  * CSS3
+  * JSF 2.2.7
+  * PrimeFaces 5.2
+  * PrimeFaces themes bootstrap 1.0.10
+  * Weld 2.2.14 (CDI 1.2)
+  * Hibernate 4.3.10 (JPA 2.1)
+  * Jandex 1.2.4
+  * JasperReports 6.1.0
+  * Barbecue 1.5
+  * Base64Coder
+  * MySQL DataBase
+  * Segurança - Hash, Distribuição de chaves, Criptografia simétrica, Criptografia assimétrica, assinatura digital e Certificado Digital.
+
 
 ## Contributors
 
