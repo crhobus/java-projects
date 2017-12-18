@@ -129,6 +129,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries:
 	  * [Itext 1.02b](https://github.com/crhobus/java-libraries/tree/master/Itext%201.02b/)
 
+* [DownloadManager](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/DownloadManager/)
+
+  * Gerenciador de download
+
 
 ## Contributors
 
