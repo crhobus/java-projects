@@ -148,7 +148,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Barbecue 1.5
   * Base64Coder
   * MySQL DataBase
-  * Segurança - Hash, Distribuição de chaves, Criptografia simétrica, Criptografia assimétrica, assinatura digital e Certificado Digital.
+  * Segurança - Hash, Distribuição de chaves, Criptografia simétrica, Criptografia assimétrica, assinatura digital e Certificado Digital
 
 * [EstruturaDados](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/EstruturaDados/)
 
@@ -156,7 +156,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
 * [Exe1BancoDadosII](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Exe1BancoDadosII/)
 
-  * Projeto matéria de faculdade: TableSpace em arquivo, manipulação de dados.
+  * Projeto matéria de faculdade: TableSpace em arquivo, manipulação de dados
 
 
 ## Contributors
