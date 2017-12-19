@@ -306,6 +306,13 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante, generics
 
+* [HTML5ApplicationWeb](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/HTML5ApplicationWeb/)
+
+  * HTML5
+  * CSS3
+  * JavaScript
+  * jQuery
+
 
 ## Contributors
 
