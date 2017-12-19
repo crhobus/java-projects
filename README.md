@@ -198,6 +198,13 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante, orientação a objetos
 
+* [ExercicioResponsivoHTML5Web](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExercicioResponsivoHTML5Web/)
+
+  * HTML5
+  * CSS3
+  * JavaScript
+  * jQuery
+
 
 ## Contributors
 
