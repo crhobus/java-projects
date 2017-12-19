@@ -294,6 +294,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
 
+* [ExeThreadSynchronized](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExeThreadSynchronized/)
+
+  * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
+
 
 ## Contributors
 
