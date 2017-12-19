@@ -178,6 +178,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries:
 	  * [Jomp](https://github.com/crhobus/java-libraries/tree/master/Jomp/)
 
+* [ExeOMP](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExeOMP/)
+
+  * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
+    * Libraries:
+	  * [Jomp](https://github.com/crhobus/java-libraries/tree/master/Jomp/)
+
 
 ## Contributors
 
