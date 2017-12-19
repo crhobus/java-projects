@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Cadastro</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="3">
+
+                <h:outputLabel value="Nome:" />
+                <h:inputText id="nome" value="#{clicad.cliente.nome}" required="true" />
+                <h:message for="nome" />
+
+                <h:outputText value="Sexo:"/>
+                <h:selectOneRadio value="#{clicad.cliente.masc}">
+                    <f:selectItem itemLabel="Masculino" itemValue="true"/>
+                    <f:selectItem itemLabel="Feminino" itemValue="false"/>
+                </h:selectOneRadio>
+                <h:outputText/>
+
+                <h:outputText value="Nascimento:"/>
+                <h:inputText id="nasc" value="#{clicad.cliente.nascimento}">
+                    <f:convertDateTime pattern="dd/MM/yyyy"/>
+                </h:inputText>
+                <h:message for="nasc"/>
+
+                <h:outputText value="E-mail:"/>
+                <h:inputText id="mail" value="#{clicad.cliente.email}" required="true"/>
+                <h:message for="mail"/>
+
+                <h:outputText value="Escolaridade:"/>
+                <h:selectOneMenu value="#{clicad.cliente.escolaridade}">
+                    <f:selectItem itemLabel="Fundamental" itemValue="f"/>
+                    <f:selectItem itemLabel="Médio" itemValue="m"/>
+                    <f:selectItem itemLabel="Superior" itemValue="s"/>
+                </h:selectOneMenu>
+                <h:outputText/>
+
+            </h:panelGrid>
+
+            <h:commandButton value="Salvar" action="#{clicad.salvar}"/>
+
+        </h:form>
+    </h:body>
+</html>
