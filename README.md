@@ -286,6 +286,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
 
+* [ExeThreadLock2](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExeThreadLock2/)
+
+  * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
+
 
 ## Contributors
 
