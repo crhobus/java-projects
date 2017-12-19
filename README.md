@@ -264,6 +264,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante, cálculo da média
 
+* [ExerSlideLogAlg](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExerSlideLogAlg/)
+
+  * Java iniciante
+
 
 ## Contributors
 
