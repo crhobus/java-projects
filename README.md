@@ -260,6 +260,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java Swing iniciante
 
+* [ExerSisMedia](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExerSisMedia/)
+
+  * Java iniciante, cálculo da média
+
 
 ## Contributors
 
