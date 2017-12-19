@@ -205,6 +205,15 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * JavaScript
   * jQuery
 
+* [ExercJPA](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExercJPA/)
+
+  * Servlet
+  * EclipseLink 2.5 (JPA 2.1)
+  * Oracle DataBase
+    * Libraries: 
+	  * [EclipseLink 2.5 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.5%20(JPA%202.1)/)
+	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+
 
 ## Contributors
 
