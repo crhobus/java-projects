@@ -298,6 +298,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
 
+* [Fatorial](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Fatorial/)
+
+  * Java iniciante
+
 
 ## Contributors
 
