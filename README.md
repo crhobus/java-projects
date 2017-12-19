@@ -244,6 +244,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante
 
+* [ExerLista3](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExerLista3/)
+
+  * Java iniciante
+
 
 ## Contributors
 
