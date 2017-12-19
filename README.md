@@ -252,6 +252,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante
 
+* [ExerPVM](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExerPVM/)
+
+  * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
+
 
 ## Contributors
 
