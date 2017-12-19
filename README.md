@@ -224,6 +224,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante, jogo da forca
 
+* [ExerLista1](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExerLista1/)
+
+  * Java iniciante
+
 
 ## Contributors
 
