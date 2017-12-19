@@ -276,6 +276,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
 
+* [ExeSomaMatrizOMP](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExeSomaMatrizOMP/)
+
+  * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
+    * Libraries:
+	  * [Jomp](https://github.com/crhobus/java-libraries/tree/master/Jomp/)
+
 
 ## Contributors
 
