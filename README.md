@@ -313,6 +313,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * JavaScript
   * jQuery
 
+* [Java](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Java/)
+
+  * Java iniciante
+
 
 ## Contributors
 
