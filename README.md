@@ -16,7 +16,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   
 * [AlgoritmosGeometricos](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/AlgoritmosGeometricos/)
 
-  * Projeto matéria de faculdade: manipulação de imagens
+  * Projeto matéria de faculdade: Manipulação de imagens
     * Libraries:
 	  * [JAI](https://github.com/crhobus/java-libraries/tree/master/JAI/)
 
@@ -189,6 +189,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
     * Libraries:
 	  * [Jomp](https://github.com/crhobus/java-libraries/tree/master/Jomp/)
+
+* [ExeProdutorConsumidor](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExeProdutorConsumidor/)
+
+  * Projeto matéria de faculdade: Thread
 
 
 ## Contributors
