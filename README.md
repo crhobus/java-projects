@@ -282,6 +282,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries:
 	  * [Jomp](https://github.com/crhobus/java-libraries/tree/master/Jomp/)
 
+* [ExeThreadLock1](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExeThreadLock1/)
+
+  * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
+
 
 ## Contributors
 
