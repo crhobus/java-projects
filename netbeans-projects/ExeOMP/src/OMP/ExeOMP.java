@@ -1,0 +1,17 @@
+package OMP;
+
+import jomp.runtime.*;
+
+public class ExeOMP {
+
+    public static void main(String[] args) {
+        int myid;
+        OMP.setNumThreads(10);
+
+        //omp parallel private(myid)
+        {
+            myid = OMP.getThreadNum();
+            System.out.println("Hello from " + myid);
+        }
+    }
+}
