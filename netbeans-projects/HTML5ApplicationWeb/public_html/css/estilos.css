@@ -1,0 +1,53 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body
+{
+    background-color: #dfdfdf;
+    font-family: arial,verdana;
+    font-size: 14px;
+    color: #666666;
+}
+h1
+{
+    font-size: 32px;
+    color: #ff0000;
+    text-align: center;
+    padding: 20px 10px 40px 20px;
+    border-width: 10px;
+    border-color: #000000;
+    border-style: solid;
+}
+#aula
+{
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFCC00;
+    margin: 20px;
+}
+.titulo
+{
+    font-size: 26px;
+    text-align: center;
+    border: 1px #ff0000 solid;
+    padding: 10px;
+    letter-spacing: 5px;                
+}
+p{
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 24px;
+}
+ul
+{
+    margin: 40px;
+    list-style-type: circle;
+}
+
+ul li
+{
+    border-bottom: 1px #000000 dotted;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício Java Script</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/exercicioJavaScript.css" />
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $('form').submit(function(){
+                   if($('#marca').val().length < 1){
+                       alert('Preencha o campo marca');
+                       $('#marca').focus();
+                       return false;
+                   }
+                   if($('#modelo').val().length < 1){
+                       alert('Preencha o campo modelo');
+                       $('#modelo').focus();
+                       return false;
+                   }
+               });
+            });
+//            function checagem(){
+//                if (document.getElementById('marca').value.length < 1){
+//                    alert("Preencha a marca do carro");
+//                    document.getElementById('marca').focus();
+//                    return false;
+//                }
+//                if (document.getElementById('modelo').value.length < 1){
+//                    alert("Preencha o modelo do carro");
+//                    document.getElementById('marca').focus();
+//                    return false;
+//                }
+//                return true;
+//            }
+        </script>
+    </head>
+    <body>
+        <div id="pagina">
+
+            <form action="" method="post">
+                <fieldset>
+                    <label for="marca">Marca do automóvel</label><br/>
+                    <select name="marca" id="marca" class="campo_form">
+                        <option value="" selected="selected">Selecione</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Audi">Audi</option>
+                    </select><br/>
+
+                    <label for="modelo">Modelo</label><br/>
+                    <input type="text" name="modelo" id="modelo" class="campo_form"><br/>
+
+                    <label for="motorizacao">Motorização</label><br/>
+                    <input type="text" name="motorizacao" id="motorizacao" class="campo_form"><br/>
+
+                    <label for="combustivel">Combustível</label><br/>
+                    <input type="radio" name="combustivel" id="combustivel" value="G" class="campo_form"/>Gasolina
+                    <input type="radio" name="combustivel" id="combustivel" value="A" class="campo_form"/>Alcool
+                    <input type="radio" name="combustivel" id="combustivel" value="D" class="campo_form"/>Diesel
+                    <input type="radio" name="combustivel" id="combustivel" value="F" class="campo_form"/>Flex<br/>
+
+                    <label for="cor">Cor</label><br/>
+                    <input type="color" name="cor" id="cor" class="campo_form"><br/>
+
+                    <label for="valor">Valor</label><br/>
+                    <input type="number" name="valor" id="valor" class="campo_form"><br/>
+
+                    <label for="observacoes">Observações</label><br/>
+                    <textarea name="observacoes" id="observacoes" class="campo_form  campo_textarea_form"></textarea><br/>
+
+                    <input type="submit" id="botao_enviar" value="Enviar"><br/>
+                </fieldset>
+            </form>
+
+        </div>
+    </body>
+</html>
