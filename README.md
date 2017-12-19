@@ -272,6 +272,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
 
+* [ExeSemaforo2](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExeSemaforo2/)
+
+  * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
+
 
 ## Contributors
 
