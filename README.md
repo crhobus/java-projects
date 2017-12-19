@@ -194,6 +194,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Thread
 
+* [ExercicioOrientacaoObjetos](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExercicioOrientacaoObjetos/)
+
+  * Java iniciante, orientação a objetos
+
 
 ## Contributors
 
