@@ -302,6 +302,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante
 
+* [Genericos](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Genericos/)
+
+  * Java iniciante, generics
+
 
 ## Contributors
 
