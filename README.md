@@ -268,6 +268,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante
 
+* [ExeSemaforo1](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExeSemaforo1/)
+
+  * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
+
 
 ## Contributors
 
