@@ -415,6 +415,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Padrões de projeto: Factory method
 
+* [PadraoIterator](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PadraoIterator/)
+
+  * Padrões de projeto: Iterator
+
 
 ## Contributors
 
