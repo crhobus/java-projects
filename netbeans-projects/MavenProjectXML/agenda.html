@@ -1,0 +1,35 @@
+﻿<html>
+    <head>
+    </head>
+    <body>
+        <h1>Contatos</h1>
+        <script>
+            window.onload = function() {
+                xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", "agenda.xml", false);
+                xmlhttp.send();
+                xmlDoc = xmlhttp.responseXML;
+
+                table = document.getElementById("tab");
+
+                contatos = xmlDoc.getElementsByTagName("contato");
+                for (i = 0; i < contatos.length; i++) {
+                    nome = contatos[i].getElementsByTagName("nome")[0].firstChild.data;
+                    email = contatos[i].getElementsByTagName("email")[0].firstChild.data;
+
+                    table.innerHTML += "<tr><td>" + nome + "</td><td>" + email + "</td></tr>";
+                }
+            }
+        </script>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="tab">
+            </tbody>
+        </table>
+    </body>
+</html>
