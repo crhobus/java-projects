@@ -363,6 +363,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries:
 	  * [JMF](https://github.com/crhobus/java-libraries/tree/master/JMF/)
 
+* [MetodosNumerosInteiros](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/MetodosNumerosInteiros/)
+
+  * Java iniciante
+
 
 ## Contributors
 
