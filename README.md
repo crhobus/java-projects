@@ -411,6 +411,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Padrões de projeto: Facade
 
+* [PadraoFactoryMethod](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PadraoFactoryMethod/)
+
+  * Padrões de projeto: Factory method
+
 
 ## Contributors
 
