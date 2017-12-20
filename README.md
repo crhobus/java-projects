@@ -357,6 +357,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * JSON
   * Jackson
 
+* [MediaPlayer](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/MediaPlayer/)
+
+  * Player de mídia (Audio, Vídeo e Imagem)
+    * Libraries:
+	  * [JMF](https://github.com/crhobus/java-libraries/tree/master/JMF/)
+
 
 ## Contributors
 
