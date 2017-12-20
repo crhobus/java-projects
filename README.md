@@ -431,6 +431,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Padrões de projeto: Singleton
 
+* [PadraoState](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PadraoState/)
+
+  * Padrões de projeto: State
+
 
 ## Contributors
 
