@@ -387,6 +387,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Padrões de projeto: Abstract factory
 
+* [PadraoAdapter](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PadraoAdapter/)
+
+  * Padrões de projeto: Adapter
+
 
 ## Contributors
 
