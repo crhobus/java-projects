@@ -350,6 +350,13 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Maven Project
   * XML
 
+* [MavenProjectXML2](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/MavenProjectXML2/)
+
+  * Maven Project
+  * XML
+  * JSON
+  * Jackson
+
 
 ## Contributors
 
