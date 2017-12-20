@@ -419,6 +419,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Padrões de projeto: Iterator
 
+* [PadraoObserver](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PadraoObserver/)
+
+  * Padrões de projeto: Observer
+
 
 ## Contributors
 
