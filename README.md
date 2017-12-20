@@ -371,6 +371,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante
 
+* [NumeroPrimoWhile](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/NumeroPrimoWhile/)
+
+  * Java iniciante
+
 
 ## Contributors
 
