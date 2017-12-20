@@ -391,6 +391,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Padrões de projeto: Adapter
 
+* [PadraoBridge](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PadraoBridge/)
+
+  * Padrões de projeto: Bridge
+
 
 ## Contributors
 
