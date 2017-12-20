@@ -367,6 +367,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante
 
+* [MostraDepuracao](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/MostraDepuracao/)
+
+  * Java iniciante
+
 
 ## Contributors
 
