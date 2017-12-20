@@ -345,6 +345,11 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * JUnit
 
+* [MavenProjectXML](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/MavenProjectXML/)
+
+  * Maven Project
+  * XML
+
 
 ## Contributors
 
