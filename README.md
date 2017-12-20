@@ -375,6 +375,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante
 
+* [Operacoes](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Operacoes/)
+
+  * Java iniciante
+
 
 ## Contributors
 
