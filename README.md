@@ -399,6 +399,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Padrões de projeto: Command
 
+* [PadraoComposite](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PadraoComposite/)
+
+  * Padrões de projeto: Composite
+
 
 ## Contributors
 
