@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<carro>
+    <nome>Fusca</nome>
+    <portas>2</portas>
+    <motoristas>
+        <motorista>
+            <nome>Guilherme</nome>
+        </motorista>
+        <motorista>
+            <nome>Leonardo</nome>
+        </motorista>
+    </motoristas>
+</carro>
