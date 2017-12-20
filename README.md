@@ -383,6 +383,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante
 
+* [PadraoAbstractFactory](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PadraoAbstractFactory/)
+
+  * Padrões de projeto: Abstract factory
+
 
 ## Contributors
 
