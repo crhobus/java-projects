@@ -407,6 +407,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Padrões de projeto: Decorator
 
+* [PadraoFacade](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PadraoFacade/)
+
+  * Padrões de projeto: Facade
+
 
 ## Contributors
 
