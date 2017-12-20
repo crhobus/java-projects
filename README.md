@@ -439,6 +439,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Padrões de projeto: Strategy
 
+* [PadraoTemplateMethod](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PadraoTemplateMethod/)
+
+  * Padrões de projeto: Template method
+
 
 ## Contributors
 
