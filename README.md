@@ -423,6 +423,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Padrões de projeto: Observer
 
+* [PadraoProxy](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PadraoProxy/)
+
+  * Padrões de projeto: Proxy
+
 
 ## Contributors
 
