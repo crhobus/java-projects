@@ -515,6 +515,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries: 
 	  * [Jena](https://github.com/crhobus/java-libraries/tree/master/Jena/)
 
+* [Recursao](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Recursao/)
+
+  * Java iniciante
+
 
 ## Contributors
 
