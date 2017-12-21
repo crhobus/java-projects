@@ -10,7 +10,7 @@ public class EchoClient {
 
     public static void main(String[] arstring) {
         try {
-            System.setProperty("javax.net.ssl.trustStore", "C:\\Java\\NetBeans\\SegurancaADACD\\KeyStore.jks");
+            System.setProperty("javax.net.ssl.trustStore", "KeyStore.jks");
             System.setProperty("javax.net.ssl.trustStorePassword", "key50800");
             //System.setProperty("javax.net.debug", "ALL");
             //System.setProperty("java.protocol.handler.pkgs","com.sun.net.ssl.internal.www.protocol");

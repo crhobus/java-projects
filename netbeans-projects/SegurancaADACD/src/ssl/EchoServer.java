@@ -13,7 +13,7 @@ public class EchoServer {
 
     public static void main(String[] arstring) {
         try {
-            System.setProperty("javax.net.ssl.keyStore", "C:\\Java\\NetBeans\\SegurancaADACD\\KeyStore.jks");
+            System.setProperty("javax.net.ssl.keyStore", "KeyStore.jks");
             System.setProperty("javax.net.ssl.keyStorePassword", "key50800");
             //System.setProperty("javax.net.debug", "all");
             //System.setProperty("java.protocol.handler.pkgs","com.sun.net.ssl.internal.www.protocol");
