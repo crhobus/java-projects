@@ -451,6 +451,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Pesquisa e Ordenação
 
+* [POO2](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/POO2/)
+
+  * Projeto matéria de faculdade: Programação orientada a objetos
+
 
 ## Contributors
 
