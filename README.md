@@ -492,6 +492,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante
 
+* [ProcessosConcorrentes](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ProcessosConcorrentes/)
+
+  * Projeto matéria de faculdade: Processos concorrentes
+
 
 ## Contributors
 
