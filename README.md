@@ -509,6 +509,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 	  * [Hibernate 4.3.11 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/Hibernate%204.3.11%20(JPA%202.1)/)
 	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
 
+* [PrototipoJena](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PrototipoJena/)
+
+  * Projeto matéria de faculdade: Inteligência artificial -> Ontologia
+    * Libraries: 
+	  * [Jena](https://github.com/crhobus/java-libraries/tree/master/Jena/)
+
 
 ## Contributors
 
