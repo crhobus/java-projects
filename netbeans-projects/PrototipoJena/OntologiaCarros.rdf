@@ -1,0 +1,684 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/math/ontologies/2012/5/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/math/ontologies/2012/5/untitled-ontology-4"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/math/ontologies/2012/5/untitled-ontology-4"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Mono_Utilitario -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Mono_Utilitario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Cupe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Passeio"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <owl:inverseOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Mono_Utilitario"/>
+            </rdf:Description>
+        </owl:inverseOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Multi_Utilitarios -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Multi_Utilitarios">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Aventura"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Passeio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#SUV"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Sedan"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#'"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Transporte"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Viagem"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <owl:inverseOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Multi_Utilitarios"/>
+            </rdf:Description>
+        </owl:inverseOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Pode_ser_usado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Pode_ser_usado">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Aventura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Passeio"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#SUV"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Trabalho"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Transporte"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Viagem"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <owl:inverseOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Pode_ser_usado"/>
+            </rdf:Description>
+        </owl:inverseOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#TranporteDeCarga -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#TranporteDeCarga">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Pickup"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Trabalho"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Van"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <owl:inverseOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#TranporteDeCarga"/>
+            </rdf:Description>
+        </owl:inverseOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#naoSeAplica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#naoSeAplica">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Aventura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Conversivel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Minivan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Perua"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Sedan"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Van"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <owl:inverseOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#naoSeAplica"/>
+            </rdf:Description>
+        </owl:inverseOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#É_indicado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#É_indicado">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Aventura"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Jeep"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Passeio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Trabalho"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <owl:inverseOf>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#É_indicado"/>
+            </rdf:Description>
+        </owl:inverseOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Aventura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Aventura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Conversivel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Conversivel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">É uma categoria onde os carros têm a capota removível ou retrátil, desta forma poderá ser um carro aberto ou fechado.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Crossover -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Crossover">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">Veículos urbanos com detalhes de off-road</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Cupe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Cupe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">O espaço para passageiros no banco de trás é reduzido ou nem existe, geralmente são 2 portas e o final da carroceria possui uma suave inclinação.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Hatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Hatch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">Vem com o porta-malas (bagageiro) junto com a parte dos passageiros. É o chamado 3 ou 5 portas, e a porta trazeira dá acesso ao bagageiro</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Jeep -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Jeep">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">São os veículos fora-de-estrada (off-road) que possuem motores potentes e tração 4 rodas e acessórios que auxiliariam em caso de atolamento, devido aos locais em que trafega,</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Minivan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Minivan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">São projetados para aproveitar o máximo do espaço interno, é parecido com uma Van, porém de uso particular.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Passeio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Passeio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Perua -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Perua">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">Adequado ao transporte de passageiros e carga. De modo geral, estes veículos são variações de sedans ou hatchbacks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Pickup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Pickup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">Possuem um grande espaço para cargas, está dividida em compartimento do motor, uma cabine de passageiros, e a carroceria.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#SUV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#SUV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">É uma combinação de um bom espaço interno para passageiros com a versatilidade de carga de uma Pick-up.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Sedan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Sedan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">Está dividido entre três partes distintas: motor, passageiros e bagageiro.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Trabalho -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Trabalho">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Transporte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Transporte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Van -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Van">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">A maioria é a diesel e sua característica é o transporte muitas pessoas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Viagem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Viagem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <owl:disjointWith rdf:resource="&owl;Nothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Nothing -->
+
+    <rdf:Description rdf:about="&owl;Nothing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Boxter -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Boxter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Conversivel"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Camping -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Camping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Aventura"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Campo -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Campo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Trabalho"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Cayenne -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Cayenne">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#SUV"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Cayman -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Cayman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Cupe"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Cidade -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Cidade">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Trabalho"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Clio -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Clio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Hatch"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Corolla -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Corolla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Sedan"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#CrossFox -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#CrossFox">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Crossover"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#CurtoPeriodoDeTempo -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#CurtoPeriodoDeTempo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Viagem"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Defender -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Defender">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Jeep"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Ducato -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Ducato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Van"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#EcoSport -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#EcoSport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Crossover"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Ka -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Ka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Hatch"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#LongoPeriodoDeTempo -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#LongoPeriodoDeTempo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Viagem"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Meriva -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Meriva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Minivan"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#MuitaBagagem -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#MuitaBagagem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Passeio"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#MuitasPessoas -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#MuitasPessoas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Transporte"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Palio_Weekend -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Palio_Weekend">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Perua"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Parati -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Parati">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Perua"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Passat -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Passat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Sedan"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#PoucaBagagem -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#PoucaBagagem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Passeio"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#PoucasPessoas -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#PoucasPessoas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Transporte"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#R8 -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#R8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Cupe"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Rali -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Rali">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Aventura"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Uso"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#S10 -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#S10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Pickup"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Saveiro -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Saveiro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Pickup"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Senic -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Senic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Minivan"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Spider -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Spider">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Conversivel"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Sprinter -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Sprinter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Van"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Troller -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Troller">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Jeep"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Wrangler -->
+
+    <owl:Thing rdf:about="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Wrangler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#Carros"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/3/12/Ontology1334275244981.owl#SUV"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+
