@@ -447,6 +447,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Palindromo
 
+* [PesquisaOrdenacao](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/PesquisaOrdenacao/)
+
+  * Projeto matéria de faculdade: Pesquisa e Ordenação
+
 
 ## Contributors
 
