@@ -483,6 +483,11 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Programação orientada a objetos
 
+* [POO2Unidade6](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/POO2Unidade6/)
+
+  * Projeto matéria de faculdade: Programação orientada a objetos
+  * Utiliza reflexão: [JARs](https://github.com/crhobus/java-libraries/tree/master/FilesUsedByReflection/PrjPOO2Unidade6/)
+
 
 ## Contributors
 
