@@ -160,10 +160,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
 * [ExemploHibernateProdutos](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExemploHibernateProdutos/)
 
-  * Hibernate 4.3 (JPA 2.1)
+  * Hibernate 4.3.11 (JPA 2.1)
   * Oracle DataBase
     * Libraries: 
-	  * [Hibernate 4.3 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/Hibernate%204.3%20(JPA%202.1)/)
+	  * [Hibernate 4.3.11 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/Hibernate%204.3.11%20(JPA%202.1)/)
 	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
 
 * [ExemploJSF](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ExemploJSF/)
@@ -499,6 +499,15 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 * [ProcessosConcorrentesLinProg](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ProcessosConcorrentesLinProg/)
 
   * Projeto matéria de faculdade: Processos concorrentes
+
+* [ProjetoWeb](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ProjetoWeb/)
+
+  * Servlet
+  * Hibernate 4.3.11 (JPA 2.1)
+  * Oracle DataBase
+    * Libraries: 
+	  * [Hibernate 4.3.11 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/Hibernate%204.3.11%20(JPA%202.1)/)
+	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
 
 
 ## Contributors
