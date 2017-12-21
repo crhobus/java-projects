@@ -496,6 +496,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Processos concorrentes
 
+* [ProcessosConcorrentesLinProg](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/ProcessosConcorrentesLinProg/)
+
+  * Projeto matéria de faculdade: Processos concorrentes
+
 
 ## Contributors
 
