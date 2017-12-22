@@ -542,6 +542,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Projeto matéria de faculdade: Análise e Desenvolvimento com Assinatura e Certificado Digital
   * Segurança - Hash, Distribuição de chaves, Criptografia simétrica, Criptografia assimétrica, assinatura digital e Certificado Digital
 
+* [Sincronizado](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Sincronizado/)
+
+  * Java iniciante, Thread
+
 
 ## Contributors
 
