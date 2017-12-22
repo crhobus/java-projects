@@ -550,6 +550,13 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Sistema Java Swing básico com armazenamento em arquivos
 
+* [Sistema Oficina Teletronica](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Sistema%20Oficina%20Teletronica/)
+
+  * Sistema Java Swing básico
+  * Firebird DataBase
+    * Libraries: 
+	  * [DriverFirebird 2.1](https://github.com/crhobus/java-libraries/tree/master/DriverFirebird%202.1/)
+
 
 ## Contributors
 
