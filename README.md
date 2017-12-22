@@ -569,6 +569,13 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Chat usando socket, cliente e servidor
 
+* [SistemaInventario](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SistemaInventario/)
+
+  * Sistema de inventário
+  * Oracle DataBase
+    * Libraries: 
+	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+
 
 ## Contributors
 
