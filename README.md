@@ -565,6 +565,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Programação orientada a objetos
 
+* [SistemaChatSocket](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SistemaChatSocket/)
+
+  * Chat usando socket, cliente e servidor
+
 
 ## Contributors
 
