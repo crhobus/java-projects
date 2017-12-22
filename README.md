@@ -561,6 +561,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Sistema Java Swing básico com armazenamento em arquivos
 
+* [SistemaBiblioteca](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SistemaBiblioteca/)
+
+  * Projeto matéria de faculdade: Programação orientada a objetos
+
 
 ## Contributors
 
