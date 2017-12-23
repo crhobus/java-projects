@@ -576,6 +576,13 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries: 
 	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
 
+* [SistemaLocadora](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SistemaLocadora/)
+
+  * Sistema de locadora
+  * Oracle DataBase
+    * Libraries: 
+	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+
 
 ## Contributors
 
