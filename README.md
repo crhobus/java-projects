@@ -583,6 +583,14 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries: 
 	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
 
+* [SistemasDistribuidos](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SistemasDistribuidos/)
+
+  * Projeto matéria de faculdade: Sistemas distribuídos
+  * Oracle DataBase
+    * Libraries: 
+	  * [RPC](https://github.com/crhobus/java-libraries/tree/master/RPC/)
+	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+
 
 ## Contributors
 
