@@ -1,0 +1,12 @@
+module sistemaBancarioCorba {
+
+
+  interface InterfaceCorba {
+
+    boolean emprestimo(in long nrConta, in string senha, in double valor, out string retorno);
+    boolean pagamento(in long nrConta, in string senha, in long nrTitulo, in double valor, out string retorno);
+    boolean visualizarLimite(in long nrConta, in string senha, out string retorno);
+
+
+  };
+};
