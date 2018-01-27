@@ -595,6 +595,30 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * App usando socket, cliente e servidor
 
+* [SystemDB](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SystemDB/)
+
+  * Sistema Java Swing básico
+  * Segurança - Hash, Distribuição de chaves, Criptografia simétrica, Criptografia assimétrica, assinatura digital e Certificado Digital
+  * Comunicação segura via socket com o projeto [SystemDBServer](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SystemDBServer/) utilizando SSL
+  * Oracle DataBase
+    * Libraries: 
+	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+
+* [SystemDBServer](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SystemDBServer/)
+
+  * Implementa segurança
+  * Recebe e processa requisições seguras via socket do projeto [SystemDB](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SystemDB/) utilizando SSL
+  * Oracle DataBase
+    * Libraries: 
+	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+
+* [Teste](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Teste/)
+
+  * Projeto para realização de testes diversos
+  * Oracle DataBase
+    * Libraries: 
+	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+
 
 ## Contributors
 
