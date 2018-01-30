@@ -633,6 +633,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * JavaScript
   * jQuery
 
+* [TrabalhoClusterizacao](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoClusterizacao/)
+
+  * Projeto matéria de faculdade: Manipulação de imagens
+    * Libraries:
+	  * [jai_core.zip](https://github.com/crhobus/java-libraries/tree/master/jai_core.zip)
+
 
 ## Contributors
 
