@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cooperativa Credito WebApp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+        <script src="js//jquery-1.11.2.min.js"></script>
+        <script src="js//jquery.mobile.custom.min.js"></script>
+        <script src="js//index.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="logo"></div>
+            <div id="principal">            
+                <form action="menu.html" method="get" id="form_login">
+                    <fieldset>
+
+                        <select name="agencia" id="agencia">
+                            <option value="" selected="selected">Agência</option>
+                            <option value="1">Velha</option>
+                            <option value="2">Centro</option>
+                        </select><br/>
+
+                        <input type="text" name="conta" id="conta" placeholder="Conta"><br/>
+
+                        <input type="password" name="senha" id="senha" placeholder="Senha"><br/>
+
+                        <input type="submit" id="botao_confirmar" value="Confirmar"><br/>
+
+                    </fieldset>
+                </form>
+
+            </div>
+
+        </div>
+    </body>
+</html>

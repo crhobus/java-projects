@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cooperativa Credito WebApp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+        <script src="js//jquery-1.11.2.min.js"></script>
+        <script src="js//jquery.mobile.custom.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="logo"></div>
+            <div id="principal">   
+
+                <h1>Recarga Celular</h1><br>
+
+                <label for="ddd1" >Número Celular</label>
+                <input type="text" name="ddd1" id="ddd1" placeholder="DDD">
+                <input type="text" name="telefone1" id="telefone1" placeholder="Telefone"><br>
+                <label for="ddd2" >Confirmação Número Celular</label>
+                <input type="text" name="ddd2" id="ddd2" placeholder="DDD">
+                <input type="text" name="telefone2" id="telefone2" placeholder="Telefone"><br>
+                <select name="valor_recarga" id="agencia">
+                    <option value="" selected="selected">Valor da Recarga</option>
+                    <option value="10">R$ 10,00</option>
+                    <option value="20">R$ 20,00</option>
+                    <option value="30">R$ 30,00</option>
+                    <option value="40">R$ 40,00</option>
+                </select><br/>
+                <input type="button" value="Confirmar" onclick="window.location = 'menu.html'"><br>
+                <input type="button" value="Voltar" onclick="window.location = 'menu.html'">
+
+            </div>
+
+        </div>
+    </body>
+</html>

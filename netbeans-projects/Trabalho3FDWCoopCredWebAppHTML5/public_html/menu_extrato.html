@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cooperativa Credito WebApp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+        <script src="js//jquery-1.11.2.min.js"></script>
+        <script src="js//jquery.mobile.custom.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="logo"></div>
+            <div id="principal">  
+
+                <h1>Extrato últimos 30 dias</h1><br>
+
+                <label for="dataInicial">Data Inicial</label>
+                <input type="text" name="dataInicial" id="dataInicial" value="14/02/2015" readonly> <br> 
+
+                <label for="dataFinal">Data Final</label>
+                <input type="text" name="dataFinal" id="dataFinal" value="14/03/2015" readonly> <br> 
+
+                <table class="CSSTable">
+                    <tr>
+                        <td>Data</td>
+                        <td>Transação</td>
+                        <td>Valor</td>
+                    </tr>
+                    <tr>
+                        <td>14/02/2015</td>
+                        <td>Crédito</td>
+                        <td>R$ 250,87</td>
+                    </tr>
+                    <tr>
+                        <td>18/02/2015</td>
+                        <td>Débito</td>
+                        <td>R$ 10,00</td>
+                    </tr>
+                    <tr>
+                        <td>25/02/2015</td>
+                        <td>Débito</td>
+                        <td>R$ 134,56</td>
+                    </tr>
+                    <tr>
+                        <td>03/03/2015</td>
+                        <td>Crédito</td>
+                        <td>R$ 2000,00</td>
+                    </tr>
+                    <tr>
+                        <td>06/03/2015</td>
+                        <td>Débito</td>
+                        <td>R$ 230,12</td>
+                    </tr>
+                    <tr>
+                        <td>15/03/2015</td>
+                        <td>Crédito</td>
+                        <td>R$ 280,20</td>
+                    </tr>
+                    <tr>
+                        <td>09/03/2015</td>
+                        <td>Crédito</td>
+                        <td>R$ 700,87</td>
+                    </tr>
+                    <tr>
+                        <td>10/03/2015</td>
+                        <td>Débito</td>
+                        <td>R$ 1020,99</td>
+                    </tr>
+                    <tr>
+                        <td>12/03/2015</td>
+                        <td>Crédito</td>
+                        <td>R$ 200,00</td>
+                    </tr>
+                    <tr>
+                        <td>14/03/2015</td>
+                        <td>Débito</td>
+                        <td>R$ 100,30</td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <label for="saldo" >Saldo Disponível</label>
+                <input id="saldo" type="text" value=" R$ 1000,00" readonly>
+
+                <input type="button" value="Voltar" onclick="window.location = 'menu.html'">
+
+            </div>
+
+        </div>
+    </body>
+</html>

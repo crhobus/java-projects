@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cooperativa Credito WebApp</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+        <script src="js//jquery-1.11.2.min.js"></script>
+        <script src="js//jquery.mobile.custom.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="logo"></div>
+            <div id="principal">   
+
+                <h1>Pagamentos</h1><br>
+
+                <div class="radio">  
+                    <input id="boleto" type="radio" name="tipo" value="0">  
+                    <label for="boleto">Boleto</label>  
+                    <input id="titulo" type="radio" name="tipo" value="1">  
+                    <label for="titulo">Título</label>  
+                </div>   
+                <br>
+
+                <label for="codigo_pgo" >Linha Digitável</label>
+                <input type="text" name="codigo_pgo" id="codigo_pgo"><br> 
+
+                <label for="valor_pgo" >Valor do Pagamento</label>
+                <input type="text" name="valor_pgo" id="valor_pgo" placeholder="Valor"><br> 
+
+                <label for="data_pgo" >Data Pagamento</label>
+                <input type="date" name="data_pgo" id="data_pgo"><br> 
+
+                <input type="button" value="Confirmar" onclick="window.location = 'menu.html'"> <br>
+                <input type="button" value="Voltar" onclick="window.location = 'menu.html'">
+
+            </div>
+
+        </div>
+    </body>
+</html>
