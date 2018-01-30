@@ -646,6 +646,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 	  * [Jomp](https://github.com/crhobus/java-libraries/tree/master/Jomp/)
 	  * [ResolveExpressoesMatematicas](https://github.com/crhobus/java-libraries/tree/master/ResolveExpressoesMatematicas/)
 
+* [TrabalhoDACDPVM](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoDACDPVM/)
+
+  * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
+    * Libraries:
+	  * [ResolveExpressoesMatematicas](https://github.com/crhobus/java-libraries/tree/master/ResolveExpressoesMatematicas/)
+
 
 ## Contributors
 
