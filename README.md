@@ -639,6 +639,13 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries:
 	  * [jai_core.zip](https://github.com/crhobus/java-libraries/tree/master/jai_core.zip)
 
+* [TrabalhoDACD](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoDACD/)
+
+  * Projeto matéria de faculdade: Desenvolvimento de aplicações concorrentes e distribuídas
+    * Libraries:
+	  * [Jomp](https://github.com/crhobus/java-libraries/tree/master/Jomp/)
+	  * [ResolveExpressoesMatematicas](https://github.com/crhobus/java-libraries/tree/master/ResolveExpressoesMatematicas/)
+
 
 ## Contributors
 
