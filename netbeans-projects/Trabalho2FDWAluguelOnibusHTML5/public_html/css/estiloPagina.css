@@ -1,0 +1,448 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: arial, verdana;
+    font-size: 14px;
+}
+
+.clear {
+    clear: both;
+}
+
+#pagina {
+
+}
+
+#pagina header {
+
+}
+
+#pagina header #topo {
+    background-color: #ededed;
+    height: 39px;
+}
+
+#pagina header #topo #topo_central {
+    text-align: right;
+    padding-top: 7px;
+}
+
+.atendimento_2407 {
+    color: #857777;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 5px;
+}
+
+.tel_0800 {
+    color: #174691;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#pagina header #cab {
+    height: 140px;
+}
+
+#pagina header #cab #logo {
+    float: left;
+    width: 250px;
+    padding-top: 34px;
+}
+
+.bus {
+    color: #16438d;
+    font-weight: bold;
+    font-size: 62px;
+    text-transform: uppercase;
+    line-height: 48px;
+}
+
+.and_coach_hire {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+header #cab .menu {
+    padding-top: 60px;
+}
+
+.menu {
+    float: right;
+    width: 580px;
+}
+
+.menu ul {
+
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    font-size: 17px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-right: 20px;
+}
+
+.menu ul li a:hover {
+    color: #154189;
+}
+
+
+#pagina main {
+
+}
+
+#pagina main #slide {
+    background-image: url('../img/slide1.jpg');
+    background-position: top center;
+    height: 648px;
+}
+
+.box_slide {
+    background-image: url('../img/bg_texto_slide.png');
+    width: 750px;
+    height: 182px;
+    margin: 250px 0px 0px 50px;
+    position: absolute;
+}
+
+.box_slide .box_slide_titulo {
+    font-size: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 30px 0px 25px 30px;
+}
+
+.box_slide .box_slide_sub_titulo {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0px 50px 10px 30px;
+    letter-spacing: -1px;
+}
+
+.box_slide .box_slide_texto {
+    color: #ffffff;
+    padding: 0px 0px 0px 30px;
+}
+
+.central {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+#pagina main #capa {
+    padding: 40px 0px 40px 0px;
+}
+
+#pagina main #capa #capa_e {
+    width: 750px;
+    float: left;
+}
+
+#pagina main #capa #capa_e #vantagens {
+
+}   
+
+h2 {
+    font-size: 36px;
+    color: #313131;
+    font-weight: bold;
+}
+
+.sub_titulo {
+    font-size: 18px;
+    color: #154189;
+    padding: 30px 0px 25px 0px;
+}
+
+.esq {
+    float: left;
+}
+
+.dir {
+    float: right;
+}
+
+.boxvt {
+    width: 370px;
+    padding-bottom: 50px;
+}
+
+.boxvt .boxvt_ico {
+    width: 78px;
+    height: 78px;
+    float: left;
+    background-color: #144189;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    text-align: center;
+}
+
+.boxvt .boxvt_ico img {
+    padding-top: 18px;
+}
+
+.boxvt .boxvt_tit {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    width: 280px;
+    float: right;
+    padding: 20px 0px 0px 0px;
+}
+
+.boxvt .boxvt_texto {
+    padding: 10px 0px 0px 0px;
+    color: #837777;
+}
+
+#servicos {
+
+}
+
+#servicos h2 {
+    padding-bottom: 30px;
+}
+
+#servicos #servicos_esq {
+    width: 350px;
+    float: left;
+}
+
+#servicos #servicos_dir {
+    width: 350px;
+    float: right;
+}
+
+.boxsv {
+    padding-bottom: 35px;
+}
+
+.boxsv .boxsv_tit {
+    font-size: 16px;
+    font-weight: bold;
+    color: #144189;
+    padding-bottom: 10px;
+}
+
+.boxsv .boxsv_sub_tit {
+    color: #777777;
+}
+
+.link_botao {
+    background-color: #14438c;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 18px;
+    display: block;
+    text-decoration: none;
+    width: 85px;
+}
+
+#capa #capa_d {
+    width: 370px;
+    float: right;
+}
+
+#orcamento {
+    background-color: #ededed;
+    padding: 30px 25px 30px 25px;
+}
+
+#orcamento h2 {
+    color: #154189;
+    padding-bottom: 15px;
+}
+
+#orcamento p {
+    color: #333333;
+    padding-bottom: 20px;
+}
+
+#orcamento label {
+    font-weight: bold;
+    color: #144288;
+}
+
+.campo_orc {
+    border: 1px solid #dadada;
+    background-color: #ffffff;
+    width: 290px;
+    padding: 10px;
+    font-size: 14px;
+    margin: 10px 0px 10px 0px;
+}
+
+.campo_obrigatorio {
+    border: 1px solid #ff0000;
+    color: #ff0000;
+}
+
+#box_sucesso {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    margin-left: -250px;
+    display: none;
+}
+
+.campo_textarea_orc {
+    height: 110px;
+}
+
+#botao_orc {
+    background-color: #14438c;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 18px;
+    font-size: 14px;
+    border: 0px;
+}
+
+#avaliacoes {
+    margin-top: 40px;
+}
+
+#avaliacoes h2 {
+    padding-bottom: 40px;
+}
+
+.boxav {
+    padding-bottom: 25px;
+}
+
+.boxav .boxav_con {
+    background-color: #144189;
+    padding: 30px;
+}
+
+.boxav .boxav_con .boxav_estrelas {
+    padding-bottom: 10px;
+}
+
+.boxav .boxav_con .boxav_texto {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.boxav .boxav_seta {
+    background-image: url('../img/seta.png');
+    background-repeat: no-repeat;
+    background-position: 30px;
+    height: 14px;
+}
+
+.boxav .boxav_avaliador {
+    color: #333333;
+    font-weight: bold;
+    padding: 7px 0px 0px 30px;
+}
+
+.linha {
+    border-top: 1px solid #dadada;
+}
+
+footer {
+
+}
+
+footer #rod {
+    background-color: #ededed;
+}
+
+footer #rod #rod_conteudo {
+
+}
+
+footer #rod #rod_conteudo #logo_rod {
+    width: 250px;
+    float: left;
+    padding: 50px 0px 50px 0px;
+}
+
+footer #rod #rod_conteudo #rod_conteudo_dir {
+    width: 800px;
+    float: right;
+}
+
+footer #rod #rod_conteudo #rod_conteudo_dir .menu {
+    padding: 40px 0px 35px 0px;
+}
+
+.texto_rod {
+    color: #777777;
+    font-size: 11px;
+}
+
+footer #creditos {
+
+}
+
+footer #creditos #credito_conteudo {
+    padding: 20px 0px 40px 0px;
+    color: #777777;
+}
