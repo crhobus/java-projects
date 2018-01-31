@@ -716,6 +716,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Java iniciante
 
+* [TrabSistemasOperacionais](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabSistemasOperacionais/)
+
+  * Projeto matéria de faculdade: Sistemas Operacionais
+
 
 ## Contributors
 
