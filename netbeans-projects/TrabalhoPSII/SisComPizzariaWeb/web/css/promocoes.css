@@ -1,0 +1,15 @@
+#titulo {
+    margin-left: 3%
+}
+
+#imgs {
+    text-align: center;
+}
+
+#lista_imgs {
+    list-style-type:none;
+}
+
+#texto_p {
+    margin: 2% 3% 2% 5%; 
+}

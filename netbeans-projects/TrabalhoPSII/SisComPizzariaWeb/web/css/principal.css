@@ -1,0 +1,108 @@
+body {
+    background-image: url(../imagens/fundo.png); 
+    background-repeat: repeat-x;
+    background-color: #51231A;
+}
+
+#principal {
+    width: 100%; 
+    text-align: justify;
+}
+
+input {
+    padding: 4px;
+    font-family: Tahoma, Times New Roman, Arial;
+    font-size: 15px;
+}
+
+#cabecalho_p1 {
+    width: 11%;
+}
+
+#cabecalho_p2 {
+    width: 25%;
+}
+
+#cabecalho_p3 {
+    width: 1%;
+}
+
+#cabecalho_p4 {
+    width: 1%;
+}
+
+#cabecalho_p5 {
+    width: 1%;
+}
+
+#cabecalho_p6 {
+    width: 1%;
+}
+
+#cabecalho_p7 {
+    width: 7%;
+}
+
+#cabecalho_p8 {
+    width: 1%;
+}
+
+#cabecalho_p9 {
+    width: 12%;
+}
+
+#conteudo_p1 {
+    width: 11%;
+}
+
+#conteudo_p2 {
+    width: 50px;
+}
+
+#conteudo_p3 {
+    background-color: whitesmoke;
+    margin-right: 2%
+}
+
+ul.barraLateral {
+    font-family: Courier New, Courier, monospace;
+    font-weight: bold;
+    font-variant: normal;
+    color: #FFFFFF;
+    vertical-align: middle;
+    font-size: xx-large;
+    text-decoration: none;
+    list-style-image: url(../imagens/circle.png);
+}
+
+a:link {
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+a:visited {
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#DD3333;
+    text-decoration: none;
+}
+
+a:active {
+    color:#990000;
+    text-decoration: none;
+}
+
+#mensagem {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: -105px 0px 0px 305px;
+    color:#FFFFFF;
+}
+
+#bemVindo {
+    /*margin-top margin-right margin-bottom margin-left*/
+    color:#FFFFFF;
+    width: 20%;
+}

@@ -1,0 +1,48 @@
+#titulo {
+    margin-left: 3%;
+}
+
+#vlrtroco, #cred, #deb, #cref, #itemPedido1, #itemPedido2, #itemPedido3, #itemPedido4, #itemPedido5
+{
+    display:none;
+}
+.style1 {
+    color: #FF0000;
+    font-size: x-small;
+}
+.style3 {color: #0000FF; font-size: x-small;
+}
+
+
+#tamPizza1, #tamPizza2, #tamPizza3, #tamPizza4, #tamPizza5 {
+    font-family: Tahoma, Times New Roman, Arial;
+    font-size: 15px;
+    font-style: oblique;
+}
+
+#sabor1_1, #sabor2_1, #sabor3_1, #sabor4_1, #sabor1_2, #sabor2_2, #sabor3_2, #sabor4_2, #sabor1_3, #sabor2_3, #sabor3_3, #sabor4_3, #sabor1_4, #sabor2_4, #sabor3_4, #sabor4_4, #sabor1_5, #sabor2_5, #sabor3_5, #sabor4_5{
+    display: none;
+}
+
+option{
+    background-color: rgb(173, 216, 230);
+    font-family: Tahoma, Times New Roman, Arial;
+    font-size: 15px;
+}
+
+#centralizado {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 0px 30px;
+}
+
+label, legend {
+    font-family: Tahoma, Times New Roman, Arial;
+    font-size: 15px;
+}
+
+#bt_continuar {
+    width: 80px;
+    height: 35px;
+    font-family: Tahoma, Times New Roman, Arial;
+    font-size: 15px;
+}

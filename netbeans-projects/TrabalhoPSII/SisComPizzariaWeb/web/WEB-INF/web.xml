@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>ServletCliente</servlet-name>
+        <servlet-class>server.cliente.ServletCliente</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletIndex</servlet-name>
+        <servlet-class>server.index.ServletIndex</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletCardapio</servlet-name>
+        <servlet-class>server.cardapio.ServletCardapio</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletPedido</servlet-name>
+        <servlet-class>server.pedido.ServletPedido</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletCliente</servlet-name>
+        <url-pattern>/servletcliente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletIndex</servlet-name>
+        <url-pattern>/servletindex</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletCardapio</servlet-name>
+        <url-pattern>/servletcardapio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletPedido</servlet-name>
+        <url-pattern>/servletpedido</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

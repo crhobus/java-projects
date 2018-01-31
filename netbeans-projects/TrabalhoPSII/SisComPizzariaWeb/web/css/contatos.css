@@ -1,0 +1,15 @@
+#titulo {
+    margin-left: 3%;
+}
+
+#texto {
+    margin: 0 3% 0 2%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#msg {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: -197px 0px 0px 310px;
+    color:#FFFFFF;
+}

@@ -1,0 +1,122 @@
+#centralizado {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 0px 30px;
+}
+
+label {
+    font-family: Tahoma, Times New Roman, Arial;
+    font-size: 15px;
+}
+
+.nm_cliente input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 70px;
+    background-color: rgb(173, 216, 230);
+    width: 220px;
+}
+
+.nm_usuario input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 3px;
+    background-color: rgb(173, 216, 230);
+    width: 140px;
+}
+
+.ds_senha input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 3px;
+    background-color: rgb(173, 216, 230);
+    width: 100px;
+}
+
+.ds_confirma_senha input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 5px;
+    width: 100px;
+}
+
+.ds_endereco input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 5px;
+    background-color: rgb(173, 216, 230);
+    width: 412px;
+}
+
+.ds_bairro input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 71px;
+    background-color: rgb(173, 216, 230);
+    width: 230px;
+}
+
+.nr_cep input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 5px;
+    background-color: rgb(173, 216, 230);
+    width: 125px;
+}
+
+.nr_residencia input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 5px;
+    background-color: rgb(173, 216, 230);
+    width: 113px;
+}
+
+.nm_cidade input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 64px;
+    background-color: rgb(173, 216, 230);
+    width: 180px;
+}
+
+.ds_referencia input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 5px;
+    width: 322px;
+}
+
+.nr_telefone input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 50px;
+    width: 120px;
+}
+
+.nr_celular input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 5px;
+    width: 120px;
+}
+
+.ds_email input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 5px;
+    width: 233px;
+}
+
+.ds_observacao input {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: 0px 0px 2px 30px;
+    width: 593px;
+}
+
+#bt_salvar {
+    width: 80px;
+    height: 35px;
+    font-family: Tahoma, Times New Roman, Arial;
+    font-size: 15px;
+}
+
+#bt_cancelar {
+    width: 80px;
+    height: 35px;
+    font-family: Tahoma, Times New Roman, Arial;
+    font-size: 15px;
+}
+
+#msg {
+    /*margin-top margin-right margin-bottom margin-left*/
+    margin: -26px 0px 0px 180px;
+    color: #FF0000;
+    font-family: Tahoma, Times New Roman, Arial;
+}

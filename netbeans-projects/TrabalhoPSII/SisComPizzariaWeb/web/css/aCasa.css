@@ -1,0 +1,19 @@
+#titulo {
+    margin-left: 3%;
+}
+
+#texto_p1 {
+    margin: 0 3% 0 5%;
+}
+
+#imgs {
+    text-align: center;
+}
+
+#lista_imgs {
+    list-style-type:none;
+}
+
+#texto_p2 {
+    margin: 2% 3% 2% 5%; 
+}
