@@ -662,7 +662,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
 * [TrabalhoPSII](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoPSII/)
 
-  * Projeto matéria de faculdade: Processo de Software II - Com 3 sub projetos
+  * Projeto matéria de faculdade: Processo de Software II - Com 3 subprojetos
 
     * [SisComPizzariaServidor](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoPSII/SisComPizzariaServidor/)
 	  * EclipseLink 2.5 (JPA 2.1)
