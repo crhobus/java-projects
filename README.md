@@ -652,6 +652,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries:
 	  * [ResolveExpressoesMatematicas](https://github.com/crhobus/java-libraries/tree/master/ResolveExpressoesMatematicas/)
 
+* [TrabalhoFinalOO](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoFinalOO/)
+
+  * Projeto matéria de faculdade: Programação orientada a objetos
+
 
 ## Contributors
 
