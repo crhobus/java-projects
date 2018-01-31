@@ -708,6 +708,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Engenharia de Software
 
+* [TrabLingFormais](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabLingFormais/)
+
+  * Projeto matéria de faculdade: Linguagens Formais - Reconhecimento de palavras da linguagem regular
+
 
 ## Contributors
 
