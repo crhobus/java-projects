@@ -704,6 +704,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Compiladores - Desenvolvimento de um compilador
 
+* [TrabEngSoftware](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabEngSoftware/)
+
+  * Projeto matéria de faculdade: Engenharia de Software
+
 
 ## Contributors
 
