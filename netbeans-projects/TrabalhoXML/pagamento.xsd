@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:attribute name="nr_titulo" type="xs:integer" />
+	<xs:element name="pagamento" type="Pagamento" />
+	<xs:complexType name="Pagamento">
+		<xs:sequence>
+			<xs:element ref="titulo" minOccurs="1" maxOccurs="unbounded" /> 
+			<xs:element name="cliente" type="xs:string" />
+	   </xs:sequence>
+	</xs:complexType>
+	<xs:element name="titulo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="forma_pgo" type="xs:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+				<xs:element name="valor" type="xs:decimal" minOccurs="1" maxOccurs="1" nillable="false"/>
+				<xs:element name="quitado" type="xs:boolean" minOccurs="1" maxOccurs="1" nillable="false"/>
+			</xs:sequence>
+			<xs:attribute ref="nr_titulo" />	
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+

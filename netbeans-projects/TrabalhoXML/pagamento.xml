@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pagamento>
+	<titulo nr_titulo="1">
+		<forma_pgo>Dinheiro</forma_pgo>
+		<valor>50.00</valor>
+		<quitado>true</quitado>
+	</titulo>
+	<titulo nr_titulo="2">
+		<forma_pgo>Cheque</forma_pgo>
+		<valor>1000.00</valor>
+		<quitado>false</quitado>
+	</titulo>
+	<cliente>Daniel Zimmermann</cliente>
+</pagamento>

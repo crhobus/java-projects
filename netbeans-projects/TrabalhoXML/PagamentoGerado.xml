@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pagamento>
+    <titulo nr_titulo="1">
+        <forma_pgo>Cheque</forma_pgo>
+        <valor>200.76</valor>
+        <quitado>true</quitado>
+    </titulo>
+    <titulo nr_titulo="2">
+        <forma_pgo>Cartão</forma_pgo>
+        <valor>1500.00</valor>
+        <quitado>true</quitado>
+    </titulo>
+    <titulo nr_titulo="3">
+        <forma_pgo>Dinheiro</forma_pgo>
+        <valor>50.00</valor>
+        <quitado>false</quitado>
+    </titulo>
+    <cliente>Caio Renan Hobus</cliente>
+</pagamento>
