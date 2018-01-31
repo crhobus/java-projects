@@ -712,6 +712,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Linguagens Formais - Reconhecimento de palavras da linguagem regular
 
+* [TrabMatriz](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabMatriz/)
+
+  * Java iniciante
+
 
 ## Contributors
 
