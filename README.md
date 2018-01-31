@@ -656,6 +656,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Programação orientada a objetos
 
+* [TrabalhoLingProg1](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoLingProg1/)
+
+  * Projeto matéria de faculdade: Linguagens de Programação
+
 
 ## Contributors
 
