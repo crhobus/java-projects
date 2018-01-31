@@ -742,6 +742,11 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Maven Project
   * Servlet
 
+* [WebApplication2](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WebApplication2/)
+
+  * Maven Project
+  * Servlet com Filter
+
 
 ## Contributors
 
