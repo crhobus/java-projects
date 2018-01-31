@@ -550,17 +550,6 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Sistema Java Swing básico com armazenamento em arquivos
 
-* [Sistema Oficina Teletronica](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Sistema%20Oficina%20Teletronica/)
-
-  * Sistema Java Swing básico
-  * Firebird DataBase
-    * Libraries: 
-	  * [DriverFirebird 2.1](https://github.com/crhobus/java-libraries/tree/master/DriverFirebird%202.1/)
-
-* [Sistema Vendas produtos](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/Sistema%20Vendas%20produtos/)
-
-  * Sistema Java Swing básico com armazenamento em arquivos
-
 * [SistemaBiblioteca](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SistemaBiblioteca/)
 
   * Projeto matéria de faculdade: Programação orientada a objetos
@@ -583,6 +572,13 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries: 
 	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
 
+* [SistemaOficinaTeletronica](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SistemaOficinaTeletronica/)
+
+  * Sistema Java Swing básico
+  * Firebird DataBase
+    * Libraries: 
+	  * [DriverFirebird 2.1](https://github.com/crhobus/java-libraries/tree/master/DriverFirebird%202.1/)
+
 * [SistemasDistribuidos](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SistemasDistribuidos/)
 
   * Projeto matéria de faculdade: Sistemas distribuídos
@@ -590,6 +586,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries: 
 	  * [RPC](https://github.com/crhobus/java-libraries/tree/master/RPC/)
 	  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+
+* [SistemaVendasProdutos](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SistemaVendasProdutos/)
+
+  * Sistema Java Swing básico com armazenamento em arquivos
 
 * [SocketClienteServidor](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/SocketClienteServidor/)
 
@@ -719,6 +719,13 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 * [TrabSistemasOperacionais](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabSistemasOperacionais/)
 
   * Projeto matéria de faculdade: Sistemas Operacionais
+
+* [TranspMecGuthnerLTDA](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TranspMecGuthnerLTDA/)
+
+  * Sistema Java Swing básico
+  * Firebird DataBase
+    * Libraries: 
+	  * [DriverFirebird 2.1](https://github.com/crhobus/java-libraries/tree/master/DriverFirebird%202.1/)
 
 
 ## Contributors
