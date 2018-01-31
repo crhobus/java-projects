@@ -660,6 +660,37 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Linguagens de Programação
 
+* [TrabalhoPSII](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoPSII/)
+
+  * Projeto matéria de faculdade: Processo de Software II - Com 3 sub projetos
+
+    * [SisComPizzariaServidor](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoPSII/SisComPizzariaServidor/)
+	  * EclipseLink 2.5 (JPA 2.1)
+	  * Oracle DataBase
+	    * Libraries:
+		  * [EclipseLink 2.5 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.5%20(JPA%202.1)/)
+
+    * [SisComPizzariaDesktop](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoPSII/SisComPizzariaDesktop/)
+	  * EclipseLink 2.5 (JPA 2.1)
+	  * Java Swing
+	    * Libraries:
+		  * [EclipseLink 2.5 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.5%20(JPA%202.1)/)
+		  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+		  * [SisComPizzariaServidor](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoPSII/SisComPizzariaServidor/)
+
+    * [SisComPizzariaWeb](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoPSII/SisComPizzariaWeb/)
+	  * EclipseLink 2.5 (JPA 2.1)
+	  * Servlet
+	  * HTML5
+      * CSS3
+      * JavaScript
+      * JQuery
+      * JSP
+	    * Libraries:
+		  * [EclipseLink 2.5 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/EclipseLink%202.5%20(JPA%202.1)/)
+		  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+		  * [SisComPizzariaServidor](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabalhoPSII/SisComPizzariaServidor/)
+
 
 ## Contributors
 
