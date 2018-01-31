@@ -1,0 +1,196 @@
+#Options
+GenerateScanner = true
+GenerateParser = true
+Language = Java
+ScannerName = Lexico
+ParserName = Sintatico
+SemanticName = Semantico
+ScannerCaseSensitive = true
+ScannerTable = Compact
+Input = String
+Parser = LL
+#RegularDefinitions
+letra: [a-zA-Z]
+digito:[0-9]
+digito1:[1-9]
+inteiro: 0|({digito1}({digito}?{digito}?{digito}?{digito}?))
+execoes:\\(\\|\"|n)
+permitidos:[^\\\"\n]
+permitidos2:[^\n]
+#Tokens
+:[\s\t\n]
+
+: /"/"{permitidos2}*
+
+identificador: {letra}+(({letra}|{digito})*_?({letra}|{digito})+)*
+
+inteiro: 0|({digito1}({digito}?{digito}?{digito}?{digito}?))
+
+real: {inteiro},(0|(({digito}?{digito}?{digito}?{digito}?){digito1}))
+
+data: {digito}{digito}/{digito}{digito}/({digito}{digito}|{digito}{digito}{digito}{digito})
+
+hora: {digito}?{digito}:{digito}{digito}(:{digito}{digito})?
+
+literal: \"({permitidos}*{execoes}*)*\"
+
+begin = identificador: "begin" 
+
+boolean = identificador: "boolean"
+
+date = identificador: "date"
+
+else = identificador: "else"
+
+end = identificador: "end"
+
+exit = identificador: "exit"
+
+false = identificador: "false"
+
+float = identificador: "float"
+
+if = identificador: "if"
+
+int = identificador: "int"
+
+loop = identificador: "loop"
+
+module = identificador: "module"
+
+read = identificador: "read"
+
+string = identificador: "string"
+
+then = identificador: "then"
+
+time = identificador: "time"
+
+true = identificador: "true"
+
+var = identificador: "var"
+
+write = identificador: "write"
+
+"="
+"+="
+"-="
+"=="
+"!="
+"<"
+"<="
+">"
+">="
+"+"
+"-"
+"*"
+"/"
+"\"
+"%"
+"!"
+"&"
+"|"
+";"
+"."
+":"
+","
+"("
+")"
+
+
+
+#NonTerminals
+<programa>
+<variaveis>
+<atrVar>
+<atrVar1>
+<listaId>
+<listaId1>
+<tipo>
+<iniVar>
+<cmdAtribuicao>
+<opAtr>
+<cmdEntrada>
+<cmdSaida>
+<listaExp>
+<listaExp1>
+<cmdSelecao>
+<senao>
+<cmdRepeticao>
+<comando>
+<listaCmd>
+<listaCmd1>
+<expressao>
+<expressao1>
+<valor>
+<relacional>
+<relacional1>
+<operadorRelacional>
+<aritmetica>
+<aritmetica1>
+<termo>
+<termo1>
+<elemento>
+#Grammar
+<programa>::= #1 module identificador #36 ";" <variaveis> begin <listaCmd> end identificador #2 ".";
+
+<variaveis>::= var <atrVar> | î;
+
+<atrVar>::= <listaId> ":" <tipo> #25 <iniVar> ";" <atrVar1>;
+
+<atrVar1>::= <atrVar> | î;
+
+<listaId>::= identificador #23 <listaId1>;
+
+<listaId1>::= "," <listaId> | î;
+
+<tipo>::= int | float | date | time | boolean | string; 
+
+<iniVar>::= "=" <expressao> #26 | î;
+
+<cmdAtribuicao>::= identificador #23 <opAtr> #28 <expressao> #29;
+
+<opAtr>::= "=" | "+=" | "-=";
+
+<cmdEntrada>::= read "(" <listaId> ")" #30;
+
+<cmdSaida>::= write "(" <listaExp> ")";
+
+<listaExp>::= <expressao> #3 <listaExp1>;
+
+<listaExp1>::= "," <listaExp> | î; 
+
+<cmdSelecao>::= if <expressao> #31 then <listaCmd> <senao> end #32;
+
+<senao>::= #33 else <listaCmd> | î;
+
+<cmdRepeticao>::= #34 loop <listaCmd> end #35;
+
+<comando>::= <cmdAtribuicao> | <cmdEntrada> | <cmdSaida> | <cmdSelecao> | <cmdRepeticao> | exit #27 ;
+
+<listaCmd>::= <comando> <listaCmd1>;
+
+<listaCmd1>::= ";" <listaCmd> | î;
+
+<expressao>::= <valor> <expressao1>;
+
+<expressao1>::= "|" <valor> #4 <expressao1> | "&" <valor> #5 <expressao1> | î;
+
+<valor>::= <relacional> | true #6 | false #7 | "!" <valor> #8;
+
+<relacional>::= <aritmetica> <relacional1>;
+
+<relacional1>::= <operadorRelacional> #9 <aritmetica> #10 | î;
+
+<operadorRelacional>::= "==" | "!=" | "<" | "<=" | ">" | ">=";
+
+<aritmetica>::= <termo> <aritmetica1> ;
+
+<aritmetica1>::= "+" <termo> #11 <aritmetica1> | "-" <termo> #12 <aritmetica1> | î;
+
+<termo>::= <elemento> <termo1>;
+
+<termo1>::= "*" <elemento> #13 <termo1> | "/" <elemento> #14 <termo1> | "\" <elemento> #15 <termo1> | "%" <elemento> #16 <termo1> | î;
+
+<elemento>::= identificador #24 | inteiro #17 | real #18 | data #19  | hora #20 | literal #21| "(" <expressao> ")" | "+" <elemento> |  "-" <elemento> #22 ;
+

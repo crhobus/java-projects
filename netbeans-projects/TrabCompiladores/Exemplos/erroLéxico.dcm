@@ -1,0 +1,6 @@
+module quadrado;
+begin
+   read (lado); $
+   area = lado * lado;
+   write (area
+end quadrado.

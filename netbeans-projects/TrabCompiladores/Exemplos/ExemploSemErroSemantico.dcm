@@ -1,0 +1,7 @@
+module quadrado;
+var lado, cima, baixo: int;
+begin
+	read (lado);
+	area = lado * lado;
+	write (area)
+end quadrado.

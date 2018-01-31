@@ -700,6 +700,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Projeto matéria de faculdade: Banco de Dados II - Compilador de banco de dados
 
+* [TrabCompiladores](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/TrabCompiladores/)
+
+  * Projeto matéria de faculdade: Compiladores - Desenvolvimento de um compilador
+
 
 ## Contributors
 

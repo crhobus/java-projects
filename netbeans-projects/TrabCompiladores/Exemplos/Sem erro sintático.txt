@@ -1,0 +1,57 @@
+module teste;
+const constante = 1 + 2 + 5 + 4;
+var a : int;
+    b : float = 1;
+begin
+
+if (1 > 2) then
+   a = 1+2 
+end;
+
+loop
+   if (a > b) then
+      a = 1+2;
+      exit
+   else
+      a = 1 + 8
+   end;
+   b = 5 + 9,0
+end;
+
+if(!f) then
+   b = 9
+end;
+
+write(saida);
+
+read(entrada)
+
+end teste.module teste;
+const constante = 1 + 2 + 5 + 4;
+var a : int;
+    b : float = 1;
+begin
+
+if (1 > 2) then
+   a = 1+2 
+end;
+
+loop
+   if (a > b) then
+      a = 1+2;
+      exit
+   else
+      a = 1 + 8
+   end;
+   b = 5 + 9,0
+end;
+
+if(!f) then
+   b = 9
+end;
+
+write(saida);
+
+read(entrada)
+
+end teste.
