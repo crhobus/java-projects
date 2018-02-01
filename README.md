@@ -756,6 +756,10 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * HTML5
   * JavaScript
 
+* [WebApplicationJS](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WebApplicationJS/)
+
+  * AngularJS
+
 
 ## Contributors
 

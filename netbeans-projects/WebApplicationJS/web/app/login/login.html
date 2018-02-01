@@ -1,0 +1,19 @@
+<div>
+    <div>
+        <h1>{{titulo}}</h1>
+
+        <form name="usuarioForm" id="usuarioForm" ng-submit="login(usuario)" novalidate>
+
+            <label for="usuario">Usuário</label><br/>
+            <input type="text" id="usuario" name="usuario" ng-model="usuario.usuario" ng-required="true"><br/>
+
+            <label for="senha">Senha</label><br/>
+            <input type="password" id="senha" name="senha" ng-model="usuario.senha" ng-required="true"><br/>
+
+            <button type="submit" id="salvar" ng-disabled="usuarioForm.$invalid">Salvar</button>
+            <button type="reset" id="cancelar" ng-click="cancelar()">Cancelar</button>
+
+        </form>
+
+    </div>
+</div>
