@@ -747,6 +747,15 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Maven Project
   * Servlet com Filter
 
+* [WebApplicationAjax](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WebApplicationAjax/)
+
+  * Maven Project
+  * Requisições Ajax
+  * JSON
+  * XML
+  * HTML5
+  * JavaScript
+
 
 ## Contributors
 
