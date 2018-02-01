@@ -760,6 +760,12 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * AngularJS
 
+* [WebApplicationJSF](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WebApplicationJSF/)
+
+  * JSF 2.2
+    * Libraries: 
+	  * [JSF 2.2](https://github.com/crhobus/java-libraries/tree/master/JSF%202.2/)
+
 
 ## Contributors
 

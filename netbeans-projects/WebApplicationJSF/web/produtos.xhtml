@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Cadastro de Produtos</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputLabel for="codigo" value="Codigo"/>
+                <h:inputText id="codigo" value="#{prodBean.produtoItem.codigo}" required="true" label="Codigo"/>
+                <h:message for="codigo" style="color: red"/>
+
+                <h:outputLabel for="nome" value="Nome"/>
+                <h:inputText id="nome" value="#{prodBean.produtoItem.nome}" required="true" label="Nome">
+                    <f:validateLength minimum="5" maximum="30"/>
+                </h:inputText>
+                <h:message for="nome" style="color: red"/>
+
+                <h:outputLabel for="preco" value="Preço"/>
+                <h:inputText id="preco" value="#{prodBean.produtoItem.preco}" required="true" label="Preço">
+                    <f:convertNumber locale="pt"/>
+                </h:inputText>
+                <h:message for="preco" style="color: red"/>
+            </h:panelGrid>
+            <h:commandButton action="#{prodBean.salvar()}" value="Salvar"/>
+        </h:form>
+        <h:dataTable var="item" value="#{prodBean.produtos}">
+            <h:column>
+                <f:facet name="header">Codigo</f:facet>
+                <h:outputText value="#{item.codigo}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nome</f:facet>
+                <h:outputText value="#{item.nome}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Preço</f:facet>
+                <h:outputText value="#{item.preco}">
+                    <f:convertNumber locale="pt"/>
+                </h:outputText>
+            </h:column>
+        </h:dataTable>
+    </h:body>
+</html>
+
