@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulário de contato - Email</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script type="text/javascript">
+            function index()
+            {
+                location.href = "index.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Formulário de Contato - Email</h1>
+
+            <form action="contatoservlet" method="POST">
+
+                <label>SMTP Server:</label><br/>
+                <input type="text" name="smtpServer" value="smtp.gmail.com" class="field"><br/>
+
+                <label>De:</label><br/>
+                <input type="text" name="from" value="caiohobus@gmail.com" class="field"><br/>
+
+                <label>Nome:</label><br/>
+                <input type="text" name="nameFrom" value="Caio Hobus" class="field"><br/>
+
+                <label>Username:</label><br/>
+                <input type="text" name="username" value="caiohobus@gmail.com" class="field"><br/>
+
+                <label>Password:</label><br/>
+                <input type="password" name="password" class="field">
+
+                <br/>
+                <br/>
+
+                <label>Para:</label><br/>
+                <input type="text" name="to" class="field"><br/>
+
+                <label>Nome:</label><br/>
+                <input type="text" name="nameTo" class="field"><br/>
+
+                <label>Assunto:</label><br/>
+                <input type="text" name="subject" class="field"><br/>
+
+                <label>Mensagem:</label><br/>
+                <textarea name="message" class="field"></textarea>
+
+                <br/>
+                <br/>
+
+                <input type="submit" value="Enviar" class="button">
+                <input type="button" value="Index" onClick="index()" class="button">
+
+            </form>
+        </div>
+    </body>
+</html>

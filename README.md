@@ -778,6 +778,14 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Maven Project
   * Servlet
 
+* [WebApplicationUtils](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WebApplicationUtils/)
+
+  * Maven Project
+  * Servlet
+  * Oracle DataBase
+  * HTML5
+  * CSS3
+
 
 ## Contributors
 

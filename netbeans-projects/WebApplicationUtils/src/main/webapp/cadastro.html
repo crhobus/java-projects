@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulário de contato - Cadastro</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script type="text/javascript">
+            function index()
+            {
+                location.href = "index.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Formulário de Contato - Cadastro</h1>
+
+            <form action="db/contato" method="POST">
+
+                <label>Nome:</label><br/>
+                <input type="text" name="nome" class="field"><br/>
+
+                <label>Telefone:</label><br/>
+                <input type="text" name="telefone" class="field"><br/>
+
+                <label>Email:</label><br/>
+                <input type="text" name="email" class="field">
+
+                <br/>
+                <br/>
+
+                <input type="submit" value="Cadastrar" class="button">
+                <input type="button" value="Index" onClick="index()" class="button">
+
+            </form>
+        </div>
+    </body>
+</html>
