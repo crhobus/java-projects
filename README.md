@@ -782,6 +782,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Maven Project
   * Servlet
+  * Email
   * Oracle DataBase
   * HTML5
   * CSS3
