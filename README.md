@@ -787,6 +787,14 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * HTML5
   * CSS3
 
+* [WebServiceServidor](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WebServiceServidor/)
+
+  * Web Service Servidor
+
+* [WebServiceCliente](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WebServiceCliente/)
+
+  * Web Service Cliente
+
 
 ## Contributors
 
