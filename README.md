@@ -809,6 +809,14 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * CSS3
   * Spring
 
+* [WebStrutsApp](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WebStrutsApp/)
+
+  * Maven Project
+  * JSP
+  * HTML5
+  * CSS3
+  * Struts
+
 
 ## Contributors
 
