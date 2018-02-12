@@ -800,6 +800,15 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Web Service Servidor/Cliente
   * XML
 
+* [WebSpringApp](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WebSpringApp/)
+
+  * Maven Project
+  * JSP
+  * JSTL
+  * HTML5
+  * CSS3
+  * Spring
+
 
 ## Contributors
 
