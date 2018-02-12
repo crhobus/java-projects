@@ -766,6 +766,13 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * Libraries: 
 	  * [JSF 2.2](https://github.com/crhobus/java-libraries/tree/master/JSF%202.2/)
 
+* [WebApplicationJSP](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WebApplicationJSP/)
+
+  * Maven Project
+  * Servlet
+  * JSTL
+  * JSP
+
 
 ## Contributors
 
