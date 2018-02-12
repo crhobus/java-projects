@@ -1,0 +1,7 @@
+info
+
+cd C:\Java\NetBeans\WebServices\src
+
+set path=C:\Program Files\Java\jdk1.7.0_05\bin
+
+wsimport -keep -p webservice http://localhost:5097/cliente?wsdl
