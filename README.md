@@ -817,6 +817,21 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * CSS3
   * Struts
 
+* [WS](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WS/)
+
+  * Web Services - Com 2 subprojetos
+
+    * [CalculadoraWS](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WS/CalculadoraWS/)
+	  * Server
+	    * Libraries:
+		  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+		  * [METRO 2.0](https://github.com/crhobus/java-libraries/tree/master/METRO%202.0/)
+
+    * [CalculadoraWSCliente](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WS/CalculadoraWSCliente/)
+	  * Client
+	    * Libraries:
+		  * [JAX-WS 2.2.6](https://github.com/crhobus/java-libraries/tree/master/JAX-WS%202.2.6/)
+
 
 ## Contributors
 
