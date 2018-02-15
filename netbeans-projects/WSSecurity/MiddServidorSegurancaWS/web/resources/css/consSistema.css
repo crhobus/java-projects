@@ -1,0 +1,39 @@
+/* 
+    Document   : consSistema.css
+    Created on : 25/08/2013, 10:05:20
+    Author     : Caio
+*/
+
+.btPesquisar {
+    margin-left: 12px !important;
+}
+
+.btLimpar {
+    margin-left: 3px !important;
+}
+
+.columnNrSequencia {
+    width: 10% !important;
+}
+
+.columnNmSistema {
+    width: 100% !important;
+}
+
+.columAlterar {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgAlterar {
+    border: 0 !important;
+}
+
+.columExcluir {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgExcluir {
+    border: 0 !important;
+}

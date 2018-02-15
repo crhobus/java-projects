@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : cadasPermissao.xhtml
+Created on : 25/08/2013, 16:21:54
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Cadastro de Permissões
+        </ui:define>
+        <ui:define name="corpo">
+            <h:outputStylesheet library="css" name="cadasPermissao.css"/>
+            <h:outputScript library="js" name="permissao.js"/>
+
+            <h:form id="formCadasPermissao" acceptcharset="ISO-8859-1">
+
+                <p:growl id="dsMensagemCadasPermissao" showDetail="true"/>
+
+                <p:panelGrid columns="3" styleClass="panelCadasPermissao" id="pnCadasPermissao">
+
+                    <h:outputLabel value="Sequência:" for="nrSequencia"/>
+                    <p:inputText label="sequencia" value="#{permissaoBean.permissao.nrSequencia}" required="true" readonly="true" id="nrSequencia"/>
+                    <p:message for="nrSequencia"/>
+
+                    <h:outputLabel value="Nome:" for="nmPermissao"/>
+                    <p:inputText label="permissão" value="#{permissaoBean.permissao.nmPermissao}" size="42" maxlength="50" required="true" id="nmPermissao"/>
+                    <p:message for="nmPermissao"/>
+
+                    <h:outputLabel value="Código comunicação:" for="cdPermissaoComunic"/>
+                    <p:inputText label="código comunicação" value="#{permissaoBean.permissao.cdPermissaoComunic}" size="42" maxlength="20" required="true" id="cdPermissaoComunic"/>
+                    <p:message for="cdPermissaoComunic"/>
+
+                    <h:outputLabel value="Descrição:" for="dsPermissao"/>
+                    <p:inputTextarea label="descrição" value="#{permissaoBean.permissao.dsPermissao}" autoResize="false" maxlength="4000" styleClass="permissao" id="dsPermissao"/>
+                    <p:message for="dsPermissao"/>
+
+                </p:panelGrid>
+
+                <br/>
+
+                <p:commandButton value="Salvar" action="#{permissaoBean.salvar}" ajax="false" id="btSalvar"/>
+
+                <p:button value="Novo" outcome="/pages/admin/cadasPermissao" styleClass="btNovoPer"/>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

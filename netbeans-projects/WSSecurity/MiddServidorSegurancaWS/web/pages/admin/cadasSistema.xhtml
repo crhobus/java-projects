@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : cadasSistema.xhtml
+Created on : 22/08/2013, 19:52:21
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Cadastro de Sistemas
+        </ui:define>
+        <ui:define name="corpo">
+            <h:outputStylesheet library="css" name="cadasSistema.css"/>
+
+            <h:form id="formCadasSistema" acceptcharset="ISO-8859-1">
+
+                <p:growl id="dsMensagemCadasSistema" showDetail="true"/>
+
+                <p:panelGrid columns="3" styleClass="panelCadasSistema" id="pnCadasSistema">
+
+                    <h:outputLabel value="Sequência:" for="nrSequencia"/>
+                    <p:inputText label="sequencia" value="#{sistemaBean.sistema.nrSequencia}" required="true" readonly="true" id="nrSequencia"/>
+                    <p:message for="nrSequencia"/>
+
+                    <h:outputLabel value="Sistema:" for="nmSistema"/>
+                    <p:inputText label="sistema" value="#{sistemaBean.sistema.nmSistema}" size="42" maxlength="80" required="true" id="nmSistema"/>
+                    <p:message for="nmSistema"/>
+
+                </p:panelGrid>
+
+                <br/>
+
+                <p:commandButton value="Salvar" action="#{sistemaBean.salvar}" ajax="false" id="btSalvar"/>
+
+                <p:button value="Novo" outcome="/pages/admin/cadasSistema" styleClass="btNovoSis"/>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

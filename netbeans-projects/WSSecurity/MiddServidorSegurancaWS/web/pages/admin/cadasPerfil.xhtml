@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : cadasPerfil.xhtml
+Created on : 29/08/2013, 20:40:08
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Cadastro de Perfil
+        </ui:define>
+        <ui:define name="corpo">
+            <h:outputStylesheet library="css" name="cadasPerfil.css"/>
+
+            <h:form id="formCadasPerfil" acceptcharset="ISO-8859-1">
+
+                <p:growl id="dsMensagemCadasPerfil" showDetail="true"/>
+
+                <p:panelGrid columns="3" styleClass="panelCadasPerfil" id="pnCadasPerfil">
+
+                    <h:outputLabel value="Sequência:" for="nrSequencia"/>
+                    <p:inputText label="sequencia" value="#{perfilBean.perfil.nrSequencia}" required="true" readonly="true" id="nrSequencia"/>
+                    <p:message for="nrSequencia"/>
+
+                    <h:outputLabel value="Nome:" for="nmPerfil"/>
+                    <p:inputText label="perfil" value="#{perfilBean.perfil.nmPerfil}" size="42" maxlength="80" required="true" id="nmPerfil"/>
+                    <p:message for="nmPerfil"/>
+
+                </p:panelGrid>
+
+                <br/>
+
+                <p:commandButton value="Salvar" action="#{perfilBean.salvar}" ajax="false" id="btSalvar"/>
+
+                <p:button value="Novo" outcome="/pages/admin/cadasPerfil" styleClass="btNovoPer"/>
+
+                <p:commandButton value="Recursos" action="#{recursoBean.abrirPaginaRecurso}" ajax="false" styleClass="btRecursoPer">
+                    <f:setPropertyActionListener target="#{sessionBean.nrSeqPerfilEdicaoRecurso}" value="#{perfilBean.perfil.nrSequencia}"/>
+                </p:commandButton>
+
+                <br/>
+                <br/>
+
+                <p:panelGrid columns ="3" styleClass="panelUsuarioPerfil" id="pnUsuarioPerfil">
+
+                    <h:outputLabel value="Usuário: " for="nrSeqUsuario"/>
+                    <p:selectOneMenu label="usuário" id="nrSeqUsuarioID" value="#{perfilBean.nrSeqUsuario}" styleClass="nrSeqUsuario">
+                        <f:selectItem itemValue="0" itemLabel="Selecione..."/>
+                        <f:selectItems value="#{perfilBean.usuarios}" var="usuario" itemValue="#{usuario.nrSequencia}" itemLabel="#{usuario.nmPessoa}"/>
+                    </p:selectOneMenu>
+                    <p:commandButton value="Add" action="#{perfilBean.addUsuario}" ajax="false" id="btUsuarioPerfil"/>
+
+                </p:panelGrid>
+
+                <br/>
+
+                <p:dataTable value="#{perfilBean.usuariosPerfil}" var="usuarioPerfil" emptyMessage="dados não encontrados" id="tbUsuariosPerfilID" styleClass="tbUsuariosPerfil">
+                    <p:column headerText="Usuários">
+                        <h:outputText value="#{usuarioPerfil.nmPessoa}"/>
+                    </p:column>
+                    <p:column styleClass="columExcluir">
+                        <h:commandLink action="#{perfilBean.excluirUsuario}"
+                                       onclick="if (!confirm('Confirma a exclusão do usuário?')) return false;">
+                            <h:graphicImage library="imagens" name="Excluir.png" styleClass="imgExcluir"/>
+                            <f:setPropertyActionListener target="#{perfilBean.usuario}" value="#{usuarioPerfil}"/>
+                        </h:commandLink>
+                    </p:column>
+                </p:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

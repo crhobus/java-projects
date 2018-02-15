@@ -1,0 +1,39 @@
+/* 
+    Document   : consPermissao.css
+    Created on : 27/08/2013, 21:04:58
+    Author     : Caio
+*/
+
+.btPesquisar {
+    margin-left: 12px !important;
+}
+
+.btLimpar {
+    margin-left: 3px !important;
+}
+
+.columnNrSequencia {
+    width: 10% !important;
+}
+
+.columnCdPermissaoComunic {
+    width: 16% !important;
+}
+
+.columAlterar {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgAlterar {
+    border: 0 !important;
+}
+
+.columExcluir {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgExcluir {
+    border: 0 !important;
+}

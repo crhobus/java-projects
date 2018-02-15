@@ -1,0 +1,27 @@
+servidor
+serverKeystore.jks
+alias: sysserver
+keypass: serv50200
+storepass: spserv500
+certificado:crtServ.cer
+
+cliente
+clientKeystore.jks
+alias: sysuser
+keypass: clie50200
+storepass: spclient250
+certificado:crtClient.cer
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+keytool -genkey -keyalg RSA -sigalg SHA1withRSA -validity 730 -alias sysserver -keypass serv50200 -storepass spserv500 -keystore serverKeystore.jks -dname "cn=localhost"
+
+keytool -genkey -keyalg RSA -sigalg SHA1withRSA -validity 730 -alias sysuser -keypass clie50200 -storepass spclient250 -keystore clientKeystore.jks -dname "cn=clientuser"
+
+keytool -export -rfc -keystore clientKeystore.jks -storepass spclient250 -alias sysuser -file crtClient.cer
+
+keytool -import -trustcacerts -keystore serverKeystore.jks -storepass spserv500 -alias sysuser -file crtClient.cer -noprompt
+
+keytool -export -rfc -keystore serverKeystore.jks -storepass spserv500 -alias sysserver -file crtServ.cer
+
+keytool -import -trustcacerts -keystore clientKeystore.jks -storepass spclient250 -alias sysserver -file crtServ.cer -noprompt

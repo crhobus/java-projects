@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : cadasUsuario.xhtml
+Created on : 09/06/2013, 15:50:45
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Cadastro de Usuários
+        </ui:define>
+        <ui:define name="corpo">
+            <h:outputStylesheet library="css" name="cadasUsuario.css"/>
+            <h:outputScript library="js" name="usuario.js"/>
+
+            <h:form id="formCadasUsuario" acceptcharset="ISO-8859-1">
+
+                <p:growl id="dsMensagemCadasUsuario" showDetail="true"/>
+
+                <p:panelGrid columns="3" styleClass="panelCadasUsuario" id="pnCadasUsuario">
+
+                    <h:outputLabel value="Sequência:" for="nrSequencia"/>
+                    <p:inputText label="sequencia" value="#{usuarioBean.usuario.nrSequencia}" required="true" readonly="true" id="nrSequencia"/>
+                    <p:message for="nrSequencia"/>
+
+                    <h:outputLabel value="Nome:" for="nmPessoa"/>
+                    <p:inputText label="nome" value="#{usuarioBean.usuario.nmPessoa}" required="true" id="nmPessoa"/>
+                    <p:message for="nmPessoa"/>
+
+                    <h:outputLabel value="Usuário:" for="nmUsuario"/>
+                    <p:inputText label="usuário" value="#{usuarioBean.usuario.nmUsuario}" required="true" id="nmUsuario" maxlength="25"/>
+                    <p:message for="nmUsuario"/>
+
+                    <h:outputLabel value="Senha:" for="dsSenha"/>
+                    <p:password label="senha" value="#{usuarioBean.dsSenha}" required="true" id="dsSenha" maxlength="30" redisplay="true"/>
+                    <p:message for="dsSenha"/>
+
+                    <h:outputLabel value="Confirma senha:" for="dsConfirmaSenha"/>
+                    <p:password label="confirma senha" value="#{usuarioBean.dsConfirmaSenha}" required="true" id="dsConfirmaSenha" maxlength="30" redisplay="true"/>
+                    <p:message for="dsConfirmaSenha"/>
+
+                    <h:outputLabel value="E-Mail:" for="dsEmail"/>
+                    <p:inputText label="e-mail" value="#{usuarioBean.usuario.dsEmail}" required="true" id="dsEmail"/>
+                    <p:message for="dsEmail"/>
+
+                    <h:outputLabel value="Ativo:" for="ieAtivo"/>
+                    <p:selectBooleanCheckbox label="ativo" value="#{usuarioBean.usuario.ieAtivo}" required="true" id="ieAtivo"/>
+                    <p:message for="ieAtivo"/>
+
+                    <h:inputHidden value="#{usuarioBean.dsSenhaOriginal}" id="dsSenhaOriginal"/>
+
+                </p:panelGrid>
+
+                <p:commandButton value="Salvar" action="#{usuarioBean.salvar}" ajax="false" id="btSalvar"/>
+
+                <p:button value="Novo" outcome="/pages/admin/cadasUsuario" styleClass="btNovoUsu"/>
+
+                <p:commandButton value="Recursos" action="#{recursoBean.abrirPaginaRecurso}" ajax="false" styleClass="btRecursoUsu">
+                    <f:setPropertyActionListener target="#{sessionBean.nrSeqUsuarioEdicaoRecurso}" value="#{usuarioBean.usuario.nrSequencia}"/>
+                </p:commandButton>
+
+                <br/>
+                <br/>
+
+                <p:panelGrid columns ="3" styleClass="panelPermissaoUsuario" id="pnPermissaoUsuario">
+
+                    <h:outputLabel value="Permissão: " for="dsPermissao"/>
+                    <p:selectOneMenu label="permissão" id="dsPermissaoID" value="#{usuarioBean.dsPermissao}" styleClass="dsPermissao">
+                        <f:selectItem itemValue="Selecione" itemLabel="Selecione..."/>  
+                        <f:selectItem itemValue="ROLE_ADMINISTRADOR" itemLabel="Administrador"/>  
+                        <f:selectItem itemValue="ROLE_USUARIO" itemLabel="Usuário"/> 
+                    </p:selectOneMenu>
+                    <p:commandButton value="Add" action="#{usuarioBean.addPermissao}" ajax="false" id="btPermissao"/>
+
+                </p:panelGrid>
+
+                <h:panelGroup rendered="#{!empty usuarioBean.permissoes}" id="pnID">
+                    <br/>
+                </h:panelGroup>
+
+                <p:dataTable value="#{usuarioBean.permissoes}" var="permissao" id="tbPermissoesID" rendered="#{!empty usuarioBean.permissoes}" styleClass="tbPermissoes">
+                    <p:column headerText="Permissões">
+                        <h:outputText value="#{permissao.dsPermissao}"/>
+                    </p:column>
+                    <p:column styleClass="columExcluir">
+                        <h:commandLink action="#{usuarioBean.excluirPermissao}"
+                                       onclick="if (!confirm('Confirma a exclusão da permissão?')) return false;">
+                            <h:graphicImage library="imagens" name="Excluir.png" styleClass="imgExcluir"/>
+                            <f:setPropertyActionListener target="#{usuarioBean.permissao}" value="#{permissao}"/>
+                        </h:commandLink>
+                    </p:column>
+                </p:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

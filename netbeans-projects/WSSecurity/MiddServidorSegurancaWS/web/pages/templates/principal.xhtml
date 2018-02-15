@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : principal.xhtml
+Created on : 13/08/2013, 19:22:32
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+        <title><ui:insert name="tituloPg">Servidor WS-Security</ui:insert></title>
+        <h:outputStylesheet library="css" name="principal.css"/>
+        <h:outputScript library="js" name="principal.js"/>
+    </h:head>
+    <h:body>
+
+        <p:panel styleClass="pnContainer">
+
+            <div id="titulo">
+                <ui:insert name="titulo">Servidor WS-Security</ui:insert>
+            </div>
+
+            <div id="imgLogoTipo">
+                <h:graphicImage library="imagens" name="LogoTipo.png"/>
+            </div>
+
+            <p:panel styleClass="pnInterno" id="pnInternoID">
+                <f:facet name="header">
+                    <h:outputText value="Usuário: #{request.remoteUser}"/>
+                    <h:outputText value=" " id="espacamento"/>
+                    <a href="#{request.contextPath}/j_spring_security_logout">Sair</a>
+                </f:facet>
+
+                <p:panel styleClass="pnCorpo" id="pnCorpoID">
+                    <div id="menu">
+                        <h:form id="formMenu" acceptcharset="ISO-8859-1">
+                            <p:menu>
+                                <p:submenu label="Principal">
+                                    <p:menuitem value="Início" outcome="/pages/principal/index" icon="ui-icon-arrowrefresh-1-w"/>
+                                </p:submenu>
+                                <p:submenu label="Sistemas">
+                                    <p:menuitem value="Consulta" outcome="/pages/consulta/consSistema" icon="ui-icon-document"/>
+                                    <p:menuitem value="Cadastro" outcome="/pages/admin/cadasSistema" icon="ui-icon-disk"/>
+                                </p:submenu>
+                                <p:submenu label="Permissões">
+                                    <p:menuitem value="Consulta" outcome="/pages/consulta/consPermissao" icon="ui-icon-document"/>
+                                    <p:menuitem value="Cadastro" outcome="/pages/admin/cadasPermissao" icon="ui-icon-disk"/>
+                                </p:submenu>
+                                <p:submenu label="Regras">
+                                    <p:menuitem value="Consulta" outcome="/pages/consulta/consRegra" icon="ui-icon-document"/>
+                                    <p:menuitem value="Cadastro" outcome="/pages/admin/cadasRegra" icon="ui-icon-disk"/>
+                                </p:submenu>
+                                <p:submenu label="Usuários">
+                                    <p:menuitem value="Consulta" outcome="/pages/consulta/consUsuario" icon="ui-icon-document"/>
+                                    <p:menuitem value="Cadastro" outcome="/pages/admin/cadasUsuario" icon="ui-icon-disk"/>
+                                </p:submenu>
+                                <p:submenu label="Perfil">
+                                    <p:menuitem value="Consulta" outcome="/pages/consulta/consPerfil" icon="ui-icon-document"/>
+                                    <p:menuitem value="Cadastro" outcome="/pages/admin/cadasPerfil" icon="ui-icon-disk"/>
+                                </p:submenu>
+                            </p:menu>
+                        </h:form>
+                    </div>
+                    <div id="corpo">
+                        <ui:insert name="corpo"/>
+                    </div>
+                </p:panel>
+
+                <f:facet name="footer">
+                    <h:outputText value="Middleware WS Server Security 1.0"/>
+                </f:facet>
+            </p:panel>
+
+        </p:panel>
+
+    </h:body>
+</html>

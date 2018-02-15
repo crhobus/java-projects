@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" 
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+                                               http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="MiddServidorSegurancaWSPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>br.server.model.entities.Sistema</class>
+        <class>br.server.model.entities.Permissao</class>
+        <class>br.server.model.entities.Regra</class>
+        <class>br.server.model.entities.RecursoPermissao</class>
+        <class>br.server.model.entities.Recurso</class>
+        <class>br.server.model.entities.Usuario</class>
+        <class>br.server.model.entities.Perfil</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="hibernate.connection.datasource" value="java:comp/env/jdbc/ServSecurityDB"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+            <property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.JDBCTransactionFactory"/>
+            <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>

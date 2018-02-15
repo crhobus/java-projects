@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : consPermissao.xhtml
+Created on : 25/08/2013, 16:20:36
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/facelets/tags">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Consulta de Permissões
+        </ui:define>
+        <ui:define name="corpo">
+            <h:outputStylesheet library="css" name="consPermissao.css"/>
+
+            <h:form id="formConsPermissao" acceptcharset="ISO-8859-1">
+
+                <p:growl id="dsMensagemConsPermissao" showDetail="true"/>
+
+                <p:inputText label="pesquisar" value="#{permissaoBean.dsPesquisa}" id="dsPesquisa" size="40"/>
+                <p:watermark for="dsPesquisa" value="nome..."/>
+
+                <p:commandButton value="Pesquisar" action="#{permissaoBean.pesquisar}" ajax="false" styleClass="btPesquisar"/>
+
+                <p:button value="Limpar" outcome="/pages/consulta/consPermissao" styleClass="btLimpar"/>
+
+                <br/>
+                <br/>
+
+                <p:button value="Novo" outcome="/pages/admin/cadasPermissao" styleClass="btNovo"/>
+
+                <br/>
+                <br/>
+
+                <p:dataTable value="#{permissaoBean.permissoes}" var="permissao" id="tbPermissoesID" emptyMessage="dados não encontrados" styleClass="tbPermissoes">
+                    <p:column headerText="Sequência" styleClass="columnNrSequencia">
+                        <h:outputText value="#{permissao.nrSequencia}"/>
+                    </p:column>
+                    <p:column headerText="Nome">
+                        <h:outputText value="#{permissao.nmPermissao}"/>
+                    </p:column>
+                    <p:column headerText="Código comunicação" styleClass="columnCdPermissaoComunic">
+                        <h:outputText value="#{permissao.cdPermissaoComunic}"/>
+                    </p:column>
+                    <sec:ifAnyGranted roles="ROLE_ADMINISTRADOR">
+                        <p:column styleClass="columAlterar">
+                            <h:commandLink action="#{permissaoBean.alterar}">
+                                <h:graphicImage library="imagens" name="Editar.png" styleClass="imgAlterar"/>
+                                <f:setPropertyActionListener target="#{sessionBean.nrSeqPermissaoEdicao}" value="#{permissao.nrSequencia}"/>
+                            </h:commandLink>
+                        </p:column>
+                        <p:column styleClass="columExcluir">
+                            <h:commandLink action="#{permissaoBean.excluir}"
+                                           onclick="if (!confirm('Confirma a exclusão da permissão #{permissao.nmPermissao}?')) return false;">
+                                <h:graphicImage library="imagens" name="Excluir.png" styleClass="imgExcluir"/>
+                                <f:setPropertyActionListener target="#{permissaoBean.permissao}" value="#{permissao}"/>
+                            </h:commandLink>
+                        </p:column>
+                    </sec:ifAnyGranted>
+                </p:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

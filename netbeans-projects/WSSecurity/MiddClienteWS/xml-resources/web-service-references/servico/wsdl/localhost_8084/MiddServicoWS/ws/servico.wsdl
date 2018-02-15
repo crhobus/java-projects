@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.server.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="MiddWSService" targetNamespace="http://webservice.server.br/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:tns="http://webservice.server.br/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webservice.server.br/">
+  <xs:import namespace="http://www.w3.org/2005/05/xmlmime"/>
+  <xs:element name="enviarArquivo" type="tns:enviarArquivo"/>
+  <xs:element name="enviarArquivoResponse" type="tns:enviarArquivoResponse"/>
+  <xs:element name="enviarRequisicao" type="tns:enviarRequisicao"/>
+  <xs:element name="enviarRequisicaoResponse" type="tns:enviarRequisicaoResponse"/>
+  <xs:element name="receberArquivo" type="tns:receberArquivo"/>
+  <xs:element name="receberArquivoResponse" type="tns:receberArquivoResponse"/>
+  <xs:element name="receberRequisicao" type="tns:receberRequisicao"/>
+  <xs:element name="receberRequisicaoResponse" type="tns:receberRequisicaoResponse"/>
+  <xs:element name="removerArquivoServidor" type="tns:removerArquivoServidor"/>
+  <xs:element name="removerArquivoServidorResponse" type="tns:removerArquivoServidorResponse"/>
+  <xs:complexType name="enviarRequisicao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nmUsuario" type="xs:string"/>
+      <xs:element name="nrSeqSistemaOrigem" type="xs:long"/>
+      <xs:element name="nrSeqSistemaDestino" type="xs:long"/>
+      <xs:element minOccurs="0" name="requisicao" type="xs:string"/>
+      <xs:element minOccurs="0" name="cdRegra" type="xs:string"/>
+      <xs:element minOccurs="0" name="cdPermissao" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enviarRequisicaoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="receberRequisicao">
+    <xs:sequence>
+      <xs:element name="nrSeqSistema" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="receberRequisicaoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enviarArquivo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nmUsuario" type="xs:string"/>
+      <xs:element name="nrSeqSistemaOrigem" type="xs:long"/>
+      <xs:element name="nrSeqSistemaDestino" type="xs:long"/>
+      <xs:element minOccurs="0" name="arquivo" type="tns:arquivo"/>
+      <xs:element minOccurs="0" name="cdRegra" type="xs:string"/>
+      <xs:element minOccurs="0" name="cdPermissao" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="arquivo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="binaryData" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+      <xs:element minOccurs="0" name="cdPermissao" type="xs:string"/>
+      <xs:element minOccurs="0" name="cdRegra" type="xs:string"/>
+      <xs:element minOccurs="0" name="dsDirArquivoServidor" type="xs:string"/>
+      <xs:element minOccurs="0" name="nmArquivo" type="xs:string"/>
+      <xs:element minOccurs="0" name="nmUsuario" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="enviarArquivoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removerArquivoServidor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dsArquivo" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removerArquivoServidorResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="receberArquivo">
+    <xs:sequence>
+      <xs:element name="nrSeqSistema" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="receberArquivoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:arquivo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Exception" type="tns:Exception"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="removerArquivoServidorResponse">
+    <wsdl:part element="tns:removerArquivoServidorResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="receberRequisicao">
+    <wsdl:part element="tns:receberRequisicao" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarArquivoResponse">
+    <wsdl:part element="tns:enviarArquivoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="receberArquivoResponse">
+    <wsdl:part element="tns:receberArquivoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarRequisicaoResponse">
+    <wsdl:part element="tns:enviarRequisicaoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part element="tns:Exception" name="Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarArquivo">
+    <wsdl:part element="tns:enviarArquivo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="receberArquivo">
+    <wsdl:part element="tns:receberArquivo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="receberRequisicaoResponse">
+    <wsdl:part element="tns:receberRequisicaoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="enviarRequisicao">
+    <wsdl:part element="tns:enviarRequisicao" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removerArquivoServidor">
+    <wsdl:part element="tns:removerArquivoServidor" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MiddWSInterface">
+    <wsdl:operation name="enviarRequisicao">
+      <wsdl:input message="tns:enviarRequisicao" name="enviarRequisicao">
+    </wsdl:input>
+      <wsdl:output message="tns:enviarRequisicaoResponse" name="enviarRequisicaoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="receberRequisicao">
+      <wsdl:input message="tns:receberRequisicao" name="receberRequisicao">
+    </wsdl:input>
+      <wsdl:output message="tns:receberRequisicaoResponse" name="receberRequisicaoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="enviarArquivo">
+      <wsdl:input message="tns:enviarArquivo" name="enviarArquivo">
+    </wsdl:input>
+      <wsdl:output message="tns:enviarArquivoResponse" name="enviarArquivoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removerArquivoServidor">
+      <wsdl:input message="tns:removerArquivoServidor" name="removerArquivoServidor">
+    </wsdl:input>
+      <wsdl:output message="tns:removerArquivoServidorResponse" name="removerArquivoServidorResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="receberArquivo">
+      <wsdl:input message="tns:receberArquivo" name="receberArquivo">
+    </wsdl:input>
+      <wsdl:output message="tns:receberArquivoResponse" name="receberArquivoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:Exception" name="Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MiddWSServiceSoapBinding" type="tns:MiddWSInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="enviarRequisicao">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="enviarRequisicao">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="enviarRequisicaoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="enviarArquivo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="enviarArquivo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="enviarArquivoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="receberRequisicao">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="receberRequisicao">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="receberRequisicaoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removerArquivoServidor">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removerArquivoServidor">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removerArquivoServidorResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="receberArquivo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="receberArquivo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="receberArquivoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MiddWSService">
+    <wsdl:port binding="tns:MiddWSServiceSoapBinding" name="MiddWSPort">
+      <soap:address location="http://localhost:8084/MiddServicoWS/ws/servico"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

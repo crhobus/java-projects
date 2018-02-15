@@ -1,0 +1,35 @@
+/* 
+    Document   : login.css
+    Created on : 08/08/2013, 21:16:43
+    Author     : Caio
+*/
+
+.panelLogin tr, .panelLogin td {
+    border: none !important;
+}
+
+body {
+    background-image: url(../resources/imagens/fundoLogin.png);
+}
+
+#centralizado {
+    position: absolute;
+    width: 660px;
+    height: 262px;
+    left: 50%;
+    top: 50%;
+    margin-left: -330px;
+    margin-top: -130px;
+    background-image: url(../resources/imagens/login.png);
+    background-repeat: no-repeat;
+}
+
+#dadosLogin {
+    position: absolute;
+    width: 240px;
+    height: 150px;
+    left: 47%;
+    top: 48%;
+    margin-left: 50px;
+    margin-top: -68px;
+}

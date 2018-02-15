@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : cadasRegra.xhtml
+Created on : 28/08/2013, 19:30:21
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Cadastro de Regras
+        </ui:define>
+        <ui:define name="corpo">
+            <h:outputStylesheet library="css" name="cadasRegra.css"/>
+            <h:outputScript library="js" name="regra.js"/>
+
+            <h:form id="formCadasRegra" acceptcharset="ISO-8859-1">
+
+                <p:growl id="dsMensagemCadasRegra" showDetail="true"/>
+
+                <p:panelGrid columns="3" styleClass="panelCadasRegra" id="pnCadasRegra">
+
+                    <h:outputLabel value="Sequência:" for="nrSequencia"/>
+                    <p:inputText label="sequencia" value="#{regraBean.regra.nrSequencia}" required="true" readonly="true" id="nrSequencia"/>
+                    <p:message for="nrSequencia"/>
+
+                    <h:outputLabel value="Nome:" for="nmRegra"/>
+                    <p:inputText label="regra" value="#{regraBean.regra.nmRegra}" size="42" maxlength="80" required="true" id="nmRegra"/>
+                    <p:message for="nmRegra"/>
+
+                    <h:outputLabel value="Código comunicação:" for="cdRegraComunic"/>
+                    <p:inputText label="código comunicação" value="#{regraBean.regra.cdRegraComunic}" size="42" maxlength="20" required="true" id="cdRegraComunic"/>
+                    <p:message for="cdRegraComunic"/>
+
+                    <h:outputLabel value="Sistema: " for="nrSeqSistema"/>
+                    <p:selectOneMenu label="sistema" id="nrSeqSistemaID" value="#{regraBean.regra.sistema.nrSequencia}" styleClass="nrSeqSistema">
+                        <f:selectItem itemValue="0" itemLabel="Selecione..."/>
+                        <f:selectItems value="#{regraBean.sistemas}" var="sistema" itemValue="#{sistema.nrSequencia}" itemLabel="#{sistema.nmSistema}"/>
+                    </p:selectOneMenu>
+                    <p:message for="nrSeqSistemaID"/>
+
+                </p:panelGrid>
+
+                <br/>
+
+                <p:commandButton value="Salvar" action="#{regraBean.salvar}" ajax="false" id="btSalvar"/>
+
+                <p:button value="Novo" outcome="/pages/admin/cadasRegra" styleClass="btNovoReg"/>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

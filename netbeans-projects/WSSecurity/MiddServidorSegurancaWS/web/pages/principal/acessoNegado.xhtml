@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : acessoNegado.xhtml
+Created on : 17/07/2013, 22:05:26
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Acesso Negado
+        </ui:define>
+        <ui:define name="corpo">
+            <h:form id="formAcessoNegado" acceptcharset="ISO-8859-1">
+                <h3>Usuário logado #{request.remoteUser} não tem permissão de acesso a esta página</h3>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>

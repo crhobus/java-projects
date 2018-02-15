@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd 
+                           http://cxf.apache.org/jaxws 
+                           http://cxf.apache.org/schemas/jaxws.xsd">
+
+    <bean id="servico" class="br.server.webservice.MiddWS"/>
+
+    <bean id="initAction" class="br.server.action.Action"/>
+
+    <jaxws:endpoint id="middWSService"
+                    implementor="#servico"
+                    address="/servico">
+
+        <jaxws:properties>
+            <entry key="mtom-enabled" value="true"/>
+        </jaxws:properties>
+
+        <jaxws:outInterceptors>
+            <ref bean="UsernameTokenTimestampSignEncrypt_Response"/>
+        </jaxws:outInterceptors>
+        <jaxws:inInterceptors>
+            <ref bean="UsernameTokenTimestampSignEncrypt_Request"/>
+            <bean class="org.apache.cxf.ws.security.wss4j.DefaultCryptoCoverageChecker"/>
+        </jaxws:inInterceptors>
+
+    </jaxws:endpoint>
+
+    <bean id="UsernameTokenTimestampSignEncrypt_Request" class="org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor">
+        <constructor-arg>
+            <map>
+                <entry key="action" value="UsernameToken Timestamp Signature Encrypt"/>
+                <entry key="passwordType" value="PasswordDigest"/>
+                <entry key="passwordCallbackClass" value="br.server.callback.ServerPasswordCallback"/>
+                <entry key="signaturePropFile" value="br\server\properties\servidor.properties"/>
+                <entry key="decryptionPropFile" value="br\server\properties\servidor.properties"/>
+                <entry key="encryptionKeyTransportAlgorithm" value="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+                <entry key="signatureAlgorithm" value="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="UsernameTokenTimestampSignEncrypt_Response" class="org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor">
+        <constructor-arg>
+            <map>
+                <entry key="action" value="UsernameToken Timestamp Signature Encrypt"/>
+                <entry key="user" value="sysserver"/>
+                <entry key="passwordType" value="PasswordDigest"/>
+                <entry key="passwordCallbackClass" value="br.server.callback.ServerPasswordCallback"/>
+                <entry key="signaturePropFile" value="br\server\properties\servidor.properties"/>
+                <entry key="encryptionPropFile" value="br\server\properties\servidor.properties"/>
+                <entry key="encryptionUser" value="useReqSigCert"/>
+                <entry key="signatureUser" value="sysserver"/>
+                <entry key="signatureParts" value="{Element}{http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd}Timestamp;{Element}{http://schemas.xmlsoap.org/soap/envelope/}Body"/>
+                <entry key="encryptionParts" value="{Element}{http://www.w3.org/2000/09/xmldsig#}Signature;{Content}{http://schemas.xmlsoap.org/soap/envelope/}Body"/>
+                <entry key="encryptionSymAlgorithm" value="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+                <entry key="encryptionKeyTransportAlgorithm" value="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+                <entry key="signatureAlgorithm" value="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+</beans>

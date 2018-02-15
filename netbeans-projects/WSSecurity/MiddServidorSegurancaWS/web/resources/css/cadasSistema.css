@@ -1,0 +1,13 @@
+/* 
+    Document   : cadasSistema.css
+    Created on : 22/08/2013, 20:30:02
+    Author     : Caio
+*/
+
+.panelCadasSistema tr, .panelCadasSistema td {
+    border: none !important;
+}
+
+.btNovoSis {
+    margin-left: 3px !important;
+}

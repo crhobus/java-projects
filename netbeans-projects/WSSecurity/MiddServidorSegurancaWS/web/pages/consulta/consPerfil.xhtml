@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : consPerfil.xhtml
+Created on : 29/08/2013, 20:34:12
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/facelets/tags">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Consulta de Perfil
+        </ui:define>
+        <ui:define name="corpo">
+            <h:outputStylesheet library="css" name="consPerfil.css"/>
+
+            <h:form id="formConsPerfil" acceptcharset="ISO-8859-1">
+
+                <p:growl id="dsMensagemConsPerfil" showDetail="true"/>
+
+                <p:inputText label="pesquisar" value="#{perfilBean.dsPesquisa}" id="dsPesquisa" size="40"/>
+                <p:watermark for="dsPesquisa" value="nome..."/>
+
+                <p:commandButton value="Pesquisar" action="#{perfilBean.pesquisar}" ajax="false" styleClass="btPesquisar"/>
+
+                <p:button value="Limpar" outcome="/pages/consulta/consPerfil" styleClass="btLimpar"/>
+
+                <br/>
+                <br/>
+
+                <p:button value="Novo" outcome="/pages/admin/cadasPerfil" styleClass="btNovo"/>
+
+                <br/>
+                <br/>
+
+                <p:dataTable value="#{perfilBean.perfis}" var="perfil" id="tbPerfisID" emptyMessage="dados não encontrados" styleClass="tbPerfis">
+                    <p:column headerText="Sequência" styleClass="columnNrSequencia">
+                        <h:outputText value="#{perfil.nrSequencia}"/>
+                    </p:column>
+                    <p:column headerText="Nome" styleClass="columnNmPerfil">
+                        <h:outputText value="#{perfil.nmPerfil}"/>
+                    </p:column>
+                    <sec:ifAnyGranted roles="ROLE_ADMINISTRADOR">
+                        <p:column styleClass="columAlterar">
+                            <h:commandLink action="#{perfilBean.alterar}">
+                                <h:graphicImage library="imagens" name="Editar.png" styleClass="imgAlterar"/>
+                                <f:setPropertyActionListener target="#{sessionBean.nrSeqPerfilEdicao}" value="#{perfil.nrSequencia}"/>
+                            </h:commandLink>
+                        </p:column>
+                        <p:column styleClass="columExcluir">
+                            <h:commandLink action="#{perfilBean.excluir}"
+                                           onclick="if (!confirm('Confirma a exclusão do perfil #{perfil.nmPerfil}?')) return false;">
+                                <h:graphicImage library="imagens" name="Excluir.png" styleClass="imgExcluir"/>
+                                <f:setPropertyActionListener target="#{perfilBean.perfil}" value="#{perfil}"/>
+                            </h:commandLink>
+                        </p:column>
+                    </sec:ifAnyGranted>
+                </p:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

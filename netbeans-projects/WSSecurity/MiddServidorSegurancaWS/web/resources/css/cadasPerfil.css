@@ -1,0 +1,38 @@
+/* 
+    Document   : cadasPerfil.css
+    Created on : 29/08/2013, 20:48:21
+    Author     : Caio
+*/
+
+.panelCadasPerfil tr, .panelCadasPerfil td {
+    border: none !important;
+}
+
+.btNovoPer {
+    margin-left: 3px !important;
+}
+
+.btRecursoPer {
+    margin-left: 3px !important;
+}
+
+.panelUsuarioPerfil tr, .panelUsuarioPerfil td {
+    border: none !important;
+}
+
+.nrSeqUsuario {
+    width: 264px !important;
+}
+
+.columExcluir {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgExcluir {
+    border: 0 !important;
+}
+
+.tbUsuariosPerfil {
+    width: 419px !important;
+}

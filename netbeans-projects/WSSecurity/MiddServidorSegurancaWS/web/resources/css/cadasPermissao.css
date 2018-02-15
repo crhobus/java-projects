@@ -1,0 +1,18 @@
+/* 
+    Document   : cadasPermissao.css
+    Created on : 27/08/2013, 19:06:31
+    Author     : Caio
+*/
+
+.panelCadasPermissao tr, .panelCadasPermissao td {
+    border: none !important;
+}
+
+.btNovoPer {
+    margin-left: 3px !important;
+}
+
+.permissao {
+    width: 309px !important;
+    height: 150px !important;
+}

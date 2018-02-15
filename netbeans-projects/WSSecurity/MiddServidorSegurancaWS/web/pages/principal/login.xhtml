@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : login.xhtml
+Created on : 15/07/2013, 20:14:38
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+        <title>Servidor WS Security - Login</title>
+        <h:outputStylesheet library="css" name="login.css"/>
+    </h:head>
+    <h:body>
+        <h:form id="formLogin" prependId="false" acceptcharset="ISO-8859-1">
+
+            <div id="centralizado">
+
+                <p:panelGrid columns="3" id="dadosLogin" styleClass="panelLogin"> 
+
+                    <p:outputLabel for="j_username" value="Login"/>
+                    <p:inputText id="j_username" size="12"/>
+                    <p:watermark for="j_username" value="usuario"/>
+
+                    <p:outputLabel for="j_password" value="Senha"/>
+                    <p:password id="j_password" size="12"/>
+                    <p:watermark for="j_password" value="senha"/>
+
+                    <p:commandButton value="Login" action="#{loginBean.doLogin}" ajax="false" id="btLogin"/>
+
+                    <c:if test="#{not empty param.login_error}">
+                        <p:growl id="dsMensagemLogin" showDetail="true">
+                            <f:event type="preRenderComponent" listener="#{loginBean.loginError}" />
+                            <f:attribute name="error" value="#{SPRING_SECURITY_LAST_EXCEPTION.message}"/>
+                        </p:growl>
+                    </c:if>
+
+                </p:panelGrid>
+
+            </div>
+
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,17 @@
+/* 
+    Document   : cadasRegra.css
+    Created on : 28/08/2013, 19:34:42
+    Author     : Caio
+*/
+
+.panelCadasRegra tr, .panelCadasRegra td {
+    border: none !important;
+}
+
+.btNovoReg {
+    margin-left: 3px !important;
+}
+
+.nrSeqSistema {
+    width: 317px !important;
+}

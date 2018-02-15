@@ -1,0 +1,60 @@
+/* 
+    Document   : consUsuario.css
+    Created on : 17/08/2013, 14:25:38
+    Author     : Caio
+*/
+
+.btPesquisar {
+    margin-left: 12px !important;
+}
+
+.btLimpar {
+    margin-left: 3px !important;
+}
+
+.columnNrSequencia {
+    width: 10% !important;
+}
+
+.columNmUsuario {
+    width: 14% !important;
+}
+
+.columAlterarSenha {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgAlterarSenha {
+    border: 0 !important;
+}
+
+.columAlterar {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgAlterar {
+    border: 0 !important;
+}
+
+.columExcluir {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgExcluir {
+    border: 0 !important;
+}
+
+.panelAlterarSenha tr, .panelAlterarSenha td {
+    border: none !important;
+}
+
+.panelAlterarSenha {
+    margin-bottom: 10px !important;
+}
+
+.btCancelarSenha {
+    margin-left: 5px !important;
+}

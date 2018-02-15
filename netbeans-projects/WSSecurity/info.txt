@@ -1,0 +1,11 @@
+Banco de Dados
+
+usuário: systemmidd
+senha: key50100
+
+----------------------------------------
+
+Sistema Web
+
+usuário padrão serv: user
+senha padrão serv: user

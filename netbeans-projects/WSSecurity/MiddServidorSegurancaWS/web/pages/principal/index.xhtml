@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : index.xhtml
+Created on : 08/06/2013, 17:34:05
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Menu Principal
+        </ui:define>
+        <ui:define name="corpo">
+
+            <h:form id="formIndex" acceptcharset="ISO-8859-1">
+
+                <p>Este middleware tem como objetivo garantir a confidencialidade, integridade, autorização e autencidade dos dados na
+                    comunicação entre sistemas distribuídos utilizando as especificações de web services security. Sendo que, através do
+                    serviço de segurança disponibilizado, qualquer aplicação já desenvolvida pode incorporar funções de criptografia,
+                    autenticação, assinatura digital e permissoes de acesso aos dados baseados em regras sem a necessidade de maiores
+                    implementações, uma vez que a implementação é disponibilizada pelos serviços de segurança.</p>
+
+                <p>Para efetuar a comunicação o administrador deve cadastrar os usuários criar as regras de comunicação para os
+                    respectivos sistemas na qual o usuário irá se comunicar e suas permissões de acesso as informações.
+                    Com base nestas regras a aplicação enviará os dados para o middleware. Este será o responsável por
+                    implementar as questões de segurança e enviar os dados através de web services para outra aplicação na
+                    qual receberá os dados através do middleware, que a entregará novamente a aplicação com base nas regras
+                    cadastradas, garantindo a segurança dos dados e a transparência na questão da implementação de todas as
+                    funcionalidades para suportar o WS-Security e demais camadas de rede.</p>
+
+                <p>Links abaixo para download do middleware sendo que, deverá ser importado como uma biblioteca da aplicação e download
+                    do servidor que deverá ser implantado em um servidor tomcat</p>
+
+                <br/>
+
+                <a href="download/middleware.zip" id="download">Download client: Middleware.zip</a>
+
+                <br/>
+                <br/>
+
+                <a href="download/middServicoWS.zip" id="download">Download server: MiddServicoWS.zip</a>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : recursos.xhtml
+Created on : 09/09/2013, 20:38:15
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Recursos
+        </ui:define>
+        <ui:define name="corpo">
+            <h:outputStylesheet library="css" name="recursos.css"/>
+
+            <h:form id="formRecursos" acceptcharset="ISO-8859-1">
+
+                <p:growl id="dsMensagemRecursos" showDetail="true"/>
+
+                <h:inputHidden value="#{recursoBean.nrSeqPerfil}" id="nrSeqPerfil"/>
+                <h:inputHidden value="#{recursoBean.nrSeqUsuario}" id="nrSeqUsuario"/>
+
+                <p:panelGrid columns ="3" styleClass="panelRegraRecurso" id="pnRegraRecurso">
+
+                    <h:outputLabel value="Regra: " for="nrSeqRegra"/>
+                    <p:selectOneMenu label="regra" id="nrSeqRegraID" value="#{recursoBean.nrSeqRegra}" styleClass="nrSeqRegra">
+                        <f:selectItem itemValue="0" itemLabel="Selecione..."/>
+                        <f:selectItems value="#{recursoBean.regras}" var="regra" itemValue="#{regra.nrSequencia}" itemLabel="#{regra.nmRegra}"/>
+                    </p:selectOneMenu>
+                    <p:commandButton value="Add Recurso" action="#{recursoBean.addRecurso}" ajax="false" id="btRegraRecurso"/>
+
+                </p:panelGrid>
+
+                <br/>
+
+                <p:dataTable value="#{recursoBean.recursos}" var="recurso" id="tbRecursosID" emptyMessage="dados não encontrados" styleClass="tbRecursos" scrollable="true" scrollRows="10" scrollHeight="188" selection="#{recursoBean.recurso}" selectionMode="single" rowKey="#{recurso.nrSequencia}">
+
+                    <p:ajax event="rowSelect" listener="#{recursoBean.onRowSelectRecurso}" update=":formRecursos:tbRecPermissoesID"/>
+
+                    <p:column headerText="Seq. recurso" styleClass="columnNrSeqRecurso">
+                        <h:outputText value="#{recurso.nrSequencia}"/>
+                    </p:column>
+                    <p:column headerText="Regra" styleClass="columnNmRegra">
+                        <h:outputText value="#{recurso.regra.nmRegra}"/>
+                    </p:column>
+                    <p:column headerText="Código comunicação" styleClass="columnCdRegraComunic">
+                        <h:outputText value="#{recurso.regra.cdRegraComunic}"/>
+                    </p:column>
+                    <p:column headerText="Sistema" styleClass="columnNmSistema">
+                        <h:outputText value="#{recurso.regra.sistema.nmSistema}"/>
+                    </p:column>
+                    <p:column styleClass="columAddPermissao">
+                        <p:commandButton value="Add Permissão" onclick="permissaoDLG.show()" ajax="true" id="btAddPermissaoID"/>
+                    </p:column>
+                    <p:column styleClass="columExcluir">
+                        <h:commandLink action="#{recursoBean.excluirRecurso}"
+                                       onclick="if (!confirm('Confirma a exclusão do recurso #{recurso.regra.nmRegra}?')) return false;">
+                            <h:graphicImage library="imagens" name="Excluir.png" styleClass="imgExcluir"/>
+                            <f:setPropertyActionListener target="#{recursoBean.recurso}" value="#{recurso}"/>
+                        </h:commandLink>
+                    </p:column>
+                </p:dataTable>
+
+                <br/>
+
+                <p:dataTable value="#{recursoBean.recursoPermissoes}" var="recPermissoes" id="tbRecPermissoesID" emptyMessage="dados não encontrados" styleClass="tbRecPermissoes" scrollable="true" scrollRows="10" scrollHeight="122">
+                    <p:column headerText="Seq. rec. permissões" styleClass="columnNrSeqRecPermissoes">
+                        <h:outputText value="#{recPermissoes.nrSequencia}"/>
+                    </p:column>
+                    <p:column headerText="Permissão" styleClass="columnNmPermissao">
+                        <h:outputText value="#{recPermissoes.permissao.nmPermissao}"/>
+                    </p:column>
+                    <p:column headerText="Código comunicação" styleClass="columnCdPermissaoComunic">
+                        <h:outputText value="#{recPermissoes.permissao.cdPermissaoComunic}"/>
+                    </p:column>
+                    <p:column headerText="Permitir" styleClass="columnIePermissao">
+                        <p:selectBooleanCheckbox value="#{recPermissoes.iePermissao}">
+                            <p:ajax listener="#{recursoBean.setPermitir}"/>
+                        </p:selectBooleanCheckbox>
+                    </p:column>
+                    <p:column styleClass="columExcluirRecPermissao">
+                        <h:commandLink action="#{recursoBean.excluirRecursoPermissao}"
+                                       onclick="if (!confirm('Confirma a exclusão da permissao #{recPermissoes.permissao.nmPermissao}?')) return false;">
+                            <h:graphicImage library="imagens" name="Excluir.png" styleClass="imgExcluirRecPermissao"/>
+                            <f:setPropertyActionListener target="#{recursoBean.recursoPermissao}" value="#{recPermissoes}"/>
+                        </h:commandLink>
+                    </p:column>
+                </p:dataTable>
+
+                <p:commandButton value="Voltar" action="#{recursoBean.voltar}" ajax="false" styleClass="btVoltar"/>
+
+            </h:form>
+
+            <p:dialog header="Adicionar permissão" widgetVar="permissaoDLG" id="dlg" resizable="false" modal="true">
+                <h:form id="formAddPermissao" acceptcharset="ISO-8859-1">
+
+                    <p:growl id="dsMensagemAddPermissao" showDetail="true"/>
+
+                    <p:panelGrid columns="2" styleClass="panelAddPermissao" id="pnAddPermissao">
+
+                        <h:outputLabel value="Permissao: " for="nrSeqPermissao"/>
+                        <p:selectOneMenu label="permissao" id="nrSeqPermissaoID" value="#{recursoBean.nrSeqPermissao}" styleClass="nrSeqPermissao">
+                            <f:selectItem itemValue="0" itemLabel="Selecione..."/>
+                            <f:selectItems value="#{recursoBean.permissoes}" var="permissao" itemValue="#{permissao.nrSequencia}" itemLabel="#{permissao.nmPermissao}"/>
+                        </p:selectOneMenu>
+
+                    </p:panelGrid>
+
+                    <p:commandButton styleClass="btAddPermissao" value="Add" update=":formRecursos :formAddPermissao" action="#{recursoBean.addPermissao}" oncomplete="permissaoDLG.hide();"/>
+
+                    <p:commandButton styleClass="btCancelarPermissao" value="Cancelar" update="formAddPermissao" oncomplete="permissaoDLG.hide();"/>
+
+                </h:form>
+            </p:dialog>
+
+        </ui:define>
+    </ui:composition>
+</html>

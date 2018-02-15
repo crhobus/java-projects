@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : consUsuario.xhtml
+Created on : 19/06/2013, 20:10:12
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/facelets/tags">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Consulta de Usuários
+        </ui:define>
+        <ui:define name="corpo">
+            <h:outputStylesheet library="css" name="consUsuario.css"/>
+            <h:outputScript library="js" name="usuario.js"/>
+
+            <h:form id="formConsUsuario" acceptcharset="ISO-8859-1">
+
+                <p:growl id="dsMensagemConsUsuario" showDetail="true"/>
+
+                <p:inputText label="pesquisar" value="#{usuarioBean.dsPesquisa}" id="dsPesquisa" size="40"/>
+                <p:watermark for="dsPesquisa" value="nome..."/>
+
+                <p:commandButton value="Pesquisar" action="#{usuarioBean.pesquisar}" ajax="false" styleClass="btPesquisar"/>
+
+                <p:button value="Limpar" outcome="/pages/consulta/consUsuario" styleClass="btLimpar"/>
+
+                <br/>
+                <br/>
+
+                <p:button value="Novo" outcome="/pages/admin/cadasUsuario" styleClass="btNovo"/>
+
+                <br/>
+                <br/>
+
+                <p:dataTable value="#{usuarioBean.usuarios}" var="usuario" id="tbUsuariosID" emptyMessage="dados não encontrados" styleClass="tbUsuarios">
+                    <p:column headerText="Sequência" styleClass="columnNrSequencia">
+                        <h:outputText value="#{usuario.nrSequencia}"/>
+                    </p:column>
+                    <p:column headerText="Nome">
+                        <h:outputText value="#{usuario.nmPessoa}"/>
+                    </p:column>
+                    <p:column headerText="Usuário" styleClass="columNmUsuario">
+                        <h:outputText value="#{usuario.nmUsuario}"/>
+                    </p:column>
+                    <p:column headerText="E-Mail">
+                        <a href="mailto:#{usuario.dsEmail}">
+                            <h:outputText value="#{usuario.dsEmail}"/>
+                        </a>
+                    </p:column>
+                    <p:column styleClass="columAlterarSenha">
+                        <p:commandLink onclick="senhaDLG.show()"
+                                       ajax="true">
+                            <h:graphicImage library="imagens" name="Usuarios.png" styleClass="imgAlterarSenha"/>
+                            <f:setPropertyActionListener target="#{usuarioBean.usuario}" value="#{usuario}"/>
+                        </p:commandLink>
+                    </p:column>
+                    <sec:ifAnyGranted roles="ROLE_ADMINISTRADOR">
+                        <p:column styleClass="columAlterar">
+                            <h:commandLink action="#{usuarioBean.alterar}">
+                                <h:graphicImage library="imagens" name="Editar.png" styleClass="imgAlterar"/>
+                                <f:setPropertyActionListener target="#{sessionBean.nrSeqUsuarioEdicao}" value="#{usuario.nrSequencia}"/>
+                            </h:commandLink>
+                        </p:column>
+                        <p:column styleClass="columExcluir">
+                            <h:commandLink action="#{usuarioBean.excluir}"
+                                           onclick="if (!confirm('Confirma a exclusão do usuário #{usuario.nmPessoa}?')) return false;">
+                                <h:graphicImage library="imagens" name="Excluir.png" styleClass="imgExcluir"/>
+                                <f:setPropertyActionListener target="#{usuarioBean.usuario}" value="#{usuario}"/>
+                            </h:commandLink>
+                        </p:column>
+                    </sec:ifAnyGranted>
+                </p:dataTable>
+
+            </h:form>
+
+            <p:dialog header="Alterar senha usuário" widgetVar="senhaDLG" id="dlg" resizable="false" modal="true">
+                <h:form id="formAlterarSenha" acceptcharset="ISO-8859-1">
+
+                    <p:growl id="dsMensagemAlterarSenhaUsuario" showDetail="true"/>
+
+                    <p:panelGrid columns="3" styleClass="panelAlterarSenha" id="pnAlterarSenha">
+
+                        <h:outputLabel value="Senha atual:" for="dsSenhaAtual"/>
+                        <p:password label="senha atual" value="#{usuarioBean.dsSenhaOriginal}" id="dsSenhaAtual" maxlength="30"/>
+                        <p:message for="dsSenhaAtual"/>
+
+                        <h:outputLabel value="Senha nova:" for="dsNovaSenha"/>
+                        <p:password label="nova senha" value="#{usuarioBean.dsSenha}" id="dsNovaSenha" maxlength="30"/>
+                        <p:message for="dsNovaSenha"/>
+
+                        <h:outputLabel value="Confirma senha:" for="dsConfirmaNovaSenha"/>
+                        <p:password label="confirma nova senha" value="#{usuarioBean.dsConfirmaSenha}" id="dsConfirmaNovaSenha" maxlength="30"/>
+                        <p:message for="dsConfirmaNovaSenha"/>
+
+                    </p:panelGrid>
+
+                    <p:commandButton styleClass="btSalvarSenha" value="Salvar" update="formAlterarSenha" action="#{usuarioBean.alterarSenha}" oncomplete="senhaDLG.hide();"/>
+
+                    <p:commandButton styleClass="btCancelarSenha" value="Cancelar" update="formAlterarSenha" oncomplete="senhaDLG.hide();"/>
+
+                </h:form>
+            </p:dialog>
+
+        </ui:define>
+    </ui:composition>
+</html>

@@ -1,0 +1,89 @@
+/* 
+    Document   : recursos.css
+    Created on : 09/09/2013, 20:40:18
+    Author     : Caio
+*/
+
+.panelRegraRecurso tr, .panelRegraRecurso td {
+    border: none !important;
+}
+
+.nrSeqRegra {
+    width: 290px !important;
+}
+
+.columnNrSeqRecurso {
+    width: 10% !important;
+}
+
+.columnNmRegra {
+    width: 29% !important;
+}
+
+.columnCdRegraComunic {
+    width: 16% !important;
+}
+
+.columnNmSistema {
+    width: 29% !important;
+}
+
+.columAddPermissao {
+    width: 13% !important;
+    text-align: center !important;
+}
+
+.columExcluir {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgExcluir {
+    border: 0 !important;
+}
+
+.panelAddPermissao tr, .panelAddPermissao td {
+    border: none !important;
+}
+
+.panelAddPermissao {
+    margin-bottom: 10px !important;
+}
+
+.nrSeqPermissao {
+    width: 250px !important;
+}
+
+.btCancelarPermissao {
+    margin-left: 5px !important;
+}
+
+.columnNrSeqRecPermissoes {
+    width: 15% !important;
+}
+
+.columnNmPermissao {
+    width: 59% !important;
+}
+
+.columnCdPermissaoComunic {
+    width: 15% !important;
+}
+
+.columnIePermissao {
+    width: 7% !important;
+    text-align: center !important;
+}
+
+.columExcluirRecPermissao {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgExcluirRecPermissao {
+    border: 0 !important;
+}
+
+.btVoltar {
+    margin-top: 2px !important;
+}

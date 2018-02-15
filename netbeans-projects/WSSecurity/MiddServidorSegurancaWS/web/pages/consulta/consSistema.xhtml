@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : consSistema.xhtml
+Created on : 22/08/2013, 19:50:20
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/facelets/tags">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Consulta de Sistemas
+        </ui:define>
+        <ui:define name="corpo">
+            <h:outputStylesheet library="css" name="consSistema.css"/>
+
+            <h:form id="formConsSistema" acceptcharset="ISO-8859-1">
+
+                <p:growl id="dsMensagemConsSistema" showDetail="true"/>
+
+                <p:inputText label="pesquisar" value="#{sistemaBean.dsPesquisa}" id="dsPesquisa" size="40"/>
+                <p:watermark for="dsPesquisa" value="nome..."/>
+
+                <p:commandButton value="Pesquisar" action="#{sistemaBean.pesquisar}" ajax="false" styleClass="btPesquisar"/>
+
+                <p:button value="Limpar" outcome="/pages/consulta/consSistema" styleClass="btLimpar"/>
+
+                <br/>
+                <br/>
+
+                <p:button value="Novo" outcome="/pages/admin/cadasSistema" styleClass="btNovo"/>
+
+                <br/>
+                <br/>
+
+                <p:dataTable value="#{sistemaBean.sistemas}" var="sistema" id="tbSistemasID" emptyMessage="dados não encontrados" styleClass="tbSistemas">
+                    <p:column headerText="Sequência" styleClass="columnNrSequencia">
+                        <h:outputText value="#{sistema.nrSequencia}"/>
+                    </p:column>
+                    <p:column headerText="Nome" styleClass="columnNmSistema">
+                        <h:outputText value="#{sistema.nmSistema}"/>
+                    </p:column>
+                    <sec:ifAnyGranted roles="ROLE_ADMINISTRADOR">
+                        <p:column styleClass="columAlterar">
+                            <h:commandLink action="#{sistemaBean.alterar}">
+                                <h:graphicImage library="imagens" name="Editar.png" styleClass="imgAlterar"/>
+                                <f:setPropertyActionListener target="#{sessionBean.nrSeqSistemaEdicao}" value="#{sistema.nrSequencia}"/>
+                            </h:commandLink>
+                        </p:column>
+                        <p:column styleClass="columExcluir">
+                            <h:commandLink action="#{sistemaBean.excluir}"
+                                           onclick="if (!confirm('Confirma a exclusão do sistema #{sistema.nmSistema}?')) return false;">
+                                <h:graphicImage library="imagens" name="Excluir.png" styleClass="imgExcluir"/>
+                                <f:setPropertyActionListener target="#{sistemaBean.sistema}" value="#{sistema}"/>
+                            </h:commandLink>
+                        </p:column>
+                    </sec:ifAnyGranted>
+                </p:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

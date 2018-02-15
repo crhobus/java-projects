@@ -832,6 +832,62 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 	    * Libraries:
 		  * [JAX-WS 2.2.6](https://github.com/crhobus/java-libraries/tree/master/JAX-WS%202.2.6/)
 
+* [WSSecurity](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WSSecurity/)
+
+  * Projeto matéria de faculdade: Trabalho de Conclusão de Curso - Com 5 subprojetos
+
+    * [MiddServidorSegurancaWS](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WSSecurity/MiddServidorSegurancaWS/)
+	  * HTML5
+      * CSS3
+      * JavaScript
+      * jQuery
+	  * Segurança
+	  * Hibernate 4.3.11 (JPA 2.1)
+	  * Oracle DataBase
+	  * Spring Security 3.2.0
+	  * JSF 2.2
+	  * JSTL 1.2.1
+	  * Spring Security Facelets TagLib
+	  * PrimeFaces 5.0
+	  * PrimeFaces Theme Sam 1.0.10
+	    * Libraries:
+		  * [Hibernate 4.3.11 (JPA 2.1)](https://github.com/crhobus/java-libraries/tree/master/Hibernate%204.3.11%20(JPA%202.1)/)
+		  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+		  * [Spring Security 3.2.0](https://github.com/crhobus/java-libraries/tree/master/Spring%20Security%203.2.0/)
+		  * [JSF 2.2](https://github.com/crhobus/java-libraries/tree/master/JSF%202.2/)
+		  * [JSTL 1.2.1](https://github.com/crhobus/java-libraries/tree/master/JSTL%201.2.1/)
+		  * [Spring Security Facelets TagLib](https://github.com/crhobus/java-libraries/tree/master/Spring%20Security%20Facelets%20TagLib/)
+		  * [PrimeFaces 5.0](https://github.com/crhobus/java-libraries/tree/master/PrimeFaces%205.0/)
+		  * [PrimeFaces Theme Sam 1.0.10](https://github.com/crhobus/java-libraries/tree/master/PrimeFaces%20Theme%20Sam%201.0.10/)
+
+    * [MiddServicoWS](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WSSecurity/MiddServicoWS/)
+	  * Web Services (Server) - WSSecurity
+	  * Segurança - Hash, Distribuição de chaves, Criptografia simétrica, Criptografia assimétrica, assinatura digital e Certificado Digital
+	  * Oracle DataBase
+	  * Apache CXF 2.7.6
+	    * Libraries:
+		  * [Oracle Database 11g Release 2 (11.2.0.2.0) JDBC Driver](https://github.com/crhobus/java-libraries/tree/master/Oracle%20Database%2011g%20Release%202%20(11.2.0.2.0)%20JDBC%20Driver/)
+		  * [Apache CXF 2.7.6](https://github.com/crhobus/java-libraries/tree/master/Apache%20CXF%202.7.6/)
+
+    * [MiddClienteWS](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WSSecurity/MiddClienteWS/)
+	  * Web Services (Client) - WSSecurity
+	  * Segurança - Hash, Distribuição de chaves, Criptografia simétrica, Criptografia assimétrica, assinatura digital e Certificado Digital
+	  * Apache CXF 2.7.6
+	  * XStream 1.4.4
+	    * Libraries:
+		  * [Apache CXF 2.7.6](https://github.com/crhobus/java-libraries/tree/master/Apache%20CXF%202.7.6/)
+		  * [XStream 1.4.4](https://github.com/crhobus/java-libraries/tree/master/XStream%201.4.4/)
+
+    * [AplicacaoModContabilidade](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WSSecurity/AplicacaoModContabilidade/)
+	  * MiddClienteWS
+	    * Libraries:
+		  * [MiddClienteWS](https://github.com/crhobus/java-libraries/tree/master/MiddClienteWS/)
+
+    * [AplicacaoModFaturamento](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/WSSecurity/AplicacaoModFaturamento/)
+	  * MiddClienteWS
+	    * Libraries:
+		  * [MiddClienteWS](https://github.com/crhobus/java-libraries/tree/master/MiddClienteWS/)
+
 
 ## Contributors
 

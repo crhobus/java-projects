@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<b:beans xmlns="http://www.springframework.org/schema/security"
+         xmlns:b="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                             http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                             http://www.springframework.org/schema/security 
+                             http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+    <http access-denied-page="/pages/principal/acessoNegado.jsf">
+        <intercept-url pattern="/pages/admin/**" access="ROLE_ADMINISTRADOR"/>
+        <intercept-url pattern="/pages/consulta/**" access="ROLE_ADMINISTRADOR,ROLE_USUARIO"/>
+        <form-login login-page="/pages/principal/login.jsf"
+                    always-use-default-target="true"
+                    default-target-url="/pages/principal/index.jsf"
+                    authentication-failure-url="/pages/principal/login.jsf?login_error=1"/>
+        <logout/>
+    </http>
+    <authentication-manager>
+        <authentication-provider>
+            <password-encoder hash="md5"/>
+            <jdbc-user-service data-source-ref="ServSecurityDataSource"
+                               authorities-by-username-query="select    u.nm_usuario,
+                                                                        p.ds_permissao
+                                                              from      usuario u,
+                                                                        usuario_permissao p
+                                                              where     u.nr_sequencia = p.nr_seq_usuario
+                                                              and       u.nm_usuario = ?"
+                               users-by-username-query="select  nm_usuario,
+                                                                ds_senha,
+                                                                ie_ativo
+                                                        from    usuario
+                                                        where   nm_usuario = ?"/>
+        </authentication-provider>
+    </authentication-manager>
+</b:beans>

@@ -1,0 +1,57 @@
+/* 
+    Document   : principal.css
+    Created on : 13/08/2013, 19:36:48
+    Author     : Caio
+*/
+
+body {
+    background-image: url(../resources/imagens/fundoPrincipal.png) !important;
+}
+
+.ui-widget {
+    font-size: 12px !important;
+}
+
+.ui-panel .ui-panel-titlebar {
+    text-align: right !important;
+}
+
+.ui-panel .ui-panel-footer {
+    text-align: center !important;
+}
+
+#espacamento {
+    letter-spacing: 4em !important;
+}
+
+.ui-panel-content {
+    padding: 0px 0px 0px 0px !important;
+}
+
+.pnContainer {
+    border: none !important;
+    background: transparent !important;
+}
+
+.pnCorpo {
+    border: none !important;
+}
+
+#titulo {
+    float: left !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    margin-left: 90px !important;
+    margin-top: 30px !important;
+}
+
+#imgLogoTipo {
+    text-align: right !important;
+    margin-right: 100px !important;
+}
+
+#corpo {
+    text-align: left !important;
+    margin-left: 200px !important;
+    margin-top: -453px !important;
+}

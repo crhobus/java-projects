@@ -1,0 +1,38 @@
+/* 
+    Document   : cadasUsuario.css
+    Created on : 17/08/2013, 14:10:21
+    Author     : Caio
+*/
+
+.panelCadasUsuario tr, .panelCadasUsuario td {
+    border: none !important;
+}
+
+.panelPermissaoUsuario tr, .panelPermissaoUsuario td {
+    border: none !important;
+}
+
+.dsPermissao {
+    width: 150px !important;
+}
+
+.columExcluir {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgExcluir {
+    border: 0 !important;
+}
+
+.tbPermissoes {
+    width: 250px !important;
+}
+
+.btNovoUsu {
+    margin-left: 3px !important;
+}
+
+.btRecursoUsu {
+    margin-left: 3px !important;
+}

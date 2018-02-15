@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Document   : consRegra.xhtml
+Created on : 28/08/2013, 19:38:25
+Author     : Caio
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/facelets/tags">
+    <ui:composition template="/pages/templates/principal.xhtml">
+        <ui:define name="titulo">
+            Consulta de Regras
+        </ui:define>
+        <ui:define name="corpo">
+            <h:outputStylesheet library="css" name="consRegra.css"/>
+
+            <h:form id="formConsRegra" acceptcharset="ISO-8859-1">
+
+                <p:growl id="dsMensagemConsRegra" showDetail="true"/>
+
+                <p:inputText label="pesquisar" value="#{regraBean.dsPesquisa}" id="dsPesquisa" size="40"/>
+                <p:watermark for="dsPesquisa" value="nome..."/>
+
+                <p:commandButton value="Pesquisar" action="#{regraBean.pesquisar}" ajax="false" styleClass="btPesquisar"/>
+
+                <p:button value="Limpar" outcome="/pages/consulta/consRegra" styleClass="btLimpar"/>
+
+                <br/>
+                <br/>
+
+                <p:button value="Novo" outcome="/pages/admin/cadasRegra" styleClass="btNovo"/>
+
+                <br/>
+                <br/>
+
+                <p:dataTable value="#{regraBean.regras}" var="regra" id="tbRegrasID" emptyMessage="dados não encontrados" styleClass="tbRegras">
+                    <p:column headerText="Sequência" styleClass="columnNrSequencia">
+                        <h:outputText value="#{regra.nrSequencia}"/>
+                    </p:column>
+                    <p:column headerText="Nome">
+                        <h:outputText value="#{regra.nmRegra}"/>
+                    </p:column>
+                    <p:column headerText="Código comunicação" styleClass="columnCdRegraComunic">
+                        <h:outputText value="#{regra.cdRegraComunic}"/>
+                    </p:column>
+                    <p:column headerText="Sistema">
+                        <h:outputText value="#{regra.sistema.nmSistema}"/>
+                    </p:column>
+                    <sec:ifAnyGranted roles="ROLE_ADMINISTRADOR">
+                        <p:column styleClass="columAlterar">
+                            <h:commandLink action="#{regraBean.alterar}">
+                                <h:graphicImage library="imagens" name="Editar.png" styleClass="imgAlterar"/>
+                                <f:setPropertyActionListener target="#{sessionBean.nrSeqRegraEdicao}" value="#{regra.nrSequencia}"/>
+                            </h:commandLink>
+                        </p:column>
+                        <p:column styleClass="columExcluir">
+                            <h:commandLink action="#{regraBean.excluir}"
+                                           onclick="if (!confirm('Confirma a exclusão da regra #{regra.nmRegra}?')) return false;">
+                                <h:graphicImage library="imagens" name="Excluir.png" styleClass="imgExcluir"/>
+                                <f:setPropertyActionListener target="#{regraBean.regra}" value="#{regra}"/>
+                            </h:commandLink>
+                        </p:column>
+                    </sec:ifAnyGranted>
+                </p:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+</html>

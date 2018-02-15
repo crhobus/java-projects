@@ -1,0 +1,39 @@
+/* 
+    Document   : consRegra.css
+    Created on : 28/08/2013, 19:40:02
+    Author     : Caio
+*/
+
+.btPesquisar {
+    margin-left: 12px !important;
+}
+
+.btLimpar {
+    margin-left: 3px !important;
+}
+
+.columnNrSequencia {
+    width: 10% !important;
+}
+
+.columnCdRegraComunic {
+    width: 16% !important;
+}
+
+.columAlterar {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgAlterar {
+    border: 0 !important;
+}
+
+.columExcluir {
+    width: 3% !important;
+    text-align: center !important;
+}
+
+.imgExcluir {
+    border: 0 !important;
+}
