@@ -65,6 +65,8 @@ local.properties
 **/.recommenders
 **/RemoteSystemsTempFiles
 **/Servers
+.project
+.classpath
 
 # External tool builders
 **/.externalToolBuilders/
