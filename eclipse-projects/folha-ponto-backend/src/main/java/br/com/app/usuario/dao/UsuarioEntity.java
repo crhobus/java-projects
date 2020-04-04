@@ -1,6 +1,5 @@
 package br.com.app.usuario.dao;
 
-import java.io.Serializable;
 import java.time.Instant;
 
 import javax.persistence.Column;
@@ -9,6 +8,7 @@ import javax.persistence.FetchType;
 import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import br.com.app.funcionario.dao.FuncionarioEntity;
@@ -18,7 +18,8 @@ import br.com.app.usuario.dto.SituacaoUserEnum;
 
 @Entity
 @Table(name = "usuario")
-public class UsuarioEntity extends EntityBase implements Serializable {
+@SequenceGenerator(name = "SEQUENCE_BASE", sequenceName = "usuario_seq", allocationSize = 1)
+public class UsuarioEntity extends EntityBase {
 
     private static final long serialVersionUID = 1L;
 

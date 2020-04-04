@@ -1,6 +1,5 @@
 package br.com.app.lancamento.dao;
 
-import java.io.Serializable;
 import java.time.Instant;
 
 import javax.persistence.Column;
@@ -11,6 +10,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import br.com.app.funcionario.dao.FuncionarioEntity;
@@ -19,7 +19,8 @@ import br.com.app.lancamento.dto.TipoEnum;
 
 @Entity
 @Table(name = "lancamento")
-public class LancamentoEntity extends EntityBase implements Serializable {
+@SequenceGenerator(name = "SEQUENCE_BASE", sequenceName = "lancamento_seq", allocationSize = 1)
+public class LancamentoEntity extends EntityBase {
 
     private static final long serialVersionUID = 1L;
 
