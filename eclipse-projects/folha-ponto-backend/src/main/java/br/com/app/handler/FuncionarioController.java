@@ -23,6 +23,7 @@ import br.com.app.funcionario.dto.LancamentosByFuncionarioInput;
 import br.com.app.funcionario.dto.LancamentosByFuncionarioOutput;
 import br.com.app.funcionario.dto.LancamentosIncorretosFuncByEmpresaInput;
 import br.com.app.funcionario.dto.LancamentosIncorretosFuncByEmpresaOutput;
+import br.com.app.infra.eventauditing.AuditedEvent;
 import br.com.app.infra.response.Response;
 
 @RestController
@@ -32,6 +33,7 @@ public class FuncionarioController {
     @Autowired
     private FuncionarioService service;
 
+    @AuditedEvent
     @PostMapping(value = "/create", headers = { "X-API-Version=V1" })
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<Response<Long>> create(@Valid @RequestBody FuncionarioDto dto, BindingResult result) {
@@ -53,6 +55,7 @@ public class FuncionarioController {
         return ResponseEntity.ok(response);
     }
 
+    @AuditedEvent
     @PutMapping(value = "/update", headers = { "X-API-Version=V1" })
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<Response<Boolean>> update(@Valid @RequestBody FuncionarioDto dto, BindingResult result) {
@@ -85,6 +88,7 @@ public class FuncionarioController {
         return ResponseEntity.ok(response);
     }
 
+    @AuditedEvent
     @DeleteMapping(value = "/delete/{id}", headers = { "X-API-Version=V1" })
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<Response<Boolean>> delete(@PathVariable("id") long id) {
@@ -123,7 +127,7 @@ public class FuncionarioController {
         }
 
         try {
-            LancamentosByFuncionarioOutput output = service.listaLancamentosFuncPorData(input.getCpf(), input.getData());
+            LancamentosByFuncionarioOutput output = service.listLancamentosFuncPorData(input.getCpf(), input.getData());
             response.setData(output);
         } catch (Exception ex) {
             response.getErrors().add(ex.getMessage());
@@ -144,7 +148,7 @@ public class FuncionarioController {
         }
 
         try {
-            List<LancamentosIncorretosFuncByEmpresaOutput> output = service.listaLancamentosIncorretosFuncPorEmpresa(input.getCnpj(), input.getData());
+            List<LancamentosIncorretosFuncByEmpresaOutput> output = service.listLancamentosIncorretosFuncPorEmpresa(input.getCnpj(), input.getData());
             response.setData(output);
         } catch (Exception ex) {
             response.getErrors().add(ex.getMessage());

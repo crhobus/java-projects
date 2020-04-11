@@ -124,7 +124,7 @@ public class FuncionarioService {
     }
 
     @Transactional(readOnly = true)
-    public LancamentosByFuncionarioOutput listaLancamentosFuncPorData(String cpf, String data) {
+    public LancamentosByFuncionarioOutput listLancamentosFuncPorData(String cpf, String data) {
         FuncionarioEntity funcionario = repository.findByCpf(cpf);
 
         if (funcionario == null) {
@@ -143,7 +143,7 @@ public class FuncionarioService {
     }
 
     @Transactional(readOnly = true)
-    public List<LancamentosIncorretosFuncByEmpresaOutput> listaLancamentosIncorretosFuncPorEmpresa(String cnpj, String data) {
+    public List<LancamentosIncorretosFuncByEmpresaOutput> listLancamentosIncorretosFuncPorEmpresa(String cnpj, String data) {
         LocalDate referenceDate = LocalDate.parse(data, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         List<Tuple> funcionariosDataLanc = repository.findByEmpresaWithIncorrectLancamentos(cnpj, referenceDate);
 

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.app.infra.eventauditing.AuditedEvent;
 import br.com.app.infra.response.Response;
 import br.com.app.lancamento.LancamentoService;
 import br.com.app.lancamento.dto.LancamentoDto;
@@ -28,6 +29,7 @@ public class LancamentoController {
     @Autowired
     private LancamentoService service;
 
+    @AuditedEvent
     @PostMapping(value = "/create", headers = { "X-API-Version=V1" })
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<Response<Long>> create(@Valid @RequestBody LancamentoDto dto, BindingResult result) {
@@ -49,6 +51,7 @@ public class LancamentoController {
         return ResponseEntity.ok(response);
     }
 
+    @AuditedEvent
     @PutMapping(value = "/update", headers = { "X-API-Version=V1" })
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<Response<Boolean>> update(@Valid @RequestBody LancamentoDto dto, BindingResult result) {
@@ -81,6 +84,7 @@ public class LancamentoController {
         return ResponseEntity.ok(response);
     }
 
+    @AuditedEvent
     @DeleteMapping(value = "/delete/{id}", headers = { "X-API-Version=V1" })
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<Response<Boolean>> delete(@PathVariable("id") long id) {

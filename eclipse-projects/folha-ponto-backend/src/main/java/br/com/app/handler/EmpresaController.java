@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.app.empresa.EmpresaService;
 import br.com.app.empresa.dto.EmpresaDto;
+import br.com.app.infra.eventauditing.AuditedEvent;
 import br.com.app.infra.response.Response;
 
 @RestController
@@ -28,6 +29,7 @@ public class EmpresaController {
     @Autowired
     private EmpresaService service;
 
+    @AuditedEvent
     @PostMapping(value = "/create", headers = { "X-API-Version=V1" })
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<Response<Long>> create(@Valid @RequestBody EmpresaDto dto, BindingResult result) {
@@ -49,6 +51,7 @@ public class EmpresaController {
         return ResponseEntity.ok(response);
     }
 
+    @AuditedEvent
     @PutMapping(value = "/update", headers = { "X-API-Version=V1" })
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<Response<Boolean>> update(@Valid @RequestBody EmpresaDto dto, BindingResult result) {
@@ -81,6 +84,7 @@ public class EmpresaController {
         return ResponseEntity.ok(response);
     }
 
+    @AuditedEvent
     @DeleteMapping(value = "/delete/{id}", headers = { "X-API-Version=V1" })
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<Response<Boolean>> delete(@PathVariable("id") long id) {
