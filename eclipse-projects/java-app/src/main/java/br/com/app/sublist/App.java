@@ -1,4 +1,4 @@
-package br.com.app;
+package br.com.app.sublist;
 
 import java.util.ArrayList;
 import java.util.List;

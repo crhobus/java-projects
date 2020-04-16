@@ -10,17 +10,24 @@
 
 	<name>java-app</name>
 
-	<dependencies>
-
-	</dependencies>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>14</java.version>
 		<maven.compiler.source>14</maven.compiler.source>
 		<maven.compiler.target>14</maven.compiler.target>
+		<log4j-core-version>2.13.1</log4j-core-version>
 	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j-core-version}</version>
+		</dependency>
+
+	</dependencies>
 
 	<build>
 		<plugins>
