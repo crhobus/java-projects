@@ -15,8 +15,8 @@ import br.com.app.usuario.dto.PerfilEnum;
 import br.com.app.usuario.dto.SituacaoUserEnum;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@SpringBootApplication
 @EnableSwagger2
+@SpringBootApplication
 public class Application {
 
     @Value("${paginacao.qtd_registros_pagina}")
