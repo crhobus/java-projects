@@ -4,16 +4,22 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneOffset;
 import java.time.temporal.TemporalAdjusters;
+import java.util.ArrayList;
 import java.util.List;
+
+import org.hibernate.query.NativeQuery;
 
 import com.querydsl.core.Tuple;
 import com.querydsl.jpa.impl.JPAQuery;
 
 import br.com.app.empresa.dao.QEmpresaEntity;
+import br.com.app.infra.database.NativeQueryHelper;
 import br.com.app.infra.database.RepositoryBaseImpl;
 import br.com.app.lancamento.dao.QLancamentoEntity;
 
 public class FuncionarioRepositoryImpl extends RepositoryBaseImpl<FuncionarioEntity> implements FuncionarioRepositoryCustom {
+
+    private static final String FIND_VL_SALARIO_BY_FUNCIONARIOS = "queries/find_vl_salario_by_funcionarios.sql";
 
     @Override
     public List<Tuple> findByEmpresaWithIncorrectLancamentos(String cnpj, LocalDate referenceDate) {
@@ -42,6 +48,19 @@ public class FuncionarioRepositoryImpl extends RepositoryBaseImpl<FuncionarioEnt
                 .orderBy(lancamento.data.dayOfMonth().asc());
 
         return query.fetch();
+    }
+
+    @Override
+    public List<Object[]> findVlSalarioByFuncionario() {
+        String sqlQuery;
+        try {
+            sqlQuery = NativeQueryHelper.readQueryFromClasspath(FIND_VL_SALARIO_BY_FUNCIONARIOS);
+        } catch (Exception e) {
+            return new ArrayList<>();
+        }
+
+        NativeQuery<Object[]> query = createNativeQuery(sqlQuery);
+        return query.list();
     }
 
 }

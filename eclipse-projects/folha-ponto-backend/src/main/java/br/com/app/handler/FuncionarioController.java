@@ -24,6 +24,7 @@ import br.com.app.funcionario.dto.LancamentosByFuncionarioInput;
 import br.com.app.funcionario.dto.LancamentosByFuncionarioOutput;
 import br.com.app.funcionario.dto.LancamentosIncorretosFuncByEmpresaInput;
 import br.com.app.funcionario.dto.LancamentosIncorretosFuncByEmpresaOutput;
+import br.com.app.funcionario.dto.SalarioByFuncionarioOutput;
 import br.com.app.infra.eventauditing.AuditedEvent;
 import br.com.app.infra.response.Response;
 
@@ -173,6 +174,22 @@ public class FuncionarioController {
         try {
             boolean bol = service.atualizarHorariosPorEmpresa(input);
             response.setData(bol);
+        } catch (Exception ex) {
+            response.getErrors().add(ex.getMessage());
+            return ResponseEntity.badRequest().body(response);
+        }
+
+        return ResponseEntity.ok(response);
+    }
+
+    @GetMapping(value = "/salarioPorFuncionario", headers = { "X-API-Version=V1" })
+    @PreAuthorize("hasAnyRole('ADMIN')")
+    public ResponseEntity<Response<List<SalarioByFuncionarioOutput>>> salarioPorFuncionario() {
+        Response<List<SalarioByFuncionarioOutput>> response = new Response<>();
+
+        try {
+            List<SalarioByFuncionarioOutput> output = service.listSalarioByFuncionario();
+            response.setData(output);
         } catch (Exception ex) {
             response.getErrors().add(ex.getMessage());
             return ResponseEntity.badRequest().body(response);

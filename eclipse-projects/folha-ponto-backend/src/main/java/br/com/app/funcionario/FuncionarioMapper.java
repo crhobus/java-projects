@@ -1,5 +1,7 @@
 package br.com.app.funcionario;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +14,11 @@ import br.com.app.funcionario.dao.FuncionarioEntity;
 import br.com.app.funcionario.dto.FuncionarioDto;
 import br.com.app.funcionario.dto.LancamentosByFuncionarioOutput;
 import br.com.app.funcionario.dto.LancamentosIncorretosFuncByEmpresaOutput;
+import br.com.app.funcionario.dto.SalarioByFuncionarioOutput;
 import br.com.app.infra.locale.Resource;
 import br.com.app.lancamento.dto.LancamentoFuncOutput;
 import br.com.app.usuario.dao.UsuarioEntity;
+import br.com.app.usuario.dto.PerfilEnum;
 
 @Component
 public class FuncionarioMapper {
@@ -88,6 +92,17 @@ public class FuncionarioMapper {
         String message = resource.getResource("app.Lancamentos_incorretos_func", parameters);
 
         output.setMessage(message);
+
+        return output;
+    }
+
+    public SalarioByFuncionarioOutput toSalarioByFuncionarioOutput(Object[] row) {
+        SalarioByFuncionarioOutput output = new SalarioByFuncionarioOutput();
+
+        output.setCpf((String) row[0]);
+        output.setNome((String) row[1]);
+        output.setPerfil(PerfilEnum.getKey(((BigDecimal) row[2]).intValue()));
+        output.setVlSalario(((BigDecimal) row[3]).setScale(2, RoundingMode.HALF_UP));
 
         return output;
     }

@@ -24,6 +24,7 @@ import br.com.app.funcionario.dto.AtualizarHorariosByEmpresaInput;
 import br.com.app.funcionario.dto.FuncionarioDto;
 import br.com.app.funcionario.dto.LancamentosByFuncionarioOutput;
 import br.com.app.funcionario.dto.LancamentosIncorretosFuncByEmpresaOutput;
+import br.com.app.funcionario.dto.SalarioByFuncionarioOutput;
 import br.com.app.lancamento.LancamentoService;
 import br.com.app.lancamento.dao.LancamentoEntity;
 import br.com.app.usuario.UsuarioService;
@@ -168,5 +169,16 @@ public class FuncionarioService {
 
         Integer updated = repository.updateHorariosByEmpresa(input.getQtHorasTrabalhoDia(), input.getQtHorasAlmoco(), empresa);
         return updated > 0;
+    }
+
+    @Transactional(readOnly = true)
+    public List<SalarioByFuncionarioOutput> listSalarioByFuncionario() {
+        List<Object[]> salarioByFuncionario = repository.findVlSalarioByFuncionario();
+
+        if (CollectionUtils.isEmpty(salarioByFuncionario)) {
+            return new ArrayList<>();
+        }
+
+        return salarioByFuncionario.stream().map(mapper::toSalarioByFuncionarioOutput).collect(Collectors.toList());
     }
 }
