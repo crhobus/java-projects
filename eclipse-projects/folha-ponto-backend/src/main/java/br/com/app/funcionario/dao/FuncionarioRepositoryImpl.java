@@ -28,6 +28,7 @@ public class FuncionarioRepositoryImpl extends RepositoryBaseImpl<FuncionarioEnt
         JPAQuery<Long> subQuery = select(lancamentoSub.count()) //
                 .from(lancamentoSub) //
                 .where(lancamentoSub.data.between(dataIni, dataFim) //
+                        .and(lancamentoSub.funcionario.id.eq(funcionario.id)) //
                         .and(lancamentoSub.data.dayOfMonth().eq(lancamento.data.dayOfMonth())));
 
         JPAQuery<Tuple> query = select(funcionario.cpf, funcionario.nome, lancamento.data.dayOfMonth(), lancamento.count()) //

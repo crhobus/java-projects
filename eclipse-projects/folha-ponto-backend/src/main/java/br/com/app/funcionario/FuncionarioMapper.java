@@ -1,6 +1,5 @@
 package br.com.app.funcionario;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,8 +35,8 @@ public class FuncionarioMapper {
         entity.setCpf(dto.getCpf());
         entity.setRg(dto.getRg());
         entity.setValorHora(dto.getValorHora());
-        entity.setQtHorasTrabalhoDia(dto.getQtHorasTrabalhoDia().doubleValue());
-        entity.setQtHorasAlmoco(dto.getQtHorasAlmoco().doubleValue());
+        entity.setQtHorasTrabalhoDia(dto.getQtHorasTrabalhoDia());
+        entity.setQtHorasAlmoco(dto.getQtHorasAlmoco());
         entity.setEmpresa(empresa);
         entity.setUsuario(usuario);
     }
@@ -50,8 +49,8 @@ public class FuncionarioMapper {
         dto.setCpf(entity.getCpf());
         dto.setRg(entity.getRg());
         dto.setValorHora(entity.getValorHora());
-        dto.setQtHorasTrabalhoDia(new BigDecimal(entity.getQtHorasTrabalhoDia()));
-        dto.setQtHorasAlmoco(new BigDecimal(entity.getQtHorasAlmoco()));
+        dto.setQtHorasTrabalhoDia(entity.getQtHorasTrabalhoDia());
+        dto.setQtHorasAlmoco(entity.getQtHorasAlmoco());
         dto.setEmpresaId(entity.getEmpresa().getId());
         dto.setEmail(entity.getUsuario().getEmail());
         dto.setSituacao(entity.getUsuario().getSituacao().name());
@@ -79,10 +78,11 @@ public class FuncionarioMapper {
     public LancamentosIncorretosFuncByEmpresaOutput toLancamentosIncorretosFuncByEmpresaOutput(Tuple funcionarioDataLanc) {
         LancamentosIncorretosFuncByEmpresaOutput output = new LancamentosIncorretosFuncByEmpresaOutput();
 
+        long qt = funcionarioDataLanc.get(3, Long.class);
         Object[] parameters = { //
                 funcionarioDataLanc.get(0, String.class), //
                 funcionarioDataLanc.get(1, String.class), //
-                funcionarioDataLanc.get(3, Long.class), //
+                qt, qt == 1 ? 0 : 1, //
                 funcionarioDataLanc.get(2, Integer.class)// 
         };
         String message = resource.getResource("app.Lancamentos_incorretos_func", parameters);

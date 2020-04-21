@@ -44,10 +44,10 @@ public class FuncionarioEntity extends EntityBase {
     private BigDecimal valorHora;
 
     @Column(name = "qt_horas_trabalho_dia", nullable = false)
-    private double qtHorasTrabalhoDia;
+    private BigDecimal qtHorasTrabalhoDia;
 
     @Column(name = "qt_horas_almoco", nullable = false)
-    private double qtHorasAlmoco;
+    private BigDecimal qtHorasAlmoco;
 
     @Column(name = "data_criacao", nullable = false)
     private Instant dataCriacao;
@@ -109,19 +109,19 @@ public class FuncionarioEntity extends EntityBase {
         this.valorHora = valorHora;
     }
 
-    public double getQtHorasTrabalhoDia() {
+    public BigDecimal getQtHorasTrabalhoDia() {
         return qtHorasTrabalhoDia;
     }
 
-    public void setQtHorasTrabalhoDia(double qtHorasTrabalhoDia) {
+    public void setQtHorasTrabalhoDia(BigDecimal qtHorasTrabalhoDia) {
         this.qtHorasTrabalhoDia = qtHorasTrabalhoDia;
     }
 
-    public double getQtHorasAlmoco() {
+    public BigDecimal getQtHorasAlmoco() {
         return qtHorasAlmoco;
     }
 
-    public void setQtHorasAlmoco(double qtHorasAlmoco) {
+    public void setQtHorasAlmoco(BigDecimal qtHorasAlmoco) {
         this.qtHorasAlmoco = qtHorasAlmoco;
     }
 
@@ -175,11 +175,8 @@ public class FuncionarioEntity extends EntityBase {
         result = prime * result + (int) (getId() ^ (getId() >>> 32));
         result = prime * result + ((lancamentos == null) ? 0 : lancamentos.hashCode());
         result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-        long temp;
-        temp = Double.doubleToLongBits(qtHorasAlmoco);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        temp = Double.doubleToLongBits(qtHorasTrabalhoDia);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
+        result = prime * result + ((qtHorasAlmoco == null) ? 0 : qtHorasAlmoco.hashCode());
+        result = prime * result + ((qtHorasTrabalhoDia == null) ? 0 : qtHorasTrabalhoDia.hashCode());
         result = prime * result + ((rg == null) ? 0 : rg.hashCode());
         result = prime * result + ((usuario == null) ? 0 : usuario.hashCode());
         result = prime * result + ((valorHora == null) ? 0 : valorHora.hashCode());
@@ -211,8 +208,12 @@ public class FuncionarioEntity extends EntityBase {
         if (nome == null) {
             if (other.nome != null) return false;
         } else if (!nome.equals(other.nome)) return false;
-        if (Double.doubleToLongBits(qtHorasAlmoco) != Double.doubleToLongBits(other.qtHorasAlmoco)) return false;
-        if (Double.doubleToLongBits(qtHorasTrabalhoDia) != Double.doubleToLongBits(other.qtHorasTrabalhoDia)) return false;
+        if (qtHorasAlmoco == null) {
+            if (other.qtHorasAlmoco != null) return false;
+        } else if (!qtHorasAlmoco.equals(other.qtHorasAlmoco)) return false;
+        if (qtHorasTrabalhoDia == null) {
+            if (other.qtHorasTrabalhoDia != null) return false;
+        } else if (!qtHorasTrabalhoDia.equals(other.qtHorasTrabalhoDia)) return false;
         if (rg == null) {
             if (other.rg != null) return false;
         } else if (!rg.equals(other.rg)) return false;

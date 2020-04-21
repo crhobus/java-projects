@@ -20,6 +20,7 @@ import br.com.app.empresa.EmpresaService;
 import br.com.app.empresa.dao.EmpresaEntity;
 import br.com.app.funcionario.dao.FuncionarioEntity;
 import br.com.app.funcionario.dao.FuncionarioRepository;
+import br.com.app.funcionario.dto.AtualizarHorariosByEmpresaInput;
 import br.com.app.funcionario.dto.FuncionarioDto;
 import br.com.app.funcionario.dto.LancamentosByFuncionarioOutput;
 import br.com.app.funcionario.dto.LancamentosIncorretosFuncByEmpresaOutput;
@@ -152,5 +153,20 @@ public class FuncionarioService {
         }
 
         return funcionariosDataLanc.stream().map(mapper::toLancamentosIncorretosFuncByEmpresaOutput).collect(Collectors.toList());
+    }
+
+    @Transactional
+    public boolean atualizarHorariosPorEmpresa(AtualizarHorariosByEmpresaInput input) throws Exception {
+        if (input.getEmpresaId() < 1) {
+            throw new Exception("ID da empresa inválido");
+        }
+
+        EmpresaEntity empresa = empresaService.getEmpresa(input.getEmpresaId());
+        if (empresa == null) {
+            throw new Exception("A empresa informada não existe");
+        }
+
+        Integer updated = repository.updateHorariosByEmpresa(input.getQtHorasTrabalhoDia(), input.getQtHorasAlmoco(), empresa);
+        return updated > 0;
     }
 }

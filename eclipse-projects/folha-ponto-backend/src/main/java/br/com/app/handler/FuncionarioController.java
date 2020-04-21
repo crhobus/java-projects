@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.app.funcionario.FuncionarioService;
+import br.com.app.funcionario.dto.AtualizarHorariosByEmpresaInput;
 import br.com.app.funcionario.dto.FuncionarioDto;
 import br.com.app.funcionario.dto.LancamentosByFuncionarioInput;
 import br.com.app.funcionario.dto.LancamentosByFuncionarioOutput;
@@ -150,6 +151,28 @@ public class FuncionarioController {
         try {
             List<LancamentosIncorretosFuncByEmpresaOutput> output = service.listLancamentosIncorretosFuncPorEmpresa(input.getCnpj(), input.getData());
             response.setData(output);
+        } catch (Exception ex) {
+            response.getErrors().add(ex.getMessage());
+            return ResponseEntity.badRequest().body(response);
+        }
+
+        return ResponseEntity.ok(response);
+    }
+
+    @AuditedEvent
+    @PutMapping(value = "/atualizarHorariosPorEmpresa", headers = { "X-API-Version=V1" })
+    @PreAuthorize("hasAnyRole('ADMIN')")
+    public ResponseEntity<Response<Boolean>> atualizarHorariosPorEmpresa(@Valid @RequestBody AtualizarHorariosByEmpresaInput input, BindingResult result) {
+        Response<Boolean> response = new Response<>();
+
+        if (result.hasErrors()) {
+            result.getAllErrors().forEach(error -> response.getErrors().add(error.getDefaultMessage()));
+            return ResponseEntity.badRequest().body(response);
+        }
+
+        try {
+            boolean bol = service.atualizarHorariosPorEmpresa(input);
+            response.setData(bol);
         } catch (Exception ex) {
             response.getErrors().add(ex.getMessage());
             return ResponseEntity.badRequest().body(response);
