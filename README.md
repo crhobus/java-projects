@@ -8,6 +8,49 @@ Repositório criado para consultas de estruturas/configurações/bibliotecas de 
 
 Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto aos projetos desenvolvidos
 
+## Eclipse
+
+* [folha-ponto-backend](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/folha-ponto-backend/)
+
+  * Rest API spring
+  * Spring Boot
+  * Spring Data JPA
+    * JPA Hibernate
+	* Native SQL
+  * QueryDSL
+  * Spring Security
+  * JWT
+  * Spring AOP
+    * Annotation
+  * PostgreSQL
+  * FlyWayDB
+  * Swagger
+  * GSON
+  * Internacionalização de mensagens usando spring
+  * Log4J
+  * Bean Validation
+    * Hibernate Validator
+  * Spring Boot Test
+  * JUnit 5
+  * Mockito
+  * AssertJ
+  * H2
+
+* [java-aop-aspectj](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/java-aop-aspectj/)
+
+  * Spring AOP
+    * Annotation
+	* Pointcut
+  * Spring Boot
+
+* [java-app](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/java-app/)
+
+  * Log4J
+  * UUID
+  * Internacionalização de mensagens usando java util
+    * MessageFormat
+	* Locale
+
 ## NetBeans
 
 * [AlgoritimosEstruturaDados](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/AlgoritimosEstruturaDados/)
