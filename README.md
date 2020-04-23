@@ -10,8 +10,24 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
 ## Eclipse
 
+* [app-produtos](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/app-produtos/)
+
+  * Maven
+  * Rest API spring
+  * Spring Boot
+  * Spring Data JPA
+    * JPA Hibernate
+  * Model Bean
+  * Log4J
+  * Spring Profiles
+  * Multi Database
+    * PostgreSQL
+	* MySQL
+	* Oracle
+
 * [folha-ponto-backend](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/folha-ponto-backend/)
 
+  * Maven
   * Rest API spring
   * Spring Boot
   * Spring Data JPA
@@ -19,6 +35,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 	* Native SQL
   * QueryDSL
   * Spring Security
+  * Spring Profiles
   * JWT
   * Spring AOP
     * Annotation
@@ -38,6 +55,9 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
 * [java-aop-aspectj](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/java-aop-aspectj/)
 
+  * Maven
+  * Rest API spring
+  * Spring Boot
   * Spring AOP
     * Annotation
 	* Pointcut
@@ -45,6 +65,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
 * [java-app](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/java-app/)
 
+  * Maven
   * Log4J
   * UUID
   * Internacionalização de mensagens usando java util
