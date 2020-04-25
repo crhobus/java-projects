@@ -17,6 +17,10 @@ public class SecurityService implements UserDetailsService {
     @Autowired
     private UsuarioService usuarioService;
 
+    /*
+     * Interface UserDetailsService faz parte do core do spring security, no qual é sobrescrito o método loadUserByUsername que obtém as informações
+     * do usuário cadastrado
+     */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<UsuarioEntity> usuario = usuarioService.getUsuario(username);

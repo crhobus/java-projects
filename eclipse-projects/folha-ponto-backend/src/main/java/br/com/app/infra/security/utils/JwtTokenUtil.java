@@ -15,15 +15,15 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Component
 public class JwtTokenUtil {
 
-    public static final String CLAIM_KEY_USERNAME = "sub";
-    public static final String CLAIM_KEY_ROLE = "role";
-    public static final String CLAIM_KEY_CREATED = "created";
+    public static final String CLAIM_KEY_USERNAME = "sub"; // Nome do usuário utilizado na autenticação
+    public static final String CLAIM_KEY_ROLE = "role"; // Perfil do usuário
+    public static final String CLAIM_KEY_CREATED = "created"; // Definição de quando o token do usuário foi criado
 
     @Value("${jwt.secret}")
-    private String secret;
+    private String secret; // Chave secreta
 
     @Value("${jwt.expiration}")
-    private Long expiration;
+    private Long expiration; // Tempo de expiração do token
 
     /**
      * Obtém o username (email) contido no token JWT.

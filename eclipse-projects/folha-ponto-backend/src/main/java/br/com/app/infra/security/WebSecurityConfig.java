@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.BeanIds;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -17,7 +18,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import br.com.app.infra.security.filter.JwtAuthenticationTokenFilter;
 
-@Configuration // Classe de configuração.
+@Configuration
 @EnableWebSecurity // Habilita o security na aplicação.
 @EnableGlobalMethodSecurity(prePostEnabled = true) // Realiza uma validação por método usando o @PreAuthorize.
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -29,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
     /**
-     * Utilizado pelo security para retornar a parte da senha.
+     * Utilizado pelo spring security para retornar a parte da senha.
      * 
      * @param authenticationManagerBuilder
      */
@@ -39,7 +40,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     /**
-     * O modo de como a senha é geranciada será utilizando o BCryptPasswordEncoder.
+     * O modo de como a senha é geranciada, será utilizando o BCryptPasswordEncoder.
      * 
      * @return PasswordEncoder
      */
@@ -59,7 +60,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    @Bean
+    @Bean(name = BeanIds.AUTHENTICATION_MANAGER)
     protected AuthenticationManager authenticationManager() throws Exception {
         return super.authenticationManager();
     }
@@ -67,18 +68,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf() //
-                .disable() // Desabilita o csrf, pois para requisições stateless não importa o cross site script
-                .exceptionHandling() //
-                .authenticationEntryPoint(jwtAuthenticationEntryPoint) // Quando ocorrer uma excessão, deve ser chamada a exceção personalizada { @link JwtAuthenticationEntryPoint } (Problemas de autenticação)
+                .disable() // Desabilita o csrf, pois para requisições stateless, não precisa se importar com cross site script
+                .exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint) // Quando ocorrer uma excessão, deve ser chamada a exceção personalizada { @link JwtAuthenticationEntryPoint } (Problemas de autenticação)
                 .and() //
                 .sessionManagement() // Como será controlada a sessão do usuário
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Sessão será stateless, ou seja sem estado
                 .and() //
-                .authorizeRequests() //
-                .antMatchers("/auth/**") // Será permitido acessar qualquer API que esteja abaixo de /auth, sem interferencia do security, pois neste momento a pessoa ainda não está autenticada, ou seja, irá se autenticar
-                .permitAll() //
-                .anyRequest() // Indica que qualquer outro request deverá estar autenticado
-                .authenticated();
+                .authorizeRequests().antMatchers("/auth/**").permitAll() // Será permitido acessar qualquer API que esteja abaixo de /auth, sem interferência do security, pois neste momento a pessoa ainda não está autenticada, ou seja, irá se autenticar
+                .anyRequest().authenticated(); // Indica que qualquer outro request deverá estar autenticado
         httpSecurity.addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
         httpSecurity.headers().cacheControl();
     }

@@ -32,7 +32,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     private UserDetailsService userDetailsService;
 
     /**
-     * Este método é quem valida a requisição e é chamado e todas as requisições feitas.
+     * Este método é quem valida a requisição e é chamado em todas as requisições feitas.
      */
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {

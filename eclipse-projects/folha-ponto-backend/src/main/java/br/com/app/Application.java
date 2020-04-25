@@ -13,9 +13,7 @@ import br.com.app.usuario.dao.UsuarioEntity;
 import br.com.app.usuario.dao.UsuarioRepository;
 import br.com.app.usuario.dto.PerfilEnum;
 import br.com.app.usuario.dto.SituacaoUserEnum;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@EnableSwagger2
 @SpringBootApplication
 public class Application {
 

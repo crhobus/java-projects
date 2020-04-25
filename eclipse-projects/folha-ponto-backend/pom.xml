@@ -28,16 +28,20 @@
 
 	<dependencies>
 
+		<!-- Infraestrutura para utilizar na web, com http, tomcat, etc. Possuindo 
+			utilitários para web, como criação de controles, endpoints de apis, etc. -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- JPA com spring -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
+		<!-- Aplicar segurança no spring boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -58,18 +62,21 @@
 			<artifactId>flyway-core</artifactId>
 		</dependency>
 
+		<!-- Extrai e processa as informações das APIs -->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>${springfox-swagger-version}</version>
 		</dependency>
 
+		<!-- Gera uma interface gráfica para o projeto -->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${springfox-swagger-version}</version>
 		</dependency>
 
+		<!-- Gera e manipula tokens JWT -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt</artifactId>

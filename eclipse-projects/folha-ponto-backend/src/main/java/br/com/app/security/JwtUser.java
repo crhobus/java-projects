@@ -12,7 +12,7 @@ public class JwtUser implements UserDetails {
     private Long id;
     private String username;
     private String password;
-    private Collection<? extends GrantedAuthority> authorities;
+    private Collection<? extends GrantedAuthority> authorities; // Autorização, nesse exemplo é o perfil do usuário
 
     public JwtUser(Long id, String username, String password, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
