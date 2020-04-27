@@ -17,7 +17,7 @@ import br.com.app.usuario.dto.SituacaoUserEnum;
 @SpringBootApplication
 public class Application {
 
-    @Value("${paginacao.qtd_registros_pagina}")
+    @Value("${paginacao.qtd_registros_pagina}") // Exemplo recupera uma propriedade do arquivo application.properties do spring
     private int qtdRegistrosPagina;
 
     @Autowired
