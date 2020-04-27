@@ -74,7 +74,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement() // Como será controlada a sessão do usuário
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Sessão será stateless, ou seja sem estado
                 .and() //
-                .authorizeRequests().antMatchers("/auth/**").permitAll() // Será permitido acessar qualquer API que esteja abaixo de /auth, sem interferência do security, pois neste momento a pessoa ainda não está autenticada, ou seja, irá se autenticar
+                .authorizeRequests().antMatchers("/auth/**", "/v2/api-docs", "/configuration/**", "/swagger*/**", "/webjars/**").permitAll() // Será permitido acessar qualquer API que esteja abaixo de /auth, sem interferência do security, pois neste momento a pessoa ainda não está autenticada, ou seja, irá se autenticar
                 .anyRequest().authenticated(); // Indica que qualquer outro request deverá estar autenticado
         httpSecurity.addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
         httpSecurity.headers().cacheControl();
