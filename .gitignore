@@ -1,18 +1,15 @@
-**/target/
-*target*
-**/.target
 *.jar
 *.war
 *.ear
 *.class
 *.*~
 *~
+*.target
+**/target/
 
-*.pydevproject
 .metadata
 *bin
-tmp/**
-tmp/**/*
+**/tmp/
 *.tmp
 *.bak
 *.swp
@@ -36,11 +33,11 @@ local.properties
 *.rar
 .project
 .recommenders
-output/**
+**/output/
 *.orig
 *.iml
 .merge_file*
-**/temp/**
+**/temp/
 hs_err_pid*
 pom.xml.tag
 pom.xml.releaseBackup
@@ -55,8 +52,7 @@ Thumbs.db
 Desktop.ini
 
 .mvn/timing.properties
-!/.mvn/wrapper/maven-wrapper.jar
-**/nbproject/private/
+**/nbproject/
 **/build/
 **/nbbuild/
 **/dist/
