@@ -10,15 +10,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import com.querydsl.core.Tuple;
-import com.querydsl.core.types.Expression;
-import com.querydsl.core.types.PathMetadata;
-import com.querydsl.core.types.Projections;
-import com.querydsl.core.types.QTuple;
-import com.querydsl.core.types.dsl.Expressions;
-import com.querydsl.core.types.dsl.StringPath;
-import com.querydsl.core.types.Expression;
-
 import br.com.app.CommonBaseTest;
 import br.com.app.common.builder.EmpresaEntityBuilder;
 import br.com.app.common.builder.FuncionarioDtoBuilder;
@@ -28,7 +19,7 @@ import br.com.app.empresa.dao.EmpresaEntity;
 import br.com.app.funcionario.dao.FuncionarioEntity;
 import br.com.app.funcionario.dto.FuncionarioDto;
 import br.com.app.funcionario.dto.LancamentosByFuncionarioOutput;
-import br.com.app.funcionario.dto.LancamentosIncorretosFuncByEmpresaOutput;
+import br.com.app.funcionario.dto.SalarioByFuncionarioOutput;
 import br.com.app.infra.locale.Resource;
 import br.com.app.lancamento.dto.LancamentoFuncOutput;
 import br.com.app.usuario.dao.UsuarioEntity;
@@ -135,15 +126,21 @@ public class FuncionarioMapperTest extends CommonBaseTest {
 
     @Test
     public void toLancamentosIncorretosFuncByEmpresaOutput() {
-        
-        QTuple qTuple = Projections.tuple(Expressions.stringPath("str"), Expressions.stringPath("str"), Expressions.numberPath(Integer.class,"str"), Expressions.numberPath(Long.class,"str"));
-        Tuple tuple = qTuple.newInstance("arg");
-        
-//        Expressions.numberPath(Integer.class, "n");
-//        Projections.tuple(exprs)
-//        Tuple funcionarioDataLanc = tupleExpression.newInstance("1", 42, true);;
-//        
-//        LancamentosIncorretosFuncByEmpresaOutput result = mapper.toLancamentosIncorretosFuncByEmpresaOutput(funcionarioDataLanc);
+        //
+    }
+
+    @Test
+    public void toSalarioByFuncionarioOutput() {
+        Object[] row = { "12345678900", "Teste", new BigDecimal(0), new BigDecimal(50.697) };
+
+        SalarioByFuncionarioOutput result = mapper.toSalarioByFuncionarioOutput(row);
+
+        assertThat(result).isNotNull();
+
+        assertThat(result.getCpf()).isEqualTo("12345678900");
+        assertThat(result.getNome()).isEqualTo("Teste");
+        assertThat(result.getPerfil()).isEqualTo(PerfilEnum.ROLE_ADMIN);
+        assertThat(result.getVlSalario().doubleValue()).isEqualTo(50.70);
     }
 
 }
