@@ -1,0 +1,38 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.ehcache.org/v3"
+	xmlns:jsr107="http://www.ehcache.org/v3/jsr107"
+	xsi:schemaLocation="
+            http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd
+            http://www.ehcache.org/v3/jsr107 http://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd">
+
+	<cache-template name="default">
+		<expiry>
+			<ttl unit="seconds">3600</ttl> <!-- Tempo do objeto no cache em segundos, ex: 1 hora -->
+		</expiry>
+
+		<listeners>
+			<listener>
+				<class>br.com.app.infra.cache.CacheEventLogger</class>
+				<event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+				<event-ordering-mode>UNORDERED</event-ordering-mode>
+				<events-to-fire-on>CREATED</events-to-fire-on>
+				<events-to-fire-on>UPDATED</events-to-fire-on>
+				<events-to-fire-on>EXPIRED</events-to-fire-on>
+				<events-to-fire-on>REMOVED</events-to-fire-on>
+				<events-to-fire-on>EVICTED</events-to-fire-on>
+			</listener>
+		</listeners>
+
+		<resources>
+			<heap unit="entries">2000</heap> <!-- Entradas do cache, quantidade de objetos que irá armazenar em cache -->
+			<offheap unit="MB">50</offheap> <!-- Quanto em MB irá armazenar fora da pilha do Java, ou seja, irá alocar um espaço em memória gerenciado pelo ehCache -->
+		</resources>
+
+	</cache-template>
+
+	<cache alias="produtoCache" uses-template="default">
+		<key-type>java.lang.Long</key-type>
+		<value-type>br.com.app.dto.ProdutoDto</value-type>
+	</cache>
+
+</config>
