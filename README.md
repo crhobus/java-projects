@@ -14,7 +14,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Maven
   * JDK 14
-  * Rest API spring
+  * Rest API Spring
   * Spring Boot
   * Spring Data JPA
     * JPA Hibernate
@@ -30,7 +30,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Maven
   * JDK 14
-  * Rest API spring
+  * Rest API Spring
   * Spring Boot
   * Spring Data JPA
     * JPA Hibernate
@@ -59,7 +59,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Maven
   * JDK 14
-  * Rest API spring
+  * Rest API Spring
   * Spring Boot
   * Spring AOP
     * Annotation
@@ -80,7 +80,7 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 
   * Maven
   * JDK 14
-  * Rest API spring
+  * Rest API Spring
   * Spring Boot
   * Spring Data JPA
     * JPA Hibernate
