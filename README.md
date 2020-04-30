@@ -76,6 +76,21 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
     * MessageFormat
 	* Locale
 
+* [products-using-cache](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/products-using-cache/)
+
+  * Maven
+  * JDK 14
+  * Rest API spring
+  * Spring Boot
+  * Spring Data JPA
+    * JPA Hibernate
+  * Spring Task Scheduler
+  * PostgreSQL
+  * Log4J
+  * Bean Validation
+    * Hibernate Validator
+  * EhCache
+
 ## NetBeans
 
 * [AlgoritimosEstruturaDados](https://github.com/crhobus/java-projects/tree/master/netbeans-projects/AlgoritimosEstruturaDados/)
