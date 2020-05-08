@@ -1,6 +1,8 @@
 package br.com.app.funcionario;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.refEq;
+import static org.mockito.Mockito.when;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -8,7 +10,10 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+
+import com.querydsl.core.Tuple;
 
 import br.com.app.CommonBaseTest;
 import br.com.app.common.builder.EmpresaEntityBuilder;
@@ -19,6 +24,7 @@ import br.com.app.empresa.dao.EmpresaEntity;
 import br.com.app.funcionario.dao.FuncionarioEntity;
 import br.com.app.funcionario.dto.FuncionarioDto;
 import br.com.app.funcionario.dto.LancamentosByFuncionarioOutput;
+import br.com.app.funcionario.dto.LancamentosIncorretosFuncByEmpresaOutput;
 import br.com.app.funcionario.dto.SalarioByFuncionarioOutput;
 import br.com.app.infra.locale.Resource;
 import br.com.app.lancamento.dto.LancamentoFuncOutput;
@@ -126,7 +132,20 @@ public class FuncionarioMapperTest extends CommonBaseTest {
 
     @Test
     public void toLancamentosIncorretosFuncByEmpresaOutput() {
-        //
+        Tuple funcionarioDataLanc = Mockito.mock(Tuple.class);
+
+        when(funcionarioDataLanc.get(0, String.class)).thenReturn("123.456.789.00");
+        when(funcionarioDataLanc.get(1, String.class)).thenReturn("Teste");
+        when(funcionarioDataLanc.get(2, Integer.class)).thenReturn(15);
+        when(funcionarioDataLanc.get(3, Long.class)).thenReturn(3L);
+
+        String message = "mensagem de teste";
+        when(resource.getResource(refEq("app.Lancamentos_incorretos_func"), refEq(new Object[4]))).thenReturn(message);
+
+        LancamentosIncorretosFuncByEmpresaOutput result = mapper.toLancamentosIncorretosFuncByEmpresaOutput(funcionarioDataLanc);
+
+        assertThat(result).isNotNull();
+        assertThat(result.getMessage()).isEqualTo(message);
     }
 
     @Test
