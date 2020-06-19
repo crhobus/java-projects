@@ -99,8 +99,8 @@ public class FuncionarioServiceTest extends CommonBaseTest {
             assertThat(capturedFuncionario.getValorHora()).isEqualTo(funcionario.getValorHora());
             assertThat(capturedFuncionario.getQtHorasTrabalhoDia()).isEqualTo(funcionario.getQtHorasTrabalhoDia());
             assertThat(capturedFuncionario.getQtHorasAlmoco()).isEqualTo(funcionario.getQtHorasAlmoco());
-            assertThat(capturedFuncionario.getEmpresa()).isEqualTo(funcionario.getEmpresa());
-            assertThat(capturedFuncionario.getUsuario()).isEqualTo(funcionario.getUsuario());
+            assertThat(capturedFuncionario.getEmpresa()).isSameAs(funcionario.getEmpresa());
+            assertThat(capturedFuncionario.getUsuario()).isSameAs(funcionario.getUsuario());
 
             assertThat(result).isEqualTo(funcionario.getId());
 
@@ -162,8 +162,8 @@ public class FuncionarioServiceTest extends CommonBaseTest {
             assertThat(capturedFuncionario.getValorHora()).isEqualTo(funcionario.getValorHora());
             assertThat(capturedFuncionario.getQtHorasTrabalhoDia()).isEqualTo(funcionario.getQtHorasTrabalhoDia());
             assertThat(capturedFuncionario.getQtHorasAlmoco()).isEqualTo(funcionario.getQtHorasAlmoco());
-            assertThat(capturedFuncionario.getEmpresa()).isEqualTo(funcionario.getEmpresa());
-            assertThat(capturedFuncionario.getUsuario()).isEqualTo(funcionario.getUsuario());
+            assertThat(capturedFuncionario.getEmpresa()).isSameAs(funcionario.getEmpresa());
+            assertThat(capturedFuncionario.getUsuario()).isSameAs(funcionario.getUsuario());
 
             assertThat(result).isTrue();
 
