@@ -26,6 +26,14 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
 	* MySQL
 	* Oracle
 
+* [calculadora](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/calculadora/)
+
+  * Maven
+  * JDK 14
+  * Rest API Spring
+  * Spring Boot
+  * API exceptions customizadas
+
 * [folha-ponto-backend](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/folha-ponto-backend/)
 
   * Maven
