@@ -1,0 +1,4 @@
+module moduloCadastro {
+
+    requires moduloCurso;
+}
