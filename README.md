@@ -75,6 +75,14 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * Internacionalização de mensagens usando java util
     * MessageFormat
 	* Locale
+  * Exemplo com sub-lista
+  * New Feature Java 8 - StringJoiner
+  * New Feature Java 8 - Method Reference
+  * New Feature Java 8 - JavaScript Nashorn
+  * New Feature Java 8 - Annotation
+  * New Feature Java 8 - Base64
+  * New Feature Java 9 - takeWhile e dropWhile
+  * New Feature Java 11 - Files.writeString e Files.readString
 
 * [products-using-cache](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/products-using-cache/)
 
