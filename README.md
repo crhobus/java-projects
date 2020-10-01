@@ -84,6 +84,20 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * New Feature Java 9 - takeWhile e dropWhile
   * New Feature Java 11 - Files.writeString e Files.readString
 
+* [java-module](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/java-module/)
+
+  * New Feature Java 9 - Modules
+
+    * [mod-curso](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/java-module/mod-curso/)
+	  * Maven
+      * JDK 14
+	  * Module - exports
+
+    * [mod-cadastro](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/java-module/mod-cadastro/)
+	  * Maven
+      * JDK 14
+	  * Module - requires
+
 * [products-using-cache](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/products-using-cache/)
 
   * Maven
