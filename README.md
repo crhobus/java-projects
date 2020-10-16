@@ -63,6 +63,59 @@ Além do Java, possui outras tecnologias/frameworks/linguagens integradas junto 
   * AssertJ
   * H2
 
+* [servico-a](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/credito/servico-a/)
+
+  * Maven
+  * JDK 14
+  * Rest API Spring
+  * Spring Boot
+  * Spring Data JPA
+    * JPA Hibernate
+  * QueryDSL
+  * PostgreSQL
+  * FlyWayDB
+  * Swagger
+  * GSON
+  * Log4J
+  * Bean Validation
+    * Hibernate Validator
+
+* [servico-b](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/credito/servico-b/)
+
+  * Maven
+  * JDK 14
+  * Rest API Spring
+  * Spring Boot
+  * Spring Data JPA
+    * JPA Hibernate
+  * QueryDSL
+  * PostgreSQL
+  * FlyWayDB
+  * Swagger
+  * GSON
+  * Log4J
+  * Bean Validation
+    * Hibernate Validator
+  * Comunicação entre os serviços via Rest Template
+
+* [servico-c](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/credito/servico-c/)
+
+  * Maven
+  * JDK 14
+  * Rest API Spring
+  * Spring Boot
+  * Spring Data JPA
+    * JPA Hibernate
+  * QueryDSL
+  * PostgreSQL
+  * FlyWayDB
+  * Swagger
+  * GSON
+  * Log4J
+  * Bean Validation
+    * Hibernate Validator
+  * Comunicação entre os serviços via Rest Template
+
 * [java-aop-aspectj](https://github.com/crhobus/java-projects/tree/master/eclipse-projects/java-aop-aspectj/)
 
   * Maven
