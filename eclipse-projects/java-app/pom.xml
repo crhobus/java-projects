@@ -16,7 +16,7 @@
 		<java.version>14</java.version>
 		<maven.compiler.source>14</maven.compiler.source>
 		<maven.compiler.target>14</maven.compiler.target>
-		<log4j-core-version>2.13.1</log4j-core-version>
+		<log4j-core-version>2.16.0</log4j-core-version>
 		<commons-lang3-version>3.11</commons-lang3-version>
 	</properties>
 
